@@ -1,0 +1,13 @@
+section {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+.sectionLayout1 {
+  width: 1440px;
+  margin: 0 auto;
+}
+.contentWrap {
+  display: flex;
+}
