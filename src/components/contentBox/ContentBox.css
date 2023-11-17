@@ -4,3 +4,17 @@
   border-radius: 40px;
   background-color: gray;
 }
+.ContentTitleText {
+  font-size: 60px;
+}
+.ContentWrap {
+  position: relative;
+  width: min-content;
+  margin-right: 70px;
+}
+.ContentTitleText {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%);
+}

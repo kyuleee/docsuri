@@ -1,0 +1,27 @@
+.ChallengContentWrap {
+  width: 400px;
+  height: 350px;
+  border: black solid 1px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: center;
+  padding: 10px;
+}
+.tagWrap {
+  display: flex;
+}
+.tagText {
+  margin-left: 10px;
+}
+.imgBox {
+  width: 400px;
+  height: 100px;
+  background: url(../../../asset/img/챌\ 아이콘.png) no-repeat;
+}
+.BoxWrap {
+  align-items: start;
+  display: flex;
+  justify-content: space-between;
+}

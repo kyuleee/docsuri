@@ -1,13 +1,18 @@
-section {
-  width: 100%;
+.aboutContentWrap {
+  display: flex;
+  transition: 1s;
+}
+.AboutSticky {
+  background-color: aqua;
+  width: 1440px;
   height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.AboutSection {
+  height: 400vh;
   overflow: hidden;
   position: relative;
-}
-.sectionLayout1 {
-  width: 1440px;
-  margin: 0 auto;
-}
-.contentWrap {
-  display: flex;
 }

@@ -1,13 +1,14 @@
-body {
+/* body {
   background-color: black;
   width: 100%;
   height: 100vh;
-}
-div {
+} */
+/* div {
   width: 500px;
   height: 500px;
-}
-.cls-1 {
+  margin: 0 auto;
+} */
+/* .cls-1 {
   fill: none;
   stroke: white;
   stroke-linecap: round;
@@ -15,16 +16,77 @@ div {
   stroke-width: 1px;
   fill-opacity: 0;
   stroke-dasharray: 360;
-  stroke-dashoffset: -360;
   animation: ch-anim 2s linear 0s forwards;
   animation-iteration-count: infinite;
-  animation-direction: alternate-reverse;
+  animation-direction: alternate;
 }
-@keyframes ch-anim {
-  from {
-    stroke-dashoffset: -360px;
+.testC {
+  animation: chs-anim 2s linear 0s forwards;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes chs-anim {
+  0% {
+    transform: translateX(0);
   }
-  to {
+  100% {
+    transform: translateX(-5%);
+  }
+} */
+.cls-2 {
+  fill: red;
+  stroke: #111;
+  stroke-miterlimit: 10;
+  stroke-width: 2px;
+  animation: chs-anim 3s linear 0s forwards;
+  transform-origin: center center;
+  animation-iteration-count: infinite;
+}
+.line {
+  fill: black;
+  fill-opacity: 0;
+  stroke-dasharray: 360;
+  animation: ch-anim 0.5s linear 0s forwards;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.check {
+  fill: none;
+  fill-opacity: 0;
+  stroke: black;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1px;
+  stroke-dasharray: 326px;
+  stroke-dashoffset: 0;
+  animation: chss-anim 3s linear 0s forwards;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes chss-anim {
+  0% {
+    stroke-dashoffset: 326px;
+    fill-opacity: 0;
+  }
+  100% {
     stroke-dashoffset: 0px;
+    fill-opacity: 1;
+  }
+}
+
+@keyframes ch-anim {
+  0% {
+    fill-opacity: 0;
+  }
+  100% {
+    fill-opacity: 1;
+  }
+}
+@keyframes chs-anim {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

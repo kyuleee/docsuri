@@ -1,10 +1,12 @@
-import { IntroSection, AboutSection } from "./section";
+import "./Page.css";
+import { IntroSection, AboutSection, ChallengeSection } from "./section";
 
 const Page = () => {
   return (
     <>
       <IntroSection />
       <AboutSection />
+      <ChallengeSection />
     </>
   );
 };

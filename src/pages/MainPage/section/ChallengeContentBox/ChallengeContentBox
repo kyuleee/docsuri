@@ -1,0 +1,28 @@
+import TagBox from "../../../../components/tagBox/TagBox";
+import BoxTitleText from "../../../../components/text/BoxTitleText";
+
+const ChallengeContentBox = () => {
+  return (
+    <div className="ChallengContentWrap">
+      <BoxTitleText
+        text={"고학년 수학 기초 챌린지"}
+        text2={"고학년에 이제 들어간 모두를 위해"}
+      />
+      <div className="tagWrap">
+        <TagBox colorType={"#FF7E9D"} text={"수리"} />
+        <TagBox colorType={"#4AB34A"} text={"수학"} />
+        <TagBox colorType={"#8CBDED"} text={"도형"} />
+        <TagBox colorType={"green"} text={"더하기"} />
+        <TagBox colorType={"pink"} text={"곱하기"} />
+      </div>
+      <div className="tagWrap">
+        <TagBox colorType={"#FF7E9D"} text={"수리"} />
+        <TagBox colorType={"#4AB34A"} text={"수학"} />
+        <TagBox colorType={"#8CBDED"} text={"도형"} />
+      </div>
+      <div className="imgBox"></div>
+    </div>
+  );
+};
+
+export default ChallengeContentBox;
