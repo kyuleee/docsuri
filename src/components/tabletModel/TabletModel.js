@@ -1,15 +1,25 @@
 import { Canvas } from "@react-three/fiber";
 import { Lights, Model } from "./parts";
-import { OrbitControls } from "@react-three/drei";
 import "./TabletModel.css";
+import { useRef, useState } from "react";
 
 const TabletModel = () => {
+  const [wheelDirect, setWheelDirect] = useState(false);
+  const modelRef = useRef();
+
+  function handleRotate(e){
+    if(e.deltaY <0){
+      modelRef.current.rotation
+    }
+  }
+
+
+
   return (
     <>
-      <Canvas camera={{ position: [0, 0, 11], fov: 60, near: 0.1, far: 1000 }}>
+      <Canvas camera={{ position: [0, 0, 11], fov: 60, near: 0.1, far: 1000 }} onWheel={handleRotate}>
         <Lights />
-        <Model />
-        {/* <OrbitControls /> */}
+        <Model modelRef={modelRef} />
       </Canvas>
     </>
   );

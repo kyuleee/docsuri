@@ -28,10 +28,10 @@ const AboutSection = () => {
     <>
       <section className="AboutSection" onWheel={handleWheel} ref={slideRef}>
         <div className="AboutSticky">
-          <h3 className="subTitleText">About</h3>
+          <h3 className="문제가 있어보임">ABOUT</h3>
           <MenuTitleText
             text={"독:수리"}
-            text2={"기본기를 다지는 탄탄한 개념 학습"}
+            text2={"저희 사이트는 이런 강점이 있습니다!"}
           />
           <div className="aboutContentWrap" style={{ translate: slide + "%" }}>
             <ContentBox text={"기초"} />
