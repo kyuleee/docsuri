@@ -3,37 +3,32 @@ import MenuTitleText from "../../../components/text/MenuTitleText";
 import "./AboutSection.css";
 import ContentBox from "../../../components/contentBox/ContentBox";
 
-const AboutSection = () => {
+const AboutSection = ({ AboutSectionRef, opacity }) => {
   const [slideCount, setSlideCount] = useState(0);
   const [slide, setSlide] = useState(40);
-  const slideRef = useRef();
 
   function handleWheel(e) {
-    if (e.deltaY > 0 && slideCount < 10) {
-      setSlideCount((prev) => prev + 1);
-      setSlide((prev) => prev - 10);
-      console.log(slideCount);
-      console.log(e.deltaY);
-      console.log(slideRef);
-      console.log(window);
-    } else if (e.deltaY < 0 && slide < 10) {
-      setSlideCount((prev) => prev - 1);
-      setSlide((prev) => prev + 10);
-      console.log(slideCount);
-      console.log(e.deltaY);
+    if (e.deltaY > 0) {
+      setSlide((prev) => prev - 200);
+    } else if (e.deltaY < 0) {
+      setSlide((prev) => prev + 200);
     }
   }
 
   return (
     <>
-      <section className="AboutSection" onWheel={handleWheel} ref={slideRef}>
+      <section
+        className="AboutSection"
+        onWheel={handleWheel}
+        ref={AboutSectionRef}
+        style={opacity ? { opacity: 1 } : { opacity: 0 }}
+      >
         <div className="AboutSticky">
-          <h3 className="문제가 있어보임">ABOUT</h3>
           <MenuTitleText
-            text={"독:수리"}
+            text={"ABOUT"}
             text2={"저희 사이트는 이런 강점이 있습니다!"}
           />
-          <div className="aboutContentWrap" style={{ translate: slide + "%" }}>
+          <div className="aboutContentWrap" style={{ translate: slide + "px" }}>
             <ContentBox text={"기초"} />
             <ContentBox text={"개념"} />
             <ContentBox text={"사고력"} />

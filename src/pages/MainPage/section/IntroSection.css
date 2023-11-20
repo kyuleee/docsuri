@@ -1,12 +1,21 @@
-article{
+.IntroSection {
+  height: 200vh;
+}
+.introSpace {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+}
+article {
   position: absolute;
 }
-.phase1{
+.phase1 {
   top: 50%;
   left: 60%;
   transform: translate(-50%, -50%);
 }
-.phase2{
+.phase2 {
   top: 50%;
   left: 40%;
   transform: translate(-50%, -50%);

@@ -1,17 +1,24 @@
 import { Canvas } from "@react-three/fiber";
 import { Lights, Model } from "./parts";
 import "./TabletModel.css";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const TabletModel = () => {
-  const [wheelDirect, setWheelDirect] = useState(false);
+  const [wheelDirect, setWheelDirect] = useState(0);
+  const [positionX, setPositionX] = useState(-6);
+  const [rotationY, setRotationY] = useState(1.2);
   const modelRef = useRef();
 
   function handleRotate(e) {
+    if (e.deltaY > 0) {
+      setWheelDirect((prev) => prev + 8);
+      setPositionX(6);
+      setRotationY(12);
+    }
     if (e.deltaY < 0) {
-      modelRef.current.rotation.y += 0.3;
-      modelRef.current.position.x += 0.3;
-      console.log(modelRef.current.rotation.x);
+      setWheelDirect((prev) => prev + 8);
+      setPositionX(-6);
+      setRotationY(1.2);
     }
   }
 
@@ -22,7 +29,11 @@ const TabletModel = () => {
         onWheel={handleRotate}
       >
         <Lights />
-        <Model modelRef={modelRef} />
+        <Model
+          modelRef={modelRef}
+          positionX={positionX}
+          rotationY={rotationY}
+        />
       </Canvas>
     </>
   );
