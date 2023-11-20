@@ -1,8 +1,8 @@
 import "./TagBox.css";
-const TagBox = ({ text, colorType }) => {
+const TagBox = ({ tag }) => {
   return (
-    <p style={{ backgroundColor: colorType }} className="tagText">
-      {text}
+    <p style={{ backgroundColor: tag.color }} className="tagText">
+      {tag.name}
     </p>
   );
 };

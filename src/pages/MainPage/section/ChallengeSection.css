@@ -11,9 +11,13 @@
 }
 .tagWrap {
   display: flex;
+  justify-content: end;
+  flex-wrap: wrap;
+  width: 80%;
 }
 .tagText {
   margin-left: 10px;
+  margin-bottom: 5px;
 }
 .imgBox {
   width: 400px;

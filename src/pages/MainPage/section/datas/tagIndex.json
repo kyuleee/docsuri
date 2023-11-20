@@ -1,0 +1,70 @@
+{
+    "basic" : {
+        "name" : "기초",
+        "color" : "#FFB5EB"
+    },
+    "deepen" : {
+        "name" : "심화",
+        "color" : "#B28DFF"
+    },
+    "add" : {
+        "name" : "덧셈",
+        "color" : "#DCD3FF"
+    },
+    "sub" : {
+        "name" : "뺄셈",
+        "color" : "#AFF8DB"
+    },
+    "mul" : {
+        "name" : "곱셈",
+        "color" : "#BFFCC6"
+    },
+    "divi" : {
+        "name" : "나눗셈",
+        "color" : "#FFC9DE"
+    },
+    "big" : {
+        "name" : "큰수",
+        "color" : "#FF9CEE"
+    },
+    "frac" : {
+        "name" : "분수",
+        "color" : "#FFCCF9"
+    },
+    "dec" : {
+        "name" : "소수",
+        "color" : "#FCC2FF"
+    },
+    "rule" : {
+        "name" : "규칙찾기",
+        "color" : "#C5A3FF"
+    },
+    "angle" : {
+        "name" : "각도",
+        "color" : "#FFABAB"
+    },
+    "rect" : {
+        "name" : "사각형",
+        "color" : "#DBFFD6"
+    },
+    "poly" : {
+        "name" : "다각형",
+        "color" : "#C4FAF8"
+    },
+    "cyli" : {
+        "name" : "원기둥",
+        "color" : "#A79AFF"
+    },
+    "cone" : {
+        "name" : "원뿔",
+        "color" : "#FFF5BA"
+    },
+    "prop" : {
+        "name" : "비례식",
+        "color" : "#D5AAFF"
+    },
+    "ratio" : {
+        "name" : "비와 비율",
+        "color" : "#85E3FF"
+    }
+}
