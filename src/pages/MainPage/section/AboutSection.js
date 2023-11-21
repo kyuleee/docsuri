@@ -21,9 +21,14 @@ const AboutSection = ({ AboutSectionRef, opacity }) => {
         className="AboutSection"
         onWheel={handleWheel}
         ref={AboutSectionRef}
-        style={opacity ? { opacity: 1 } : { opacity: 0 }}
       >
-        <div className="AboutSticky">
+        <article className="guiSpace">
+          <div className="gui"></div>
+        </article>
+        <div
+          className="aboutSpace"
+          style={opacity ? { opacity: 1 } : { opacity: 0 }}
+        >
           <MenuTitleText
             text={"ABOUT"}
             text2={"저희 사이트는 이런 강점이 있습니다!"}

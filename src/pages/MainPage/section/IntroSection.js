@@ -3,7 +3,7 @@ import MenuTitleText from "../../../components/text/MenuTitleText";
 import "./IntroSection.css";
 const IntroSection = () => {
   return (
-    <section className="IntroSection section1">
+    <section className="IntroSection">
       <div className="introSpace">
         <article className="phase1">
           <h1 className="TitleText">

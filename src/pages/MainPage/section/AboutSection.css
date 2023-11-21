@@ -2,7 +2,7 @@
   display: flex;
   transition: 1s;
 }
-.AboutSticky {
+.aboutSpace {
   background-color: aqua;
   position: sticky;
   overflow: hidden;
@@ -13,8 +13,24 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  transition: 1s;
 }
 .AboutSection {
   height: 400vh;
+  position: relative;
   transition: 1s;
+}
+.guiSpace {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gui {
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  border: 5px solid black;
+  border-radius: 50%;
 }

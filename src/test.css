@@ -33,60 +33,35 @@
     transform: translateX(-5%);
   }
 } */
-.cls-2 {
-  fill: red;
-  stroke: #111;
-  stroke-miterlimit: 10;
-  stroke-width: 2px;
-  animation: chs-anim 3s linear 0s forwards;
-  transform-origin: center center;
-  animation-iteration-count: infinite;
+div {
+  width: 500px;
 }
-.line {
-  fill: black;
-  fill-opacity: 0;
-  stroke-dasharray: 360;
-  animation: ch-anim 0.5s linear 0s forwards;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-.check {
+
+.cls-1 {
   fill: none;
-  fill-opacity: 0;
-  stroke: black;
+  stroke: url("#grad1");
   stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 1px;
-  stroke-dasharray: 326px;
-  stroke-dashoffset: 0;
-  animation: chss-anim 3s linear 0s forwards;
-  animation-iteration-count: infinite;
+  stroke-linejoin: bevel;
+  stroke-width: 5px;
+  stroke-dasharray: 200px;
+  stroke-dashoffset: 0px;
+  animation: ch-anim 5s linear;
   animation-direction: alternate;
+  animation-iteration-count: infinite;
+  transition: 1s;
 }
-@keyframes chss-anim {
-  0% {
-    stroke-dashoffset: 326px;
-    fill-opacity: 0;
-  }
-  100% {
-    stroke-dashoffset: 0px;
-    fill-opacity: 1;
-  }
+.baller {
+  width: 120px;
+}
+stop {
+  transition: 1s;
 }
 
 @keyframes ch-anim {
   0% {
-    fill-opacity: 0;
+    stroke-dasharray: 0px;
   }
   100% {
-    fill-opacity: 1;
-  }
-}
-@keyframes chs-anim {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
+    stroke-dasharray: 50px;
   }
 }
