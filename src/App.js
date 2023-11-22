@@ -4,7 +4,6 @@ import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import { Page as MainPage } from "./pages/MainPage/Page";
 import Login from "./pages/Login/KakaoLogin";
-import Test from "./Test";
 
 function App() {
   return (
@@ -18,9 +17,8 @@ function App() {
             </>
           }
         />
-        <Route path="/Login" element={<Login />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
-      {/* <Test /> */}
     </>
   );
 }
