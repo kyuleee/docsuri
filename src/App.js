@@ -9,10 +9,13 @@ import MyPage from "./pages/MyPage/MyPage";
 import StudyPage from "./pages/StudyPage/Studypage";
 import StudyBook from "./pages/StudyBook/StudyBook";
 
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <>
+    <Header/>
       <Routes>
         <Route path="/" element={<><MainPage /></>}/>
         <Route path="/StudyPage" element={<StudyPage/>}/>
@@ -21,6 +24,7 @@ function App() {
         <Route path="/join" element={<Join />} />
         <Route path="/mypage" element={<MyPage />} />
       </Routes>
+    <Footer/>
     </>
   );
 }
