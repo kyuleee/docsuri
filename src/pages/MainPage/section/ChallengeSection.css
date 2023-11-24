@@ -1,10 +1,52 @@
 .ChallengeSection {
   height: 100vh;
-  background-color: brown;
 }
 .ChallengeSpace {
   width: 1400px;
+  height: 100vh;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin: 0 auto;
-  background-color: yellow;
+  transition: 1s;
+}
+.more {
+  position: relative;
+  width: max-content;
+  transition: 1s;
+}
+.moreBtn {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  left: -20px;
+  transform: translate(0, -50%);
+  border-radius: 25px;
+  background: linear-gradient(135deg, #0a47fd 0%, #7b00df 100%);
+  opacity: 0.7;
+  z-index: -1;
+  transition: 1s;
+}
+.more > a {
+  font-size: 18px;
+  font-weight: 500;
+  color: #000;
+  transition: 0.5s;
+}
+.more:hover > a {
+  color: #fff;
+}
+.more:hover .arrowHead {
+  transform: translate(0);
+  stroke: #fff;
+}
+.more:hover .arrowLine {
+  stroke-dashoffset: 0px;
+  stroke: #fff;
+}
+.more:hover > .moreBtn {
+  background: linear-gradient(135deg, #0a47fd 0%, #7b00df 100%);
+  opacity: 1;
+  width: 140%;
 }

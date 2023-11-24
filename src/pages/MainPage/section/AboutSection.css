@@ -1,16 +1,14 @@
 .AboutSection {
-  height: 450vh;
+  height: 600vh;
   position: relative;
   transition: 1s;
 }
 
 .aboutSpace {
-  background-color: aqua;
   position: sticky;
-  overflow: hidden;
-  width: 1680px;
+  width: 1440px;
+  margin: 0 auto;
   height: 100vh;
-  margin-left: 252px;
   top: 0;
   display: flex;
   flex-direction: column;

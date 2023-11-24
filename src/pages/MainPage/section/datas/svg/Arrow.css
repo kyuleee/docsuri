@@ -1,0 +1,9 @@
+.arrowHead {
+  transform: translate(-60%);
+  transition: 1s;
+}
+.arrowLine {
+  stroke-dasharray: 36px;
+  stroke-dashoffset: 30px;
+  transition: 1s;
+}
