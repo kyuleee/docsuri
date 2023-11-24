@@ -1,5 +1,5 @@
 .IntroSection {
-  height: 200vh;
+  height: 230vh;
 }
 .introSpace {
   position: sticky;
@@ -7,20 +7,30 @@
   width: 100%;
   height: 100vh;
 }
-article {
-  position: absolute;
-}
-.phase1 {
-  top: 50%;
-  left: 60%;
-  transform: translate(-50%, -50%);
-}
 .phase2 {
+  position: absolute;
   top: 50%;
   left: 40%;
   transform: translate(-50%, -50%);
+  transition: 1s;
+}
+h2.secondTitleText {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
 }
 
-h1.TitleText {
+h2.TitleText {
+  width: max-content;
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
   font-size: 70px;
+  font-weight: 800;
+  transition: 0.5s;
+}
+h3.titleComent {
+  font-size: 24px;
+  margin-bottom: 30px;
 }
