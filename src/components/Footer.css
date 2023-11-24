@@ -1,18 +1,23 @@
 *{padding: 0; margin: 0; box-sizing: border-box;}
 
 .Footer{
-    display: flex;
-    width: 1920px;
+    width: 100%;
     height: 278px;
     padding: 70px 50px 100px 50px;
     flex-direction: column;
     justify-content: center;
-    flex-shrink: 0;
     background-color: #333;
+}
+.Footer>div{
+    margin: 0 auto;
+    min-width: 360px;
+    max-width: 1400px;
 }
 .footerIcon{
     width: 1400px;
     margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
 }
 .footerLogo{
     width: 1100px;
@@ -24,17 +29,35 @@
 .FLogo{
     width: 80px;
     height: 30px;
-    background: url(../asset/img/Logo.png) ;
+    background: url(../asset/img/LogoWhite.png) ;
 }
-.footerTxt{
+.iconLink{
+    margin-top: 20px;
     display: flex;
-    align-items: center;
 }
-.footerTxt>p{
-    font-size: 18px;
-    color: #fff;
-    padding-right: 15px;
+.iconLink>div{
+    margin-right: 20px;
     cursor: pointer;
+}
+.Ficon{
+    width: 33px;
+    height: 33px;
+    background: url(../asset/img/facebook.png);
+}
+.Yicon{
+    width: 33px;
+    height: 33px;
+    background: url(../asset/img/youtube.png);
+}
+.Iicon{
+    width: 33px;
+    height: 33px;
+    background: url(../asset/img/instar.png);
+}
+.Kicon{
+    width: 33px;
+    height: 33px;
+    background: url(../asset/img/kakao.png);
 }
 .adress{
     width: 1400px;
@@ -42,4 +65,20 @@
     margin-top: 20px;
     font-size: 16px;
     color: #fff;
+}
+@media (max-width:1400px){
+    .footerIcon{
+        width: 100%;
+    }
+    .footerLogo{
+        width: 100%;
+    }
+    .adress{
+        width: 100%;
+    }
+}
+@media (max-width:460px){
+    .footerIcon{
+        flex-direction: column;
+    }
 }
