@@ -37,9 +37,11 @@ const Header = () => {
                     <div>수다학</div>
                 </div>
                 <div className="login">
-                    <p>로그인</p>
-                    <p>|</p>
-                    <p>회원가입</p>
+                    <Link to='/login'>
+                        <p>로그인</p>
+                        <p>|</p>
+                        <p>회원가입</p>
+                    </Link>
                 </div>
             </div>
         </div>

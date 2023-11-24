@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import kakaologin from '../../asset/img/kakaologin.png';
+import './KakaoLogin.css';
 
 const Login = () => {
   const [user, setUser] = useState();
@@ -58,17 +60,37 @@ const Login = () => {
       {user ? (
         <div>
           <button onClick={kakaoLogout}>카카오 로그아웃</button>
-          <img src={user.profileImg} alt="" />
+          <img src={user.profileImg} alt="프로필 이미지" />
           <h2>닉네임 : {user.nickName}</h2>
         </div>
       ) : (
-        <button onClick={kakaoLogin}>
-          <img
-            src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwiperth.me%2F35%2F%3Fq%3DYToxOntzOjEyOiJrZXl3b3JkX3R5cGUiO3M6MzoiYWxsIjt9%26bmode%3Dview%26idx%3D11098399%26t%3Dboard&psig=AOvVaw2Opv5uaQt9MwfF4w9tLAwL&ust=1699338865201000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCJj73t7groIDFQAAAAAdAAAAABAD"
-            alt="카카오톡 로그인"
-          />
-          카카오 로그인
-        </button>
+        <section className='loginPage'>
+          <article className='frmLogin'>
+            <h3>로그인</h3>
+            <form method='post'>
+              <div>
+                <input type='text' placeholder='아이디' name='userId' id='userId' />
+              </div>
+              <div>
+                <input type='text' placeholder='비밀번호' name='userPwd' id='userPwd' />
+              </div>
+              <div className='keepchk'>
+                <input type='checkbox' id='keep' name='nvlong' />
+                <label for='keep' className='keeptxt'>로그인 상태 유지</label>
+              </div>
+              <button className='loginbtn'>로그인</button>
+              {/* <KakaoLogin/> */}
+              <button onClick={kakaoLogin} className="kakaologinbtn">
+                <img src={kakaologin} alt="카카오톡 로그인" />
+                카카오톡 간편 로그인
+              </button>
+            </form>
+          </article>
+        </section>
+        // <button onClick={kakaoLogin} className="kakaologinbtn">
+        //   <img src={kakaologin} alt="카카오톡 로그인"/>
+        //   카카오톡 간편 로그인
+        // </button>
       )}
     </div>
   );
