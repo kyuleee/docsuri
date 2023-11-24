@@ -6,7 +6,7 @@ import nav2 from '../../asset/img/작성아이콘.png';
 const SideBar = ()=>{
     return(
         <>
-            <nav>
+            <nav className="SideBar">
                 <ul>
                     <li>
                         <div className='icon icon1'>
