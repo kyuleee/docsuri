@@ -6,21 +6,23 @@ import SideBar from "./../SideBar/SideBar";
 export const introContext = createContext();
 
 const Page = () => {
-  // Model State //Text Opacity
-  const [positionX, setPositionX] = useState(-7);
-  const [rotationY, setRotationY] = useState(1);
-  const [rotationZ, setRotationZ] = useState(0.5);
-
   const [introOn, setIntroOn] = useState(false);
 
   const AboutSectionRef = useRef();
   const ChallengeSectionRef = useRef();
   const consoleRef = useRef();
 
-  const [scrollCount, setScrollCount] = useState(0);
-  const [aboutOn, setAboutOn] = useState(false);
+  // Logic
+  const [positionX, setPositionX] = useState(-7);
+  const [rotationY, setRotationY] = useState(1);
+  const [rotationZ, setRotationZ] = useState(0.5);
 
-  const [slide, setSlide] = useState(1000);
+  const [aboutOn, setAboutOn] = useState(false);
+  const [scrollCount, setScrollCount] = useState(0);
+  const [slide, setSlide] = useState(-700);
+
+  const [challengeOn, setChallengeOn] = useState(false);
+
   function handleWheel(e) {
     const AboutSectionTop = AboutSectionRef.current.offsetTop;
     const ChallengeSectionTop = ChallengeSectionRef.current.offsetTop;
@@ -41,23 +43,27 @@ const Page = () => {
 
       //  AboutSection
       setAboutOn(false);
-      setSlide(1000);
+      setSlide(700);
     }
     if (window.scrollY >= AboutSectionTop + 20) {
       //aboutSection Start
       setScrollCount((prev) => prev + 1);
       //About
       setAboutOn(true);
-      if (e.deltaY > 0) {
-        setSlide((prev) => prev - 120);
+      if (e.deltaY > 0 && scrollCount >= 6) {
+        setSlide((prev) => prev - 700);
+        setScrollCount(0);
       }
-      if (e.deltaY < 0) {
-        setSlide((prev) => prev + 120);
+      if (e.deltaY < 0 && scrollCount >= 6) {
+        setSlide((prev) => prev + 700);
+        setScrollCount(0);
+        setChallengeOn(false);
       }
     }
-    if (window.scrollY > ChallengeSectionTop - 1000) {
+    if (window.scrollY > ChallengeSectionTop - 500) {
       setAboutOn(false);
-      setSlide(-2760);
+      setSlide(-2800);
+      setChallengeOn(true);
     }
   }
   return (
@@ -70,9 +76,11 @@ const Page = () => {
         AboutSectionRef={AboutSectionRef}
         aboutOn={aboutOn}
         slide={slide}
-        consoleRef={consoleRef}
       />
-      <ChallengeSection ChallengeSectionRef={ChallengeSectionRef} />
+      <ChallengeSection
+        ChallengeSectionRef={ChallengeSectionRef}
+        challengeOn={challengeOn}
+      />
     </main>
   );
 };

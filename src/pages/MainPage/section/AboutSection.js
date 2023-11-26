@@ -16,16 +16,18 @@ const AboutSection = ({ AboutSectionRef, slide, aboutOn, consoleRef }) => {
             text3={"기본기를 다지는 탄탄한 개념 학습"}
             text4={null}
           />
-          <div
-            className="aboutContentWrap"
-            style={{ translate: slide + "px" }}
-            ref={consoleRef}
-          >
-            <ContentBox text={"기초"} />
-            <ContentBox text={"개념"} />
-            <ContentBox text={"사고력"} />
-            <ContentBox text={"창의력"} />
-            <ContentBox text={"응용력"} />
+          <div className="test">
+            <div
+              className="aboutContentWrap"
+              style={{ translate: slide + "px" }}
+              ref={consoleRef}
+            >
+              <ContentBox text={"기초"} />
+              <ContentBox text={"개념"} />
+              <ContentBox text={"사고력"} />
+              <ContentBox text={"창의력"} />
+              <ContentBox text={"응용력"} />
+            </div>
           </div>
         </div>
       </section>
