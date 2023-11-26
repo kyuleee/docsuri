@@ -1,20 +1,22 @@
 import TabletModel from "../../../components/tabletModel/TabletModel";
 import "./IntroSection.css";
 
-const IntroSection = ({ introOn }) => {
+const IntroSection = ({ introOn, introText }) => {
   return (
-    <section className="IntroSection">
+    <section
+      className="IntroSection"
+    >
       <div className="introSpace">
         <h2
           className="TitleText"
-          style={introOn ? { opacity: 0 } : { opacity: 1 }}
+          style={introText ? { opacity: 0 } : { opacity: 1 }}
         >
           초등학교 고학년을 위한 <br />
           온라인 문제 풀이 사이트
         </h2>
         <article
           className="phase2"
-          style={introOn ? { opacity: 1 } : { opacity: 0 }}
+          style={introText ? { opacity: 1 } : { opacity: 0 }}
         >
           <h2 className="secondTitleText">
             수학은 연계성이 <br />

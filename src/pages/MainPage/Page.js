@@ -1,81 +1,111 @@
 import "./Page.css";
 import { IntroSection, AboutSection, ChallengeSection } from "./section";
 import { createContext, useEffect, useRef, useState } from "react";
-import SideBar from "./../SideBar/SideBar";
+import { throttle } from "lodash";
 
 export const introContext = createContext();
 
 const Page = () => {
+  // TEST LOGIC
+
+  // INTRO LOGIC DATA
   const [introOn, setIntroOn] = useState(false);
+  const [introText, setintroText] = useState(false);
 
-  const AboutSectionRef = useRef();
-  const ChallengeSectionRef = useRef();
-  const consoleRef = useRef();
-
-  // Logic
-  const [positionX, setPositionX] = useState(-7);
+  const [positionX, setPositionX] = useState(-6);
   const [rotationY, setRotationY] = useState(1);
   const [rotationZ, setRotationZ] = useState(0.5);
 
+  // ABOUT LOGIC DATA
+  const AboutSectionRef = useRef();
+  const slideRef = useRef();
+
   const [aboutOn, setAboutOn] = useState(false);
-  const [scrollCount, setScrollCount] = useState(0);
-  const [slide, setSlide] = useState(-700);
+  const [slide, setSlide] = useState(700);
+  const [slideCount, setSlideCount] = useState(0);
+
+  // CHALLENGE LOGIC DATA
+  const ChallengeSectionRef = useRef();
 
   const [challengeOn, setChallengeOn] = useState(false);
 
-  function handleWheel(e) {
+  // SCROLL LOGIC
+  const scrollRef = useRef(0);
+  const throttleScroll = throttle(eventScroll, 400, {
+    leading: true,
+    trailing: false,
+  });
+
+  function eventScroll() {
     const AboutSectionTop = AboutSectionRef.current.offsetTop;
     const ChallengeSectionTop = ChallengeSectionRef.current.offsetTop;
-    if (window.scrollY >= 0 && window.scrollY < AboutSectionTop) {
-      // IntroSection
-      if (e.deltaY > 0) {
-        setPositionX(6);
-        setRotationY(5.5);
-        setRotationZ(6);
-        setIntroOn(true);
-      }
-      if (e.deltaY < 0 && window.scrollY <= AboutSectionTop - 1000) {
+    const screenHeight = window.innerHeight;
+    const scrollNow = window.scrollY;
+    const slideWidth = slideRef.current.clientWidth / 10;
+    if (scrollNow < AboutSectionTop - screenHeight) {
+      if (scrollNow < scrollRef.current) {
         setPositionX(-6);
         setRotationY(1);
         setRotationZ(0.5);
-        setIntroOn(false);
+        setintroText(false);
+      }
+      if (scrollNow > scrollRef.current) {
+        setPositionX(7);
+        setRotationY(5.5);
+        setRotationZ(6);
+        setintroText(true);
+      }
+      setIntroOn(true);
+      setAboutOn(false);
+      setSlide(0);
+    }
+    if (scrollNow >= AboutSectionTop) {
+      setIntroOn(false);
+      setAboutOn(true);
+
+      if (scrollNow > scrollRef.current) {
+        console.log(scrollNow);
+        console.log(scrollRef.current);
+        console.log(slideWidth);
+
+        setSlide((prev) => prev - slideWidth);
       }
 
-      //  AboutSection
-      setAboutOn(false);
-      setSlide(700);
-    }
-    if (window.scrollY >= AboutSectionTop + 20) {
-      //aboutSection Start
-      setScrollCount((prev) => prev + 1);
-      //About
-      setAboutOn(true);
-      if (e.deltaY > 0 && scrollCount >= 6) {
-        setSlide((prev) => prev - 700);
-        setScrollCount(0);
-      }
-      if (e.deltaY < 0 && scrollCount >= 6) {
-        setSlide((prev) => prev + 700);
-        setScrollCount(0);
-        setChallengeOn(false);
+      if (scrollNow < scrollRef.current) {
+        setSlide((prev) => prev + slideWidth);
       }
     }
-    if (window.scrollY > ChallengeSectionTop - 500) {
+    if (
+      scrollNow > ChallengeSectionTop - screenHeight &&
+      scrollNow < ChallengeSectionTop
+    ) {
       setAboutOn(false);
-      setSlide(-2800);
       setChallengeOn(true);
     }
+    scrollRef.current = scrollNow;
   }
+
+  useEffect(() => {
+    const handleScroll = () => {
+      throttleScroll();
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      throttleScroll.cancel();
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
-    <main className="Home" onWheel={(e) => handleWheel(e)}>
-      <SideBar />
+    <main className="Home">
       <introContext.Provider value={{ positionX, rotationY, rotationZ }}>
-        <IntroSection introOn={introOn} />
+        <IntroSection introOn={introOn} introText={introText} />
       </introContext.Provider>
       <AboutSection
         AboutSectionRef={AboutSectionRef}
         aboutOn={aboutOn}
         slide={slide}
+        slideRef={slideRef}
       />
       <ChallengeSection
         ChallengeSectionRef={ChallengeSectionRef}
@@ -84,5 +114,4 @@ const Page = () => {
     </main>
   );
 };
-
 export { Page };
