@@ -1,4 +1,4 @@
-nav {
+nav.SideBar {
   position: fixed;
   left: 30px;
   top: 50%;
@@ -8,7 +8,7 @@ nav {
 .SideBar > ul>li:last-child{
   margin-bottom: 0px;
 }
-li {
+.SideBar li {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
@@ -18,7 +18,7 @@ li {
   cursor: pointer;
   overflow: hidden;
 }
-p {
+.SideBar p {
   color: #fff;
 }
 .icon {
@@ -69,7 +69,7 @@ p {
   position: absolute;
   left: 14px;
 }
-li>p{
+.SideBar li>p{
   position: absolute;
   left: 50px;
 }
