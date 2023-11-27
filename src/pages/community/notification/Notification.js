@@ -5,9 +5,12 @@ import FAQJson from './FAQData.json';
 
 const Notification = () => {
     const [tap, setTap] = useState('NTF');
+    const [modalTap, setModalTap] = useState(false);
+    const [selectedItem, setSelectedItem] = useState(null);
 
-    function comunityChange(tapname) {
-        setTap(tapname);
+    function modalWindowTap(item) {
+        setSelectedItem(item);
+        setModalTap(true)
     }
 
     return (
@@ -18,10 +21,10 @@ const Notification = () => {
             </div>
             <div className="community_body">
                 <ul className={`community_tap ${tap === 'NTF' ? 'NTFtapVar' : 'FAQtapVar'}`}>
-                    <li onClick={() => comunityChange('NTF')}>
+                    <li onClick={() => setTap('NTF')}>
                         <i />공지사항
                     </li>
-                    <li onClick={() => comunityChange('FAQ')}>
+                    <li onClick={() => setTap('FAQ')}>
                         <i />자주하는 질문
                     </li>
                     <div></div>
@@ -29,29 +32,31 @@ const Notification = () => {
                 <div className='community_item'>
                     {tap === 'NTF' ? (
                         NftJson.map(item => (
-                            <div key={item.id}><h2>Q.</h2><p>{item.title}</p></div>
+                            <div key={item.id} onClick={() => modalWindowTap(item)}><h2>Q.</h2><p>{item.title}</p></div>
                         ))
                     ) : (
                         FAQJson.map(item => (
-                            <div key={item.id}><h2>Q.</h2><p>{item.title}</p></div>
+                            <div key={item.id} onClick={() => modalWindowTap(item)}><h2>Q.</h2><p>{item.title}</p></div>
                         ))
                     )}
                 </div>
             </div>
-            <div className='comDetail'>
-                <div>
-                    <div>
-                        <ul>
-                            <li>Q.</li>
-                            <li></li>
-                        </ul>
-                        <ul>
-                            <li>A.</li>
-                            <li></li>
-                        </ul>
+            {modalTap &&
+                <div className='comDetail'>
+                    <div onClick={() => setModalTap()}>
+                        <div>
+                            <ul>
+                                <li>Q.</li>
+                                <li>{selectedItem.title}</li>
+                            </ul>
+                            <ul className='comDetail_A'>
+                                <li>A.</li>
+                                <li><div dangerouslySetInnerHTML={{ __html: selectedItem.detail.replace(/\n/g, '<br>') }} /></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
+            }
         </div >
     );
 }
