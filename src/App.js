@@ -16,7 +16,7 @@ import Test from "./test/MyComponent";
 function App() {
   return (
     <>
-    {/* <Header/>
+    <Header/>
       <Routes>
         <Route path="/" element={<MainPage />}/>
         <Route path="/StudyPage" element={<StudyPage/>}/>
@@ -25,8 +25,8 @@ function App() {
         <Route path="/join" element={<Join />} />
         <Route path="/mypage" element={<MyPage />} />
       </Routes>
-    <Footer/> */}
-    <Test/>
+    <Footer/>
+    {/* <Test/> */}
     </>
   );
 }

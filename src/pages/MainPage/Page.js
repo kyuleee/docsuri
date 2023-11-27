@@ -31,9 +31,9 @@ const Page = () => {
 
   // SCROLL LOGIC
   const scrollRef = useRef(0);
-  const throttleScroll = throttle(eventScroll, 400, {
-    leading: true,
-    trailing: false,
+  const throttleScroll = throttle(eventScroll, 200, {
+    leading: false,
+    trailing: true,
   });
 
   function eventScroll() {
@@ -42,7 +42,7 @@ const Page = () => {
     const screenHeight = window.innerHeight;
     const scrollNow = window.scrollY;
     const slideWidth = slideRef.current.clientWidth / 10;
-    if (scrollNow < AboutSectionTop - screenHeight) {
+    if (scrollNow < AboutSectionTop - screenHeight/2) {
       if (scrollNow < scrollRef.current) {
         setPositionX(-6);
         setRotationY(1);
@@ -57,17 +57,13 @@ const Page = () => {
       }
       setIntroOn(true);
       setAboutOn(false);
-      setSlide(0);
+      setSlide(700);
     }
     if (scrollNow >= AboutSectionTop) {
       setIntroOn(false);
       setAboutOn(true);
 
       if (scrollNow > scrollRef.current) {
-        console.log(scrollNow);
-        console.log(scrollRef.current);
-        console.log(slideWidth);
-
         setSlide((prev) => prev - slideWidth);
       }
 
@@ -95,7 +91,7 @@ const Page = () => {
       throttleScroll.cancel();
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [slideCount]);
   return (
     <main className="Home">
       <introContext.Provider value={{ positionX, rotationY, rotationZ }}>

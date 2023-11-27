@@ -1,7 +1,7 @@
 .AboutSection {
   height: 400vh;
   position: relative;
-  transition: 1s;
+  transition: 0.5s;
 }
 
 .aboutSpace {

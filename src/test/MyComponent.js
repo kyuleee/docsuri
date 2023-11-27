@@ -12,7 +12,7 @@ const Test = () => {
     const i = sessionStorage.getItem("id");
     const i2 = sessionStorage.getItem("password");
     console.log(i);
-    console.log(i2);0
+    console.log(i2);
   }
   return (
     <div>
