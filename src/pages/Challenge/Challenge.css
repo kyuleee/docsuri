@@ -1,0 +1,98 @@
+*{
+    padding: 0;
+    box-sizing: border-box;
+}
+.w1400{
+    margin: 0 auto;
+    width: 1400px;
+}
+.challenge{
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    padding: 220px 100px 150px 100px;
+}
+.challengeTitle{
+    color: #000;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.challengeBox{
+    display: flex;
+    max-width: 1400px;
+    padding-top: 100px;
+    justify-content: center;
+    align-items: center;
+    gap: 50px 75px;
+    flex-wrap: wrap;
+}
+.challengeBox>div{
+    width: 220px;
+    height: 280px;
+    position: relative;
+    top: 0;
+    transition: top 0.2s ease;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.30);
+    border-radius: 10px;
+}
+.challengeBox>div:hover{
+    top: -20px;
+}
+.challenge1>div{
+    width: 100%;
+    height: 100%;
+    background: url(../../asset/img/challenge1.png) no-repeat;
+    background-size: cover;
+}
+.challenge2>div{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background: url(../../asset/img/challenge2.png) no-repeat;
+    background-size: cover;
+}
+.challenge3>div{
+    width: 100%;
+    height: 100%;
+    background: url(../../asset/img/challenge3.png) no-repeat;
+    background-size: cover;
+}
+.cha_opc{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(34, 34, 34, 0.80);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: bold;
+}
+.cha_opc:hover{
+    background: rgba(0, 0, 0, 0.80);
+}
+.challenge4>div:nth-child(2){
+    width: 100%;
+    height: 100%;
+    background: url(../../asset/img/challenge4.png) no-repeat;
+    background-size: cover;
+}
+.challenge5>div:last-child{
+    width: 100%;
+    height: 100%;
+    background: url(../../asset/img/challenge5.png) no-repeat;
+    background-size: cover;
+}
+
+/* 모달 */
+.margin{
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 20px;
+    user-select: none;
+}
+
