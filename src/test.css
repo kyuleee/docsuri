@@ -42,13 +42,13 @@ div {
   stroke: url("#grad1");
   stroke-linecap: round;
   stroke-linejoin: bevel;
-  stroke-width: 5px;
-  stroke-dasharray: 200px;
+  stroke-width: 1px;
+  stroke-dasharray: 500px;
   stroke-dashoffset: 0px;
   animation: ch-anim 5s linear;
   animation-direction: alternate;
   animation-iteration-count: infinite;
-  transition: 1s;
+  transition: 15s;
 }
 .baller {
   width: 120px;
@@ -59,9 +59,9 @@ stop {
 
 @keyframes ch-anim {
   0% {
-    stroke-dasharray: 0px;
+    stroke-dashoffset: 500px;
   }
   100% {
-    stroke-dasharray: 50px;
+    stroke-dashoffset: 0px;
   }
 }

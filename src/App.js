@@ -11,13 +11,12 @@ import StudyBook from "./pages/StudyBook/StudyBook";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Framers from "./test/MyComponent";
-import ScrollDirectionDetector from "./test/MyComponent";
+import Test from "./test/MyComponent";
 
 function App() {
   return (
     <>
-    <Header/>
+    {/* <Header/>
       <Routes>
         <Route path="/" element={<MainPage />}/>
         <Route path="/StudyPage" element={<StudyPage/>}/>
@@ -26,8 +25,8 @@ function App() {
         <Route path="/join" element={<Join />} />
         <Route path="/mypage" element={<MyPage />} />
       </Routes>
-    <Footer/>
-    {/* <ScrollDirectionDetector/> */}
+    <Footer/> */}
+    <Test/>
     </>
   );
 }

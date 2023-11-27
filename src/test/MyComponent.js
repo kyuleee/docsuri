@@ -1,46 +1,29 @@
-import React, { useState, useEffect, useRef } from "react";
-import { throttle } from "lodash";
+import { useRef, useState } from "react";
 
-const ScrollDirectionDetector = () => {
-  const [scrollDirection, setScrollDirection] = useState("none");
-  const lastScrollTop = useRef(0); // useRef를 사용하여 마지막 스크롤 위치를 추적
-
-  const updateScrollDirection = () => {
-    const currentScrollTop =
-      window.pageYOffset || document.documentElement.scrollTop;
-    if (currentScrollTop > lastScrollTop.current) {
-      setScrollDirection("down");
-      console.log("down");
-    } else if (currentScrollTop < lastScrollTop.current) {
-      setScrollDirection("up");
-      console.log("up");
-    }
-    lastScrollTop.current = currentScrollTop;
-  };
-
-  const throttledUpdateScrollDirection = throttle(updateScrollDirection, 300, {
-    leading: true,
-    trailing: false,
-  });
-
-
-  useEffect(() => {
-    const handleScroll = () => {
-      throttledUpdateScrollDirection();
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      throttledUpdateScrollDirection.cancel();
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
+const Test = () => {
+  const [test, setTest] = useState();
+  const idRef = useRef();
+  const passwordRef = useRef();
+  function handleClick() {
+    sessionStorage.setItem("id", idRef.current.value);
+    sessionStorage.setItem("password", passwordRef.current.value);
+  }
+  function handleClick2() {
+    const i = sessionStorage.getItem("id");
+    const i2 = sessionStorage.getItem("password");
+    console.log(i);
+    console.log(i2);0
+  }
   return (
     <div>
-      <p style={{ position: "fixed" }}>Scroll direction: {scrollDirection}</p>
+      <form>
+        <input ref={idRef} type="text" placeholder="아이디" />
+        <input ref={passwordRef} type="password" placeholder="비밀번호" />
+        <button onClick={handleClick}>Login</button>
+      </form>
+      <button onClick={handleClick2}>123123</button>
     </div>
   );
 };
 
-export default ScrollDirectionDetector;
+export default Test;
