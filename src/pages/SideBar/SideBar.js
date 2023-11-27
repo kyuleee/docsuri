@@ -14,16 +14,12 @@ const SideBar = ()=>{
                         </div>
                         <p>교과 학습</p>
                     </li>
-                    <li>
+                    <Link to='/Challenge'> <li>
                         <div className='icon icon2'>
                             <img src={nav2}/>
                         </div>
                         <p>챌린지</p>
-                    </li>
-                    {/* <li>
-                        <div className='icon icon3'><p className="my">MY</p></div>
-                        <p>마이페이지</p>
-                    </li> */}
+                    </li></Link>
                     <li>
                         <div className='icon icon4'><p className="faq">FAQ</p></div>
                         <p>자주하는 질문</p>

@@ -31,7 +31,7 @@ const Header = () => {
                 </div>
                 <div className="subLink">
                     <div><Link to='/StudyPage'>교과학습</Link></div>
-                    <div>챌린지</div>
+                    <div><Link to='/Challenge'>챌린지</Link></div>
                     <div>마이페이지</div>
                     <div>게시판</div>
                     <div>수다학</div>

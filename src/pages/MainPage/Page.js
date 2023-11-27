@@ -97,7 +97,12 @@ const Page = () => {
     };
   }, []);
   return (
+<<<<<<< HEAD
     <main className="Home">
+=======
+    <main className="Home" onWheel={(e) => handleWheel(e)}>
+      {/* <SideBar /> */}
+>>>>>>> mk
       <introContext.Provider value={{ positionX, rotationY, rotationZ }}>
         <IntroSection introOn={introOn} introText={introText} />
       </introContext.Provider>
