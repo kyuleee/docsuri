@@ -1,5 +1,5 @@
 .AboutSection {
-  height: 600vh;
+  height: 400vh;
   position: relative;
   transition: 1s;
 }
@@ -16,6 +16,13 @@
   transition: 0.5s;
 }
 .aboutContentWrap {
+  width: max-content;
   display: flex;
   transition: 1s;
+}
+.bars{
+  height: 30px;
+  background-color: black;
+  position: absolute;
+  top: 50%;
 }

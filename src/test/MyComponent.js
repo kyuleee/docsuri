@@ -1,26 +1,46 @@
-import React, { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { fetchData } from "./asyncActions";
+import React, { useState, useEffect, useRef } from "react";
+import { throttle } from "lodash";
 
-const MyComponent = () => {
-  const data = useSelector((state) => state.data);
-  const loading = useSelector((state) => state.loading);
-  const error = useSelector((state) => state.error);
-  const dispatch = useDispatch();
+const ScrollDirectionDetector = () => {
+  const [scrollDirection, setScrollDirection] = useState("none");
+  const lastScrollTop = useRef(0); // useRef를 사용하여 마지막 스크롤 위치를 추적
+
+  const updateScrollDirection = () => {
+    const currentScrollTop =
+      window.pageYOffset || document.documentElement.scrollTop;
+    if (currentScrollTop > lastScrollTop.current) {
+      setScrollDirection("down");
+      console.log("down");
+    } else if (currentScrollTop < lastScrollTop.current) {
+      setScrollDirection("up");
+      console.log("up");
+    }
+    lastScrollTop.current = currentScrollTop;
+  };
+
+  const throttledUpdateScrollDirection = throttle(updateScrollDirection, 300, {
+    leading: true,
+    trailing: false,
+  });
+
 
   useEffect(() => {
-    dispatch(fetchData());
-  }, [dispatch]);
+    const handleScroll = () => {
+      throttledUpdateScrollDirection();
+    };
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error: {error}</p>;
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      throttledUpdateScrollDirection.cancel();
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div>
-      {data.map((item) => (
-        <p key={item.id}>{item.name}</p>
-      ))}
+      <p style={{ position: "fixed" }}>Scroll direction: {scrollDirection}</p>
     </div>
   );
 };
 
-export default MyComponent;
+export default ScrollDirectionDetector;
