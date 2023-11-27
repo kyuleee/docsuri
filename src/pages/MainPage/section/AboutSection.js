@@ -1,7 +1,6 @@
 import MenuTitleText from "../../../components/text/MenuTitleText";
 import ContentBox from "../../../components/contentBox/ContentBox";
 import "./AboutSection.css";
-import { scroll, motion, useScroll } from "framer-motion";
 import { useRef, useState } from "react";
 
 const AboutSection = ({ AboutSectionRef, aboutOn, slideRef, slide }) => {
