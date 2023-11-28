@@ -1,7 +1,14 @@
+import users from "../../datas/userData.json"
 const MyPage = () => {
+    const userData = {...sessionStorage};
+    const dataview = ()=>{
+        console.log(sessionStorage)
+        console.log(userData)
+    }
+
     return ( 
         <>
-            1234
+            <button onClick={dataview}>item</button>
         </>
     );
 }

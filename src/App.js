@@ -16,17 +16,16 @@ import Test from "./test/MyComponent";
 function App() {
   return (
     <>
-    {/* <Header/> */}
+      {/* <Header/> */}
       <Routes>
-        <Route path="/" element={<MainPage />}/>
-        <Route path="/StudyPage" element={<StudyPage/>}/>
-        <Route path="/StudyBook" element={<StudyBook/>}/>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/StudyPage" element={<StudyPage />} />
+        <Route path="/StudyBook" element={<StudyBook />} />
         <Route path="/login" element={<Login />} />
         <Route path="/join" element={<Join />} />
         <Route path="/mypage" element={<MyPage />} />
-
+        <Route path="/test" element={<Test />} />
       </Routes>
-    <Test/>
     </>
   );
 }
