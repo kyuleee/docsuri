@@ -1,7 +1,6 @@
 .AboutSection {
-  height: 400vh;
+  height: 450vh;
   position: relative;
-  transition: 0.5s;
 }
 
 .aboutSpace {
@@ -18,7 +17,7 @@
 .aboutContentWrap {
   width: max-content;
   display: flex;
-  transition: 1s;
+  transition: 0.7s;
 }
 .bars{
   height: 30px;

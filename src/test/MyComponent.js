@@ -1,27 +1,59 @@
-import { useRef, useState } from "react";
-
+import { debounce } from "lodash";
+import { useMemo, useRef, useState } from "react";
+import users from "../datas/userData.json";
+import { useNavigate } from "react-router-dom";
 const Test = () => {
-  const [test, setTest] = useState();
-  const idRef = useRef();
-  const passwordRef = useRef();
-  function handleClick() {
-    sessionStorage.setItem("id", idRef.current.value);
-    sessionStorage.setItem("password", passwordRef.current.value);
+  //LOGIN LOGIC
+  const [readId, setReadId] = useState(null);
+  const [readPassword, setReadPassWord] = useState(null);
+  const navigator = useNavigate();
+  const debounceChange = useMemo((e) =>
+    debounce((e) => {
+      const userData = e.target;
+      if (userData.id === "ID") {
+        sessionStorage.setItem("ID", userData.value);
+      }
+      if (userData.id === "PASSWORD") {
+        sessionStorage.setItem("PASSWORD", userData.value);
+      }
+    }, 200)
+  );
+
+  function searchUser() {
+    const INPUT_ID = sessionStorage.getItem("ID");
+    const INPUT_PASSWORD = sessionStorage.getItem("PASSWORD");
+    const ID = users.find(
+      (user) => user.id === INPUT_ID && user.password === INPUT_PASSWORD
+    );
+    if (ID) {
+      sessionStorage.setItem("name", ID.name);
+      sessionStorage.setItem("grade", ID.grade);
+      sessionStorage.setItem("level", ID.level);
+      sessionStorage.setItem("school", ID.school);
+      sessionStorage.setItem("badge", ID.badge);
+      navigator('/mypage')
+    } else {
+      sessionStorage.clear();
+    }
   }
-  function handleClick2() {
-    const i = sessionStorage.getItem("id");
-    const i2 = sessionStorage.getItem("password");
-    console.log(i);
-    console.log(i2);
-  }
+
   return (
     <div>
       <form>
-        <input ref={idRef} type="text" placeholder="아이디" />
-        <input ref={passwordRef} type="password" placeholder="비밀번호" />
-        <button onClick={handleClick}>Login</button>
+        <input
+          id="ID"
+          type="text"
+          placeholder="아이디"
+          onChange={debounceChange}
+        />
+        <input
+          id="PASSWORD"
+          type="password"
+          placeholder="비밀번호"
+          onChange={debounceChange}
+        />
       </form>
-      <button onClick={handleClick2}>123123</button>
+      <button onClick={searchUser}>로그인</button>
     </div>
   );
 };
