@@ -1,5 +1,7 @@
 *{
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 a{
   text-decoration: none;
@@ -10,5 +12,14 @@ body {
 button{
   background: none;
   border: none;
+}
+input{
+  border: none;
+  outline: none;
+  background: none;
+}
+.w1400{
+  margin: 0 auto;
+  width: 1400px;
 }
 

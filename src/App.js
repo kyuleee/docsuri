@@ -3,8 +3,7 @@ import "./style/reset.css";
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import { Page as MainPage } from "./pages/MainPage/Page";
-import Login from './pages/Login/LoginPage';
-import KakaoLogin from './pages/Login/KakaoLogin'
+import LoginPage from "./pages/Login/LoginPage";
 import Join from "./pages/Login/Join";
 import MyPage from "./pages/MyPage/MyPage";
 import StudyPage from "./pages/StudyPage/Studypage";
@@ -26,9 +25,7 @@ function App() {
         <Route path="/" element={<MainPage />}/>
         <Route path="/StudyPage" element={<StudyPage/>}/>
         <Route path="/StudyBook" element={<StudyBook/>}/>
-        {/* <Route path="/login" element={<Login />} /> */}
-        {/* <Route path="/login/kakao" element={<KakaoLogin />} /> */}
-        <Route path="/login" element={<KakaoLogin />} />
+        <Route path="/login" element={<LoginPage/>}/>
         <Route path="/Challenge" element={<Challenge />} />
         <Route path="/join" element={<Join />} />
         <Route path="/mypage" element={<MyPage />} />
