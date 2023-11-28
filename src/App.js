@@ -11,9 +11,11 @@ import StudyPage from "./pages/StudyPage/Studypage";
 import StudyBook from "./pages/StudyBook/StudyBook";
 import Notification from "./pages/community/notification/Notification";
 import Challenge from "./pages/Challenge/Challenge";
+
+
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import SideBar from "./pages/SideBar/SideBar";
+import SideBar from "./components/SideBar/SideBar";
 
 function App() {
   return (
