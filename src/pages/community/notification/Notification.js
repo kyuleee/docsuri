@@ -32,11 +32,17 @@ const Notification = () => {
                 <div className='community_item'>
                     {tap === 'NTF' ? (
                         NftJson.map(item => (
-                            <div key={item.id} onClick={() => modalWindowTap(item)}><h2>Q.</h2><p>{item.title}</p></div>
+                            <div key={item.id} onClick={() => modalWindowTap(item)}>
+                                <div><h2>Q.</h2><p>{item.title}</p></div>
+                                <div dangerouslySetInnerHTML={{ __html: item.tag }} />
+                            </div>
                         ))
                     ) : (
                         FAQJson.map(item => (
-                            <div key={item.id} onClick={() => modalWindowTap(item)}><h2>Q.</h2><p>{item.title}</p></div>
+                            <div key={item.id} onClick={() => modalWindowTap(item)}>
+                                <div><h2>Q.</h2><p>{item.title}</p></div>
+                                <div dangerouslySetInnerHTML={{ __html: item.tag }} />
+                            </div>
                         ))
                     )}
                 </div>
