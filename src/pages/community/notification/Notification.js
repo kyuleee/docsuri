@@ -15,7 +15,7 @@ const Notification = () => {
 
     return (
         <div className="Notification">
-            <div className={`community_top ${tap === 'NTF' ? 'Com_top_animate1' : 'Com_top_animate2'}`}>
+            <div className="community_top">
                 <h1>{tap === 'NTF' ? '독:수리 공지사항' : 'FAQ - 자주하는 질문'}</h1>
                 <p>{tap === 'NTF' ? '최신 소식을 가장 빠르게 접해보세요.' : '궁금한 점은 쉽고 빠르게 확인하세요.'}</p>
             </div>
@@ -27,21 +27,22 @@ const Notification = () => {
                     <li onClick={() => setTap('FAQ')}>
                         <i />자주하는 질문
                     </li>
-                    <div></div>
+                    <div className='comTapPoint'></div>
                 </ul>
                 <div className='community_item'>
                     {tap === 'NTF' ? (
                         NftJson.map(item => (
                             <div key={item.id} onClick={() => modalWindowTap(item)}>
-                                <div><h2>Q.</h2><p>{item.title}</p></div>
-                                <div dangerouslySetInnerHTML={{ __html: item.tag }} />
+                                <div className='com_Qust'><h3>Q.</h3><p>{item.title}</p></div>
+                                <div className='comTTAAGG' dangerouslySetInnerHTML={{ __html: item.tag }} />
+                                {/* <div className='Com_Answer' dangerouslySetInnerHTML={{ __html: item.detail }} /> */}
                             </div>
                         ))
                     ) : (
                         FAQJson.map(item => (
                             <div key={item.id} onClick={() => modalWindowTap(item)}>
-                                <div><h2>Q.</h2><p>{item.title}</p></div>
-                                <div dangerouslySetInnerHTML={{ __html: item.tag }} />
+                                <div className='com_Qust'><h3>Q.</h3><p>{item.title}</p></div>
+                                <div className='comTTAAGG' dangerouslySetInnerHTML={{ __html: item.tag }} />
                             </div>
                         ))
                     )}
@@ -50,8 +51,8 @@ const Notification = () => {
             {modalTap &&
                 <div className='comDetail'>
                     <div onClick={() => setModalTap()}>
-                        <div>
-                            <ul>
+                        <div className='comDetailPop'>
+                            <ul className='comDetailTop'>
                                 <li>Q.</li>
                                 <li>{selectedItem.title}</li>
                             </ul>

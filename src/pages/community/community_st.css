@@ -1,3 +1,7 @@
+.Notification {
+    padding-top: 70px;
+}
+
 .community_top {
     display: flex;
     height: 250px;
@@ -8,18 +12,10 @@
     background: linear-gradient(90deg, #00DE63 0%, #1EC8EA 100%);
 }
 
-.community_top>h1,
-.community_top>p {
+.community_top>* {
     align-self: stretch;
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-
     color: #FFF;
     text-align: center;
-    text-overflow: ellipsis;
-    line-height: normal;
     user-select: none;
 }
 
@@ -37,8 +33,7 @@
     display: flex;
     max-width: 1920px;
     min-height: 680px;
-    padding: 100px;
-    margin: 0 auto;
+    padding: 50px 100px 100px 100px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -54,15 +49,14 @@
 }
 
 .community_tap>li {
+    font-weight: bold;
     display: flex;
     padding: 5px 15px;
-    justify-content: center;
     align-items: center;
     gap: 10px;
     user-select: none;
     cursor: pointer;
     transition: .4s;
-    font-weight: bold;
 }
 
 .community_tap>li>i {
@@ -72,51 +66,52 @@
     background-color: #fff;
 }
 
-.NTFtapVar>li:nth-child(1) {
-    color: #FFF;
-}
-
+.NTFtapVar>li:nth-child(1),
 .FAQtapVar>li:nth-child(2) {
     color: #FFF;
 }
 
-.community_tap>div {
+.comTapPoint {
     height: 40px;
     border-radius: 20px;
-    transition: .5s ease-in-out;
+    transition: .5s;
     background: linear-gradient(90deg, #00DE63 0%, #1EC8EA 100%);
     position: absolute;
     top: -3px;
     z-index: -1;
 }
 
-.NTFtapVar>div {
+.NTFtapVar>.comTapPoint {
     width: 109px;
     left: 0;
 }
 
-.FAQtapVar>div {
+.FAQtapVar>.comTapPoint {
     width: 144px;
     left: 129px;
 }
 
 .community_item {
     display: flex;
-    max-width: 1400px;
+    width: 100%;
+    max-width: 1452px;
     margin: 0 auto;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    gap: 50px 66px;
-    align-self: stretch;
+    justify-content: space-between;
+    align-content: space-between;
     flex-wrap: wrap;
+}
+
+@media (max-width: 1272px) {
+    .community_item {
+        justify-content: center;
+    }
 }
 
 .community_item>div {
     width: 300px;
-    height: 150px;
+    min-height: 150px;
     padding: 20px;
-    gap: 10px;
+    margin: 0 26px 50px 26px;
     border-radius: 10px;
     background: #FFF;
 
@@ -129,11 +124,60 @@
     cursor: pointer;
 }
 
-.community_item>div>div:first-child {
-    display: flex;
+@media (max-width: 920px) {
+    .community_item {
+        justify-content: space-between;
+    }
+
+    .community_item>div {
+        margin: 0 0px 5.4347826vw 0px;
+    }
 }
 
-.community_item>div>div:last-child>div {
+@media (max-width: 860px) {
+    .community_top {
+        padding: 20px 7vw;
+        ;
+    }
+
+    .community_top>h1 {
+        font-size: 6.9767vw;
+    }
+
+    .community_top>p {
+        font-size: 2.790697674vw;
+    }
+
+    .community_body {
+        padding: 50px 50px 100px 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .community_body {
+        padding: 50px 30px 100px 30px;
+    }
+}
+
+@media (max-width: 750px) {
+    .community_item>div {
+        width: 40vw;
+    }
+}
+
+@media (max-width: 450px) {
+    .community_item>div {
+        width: 100%;
+    }
+}
+
+.com_Qust {
+    display: flex;
+    font-family: Noto Sans KR;
+    font-weight: 500;
+}
+
+.comTTAAGG>div {
     width: max-content;
     font-weight: normal;
     font-size: 13px;
@@ -143,27 +187,25 @@
     border-radius: 4px;
 }
 
-.community_item>div>div:last-child>.community_tag1 {
+.comTTAAGG>.community_tag1 {
     background-color: #5465FF;
 }
 
-.community_item>div>div>* {
-    color: #000;
-    font-family: Noto Sans KR;
-    font-weight: 500;
-}
-
-.community_item>div>div>h2 {
+.com_Qust>h3 {
     font-size: 32px;
 }
 
-.community_item>div>div>p {
+.com_Qust>p {
     padding: 13px 0 0 10px;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
     -webkit-line-clamp: 2;
     font-size: 18px;
+}
+
+.Com_Answer>* {
+    display: block;
 }
 
 
@@ -183,7 +225,7 @@
     background-color: rgba(0, 0, 0, 0.30);
 }
 
-.comDetail>div>div {
+.comDetailPop {
     display: flex;
     max-width: 800px;
     min-height: 300px;
@@ -197,32 +239,32 @@
     background: #FFF;
 }
 
-.comDetail>div>div>ul {
+.comDetailPop>ul {
     display: flex;
     align-items: flex-start;
     gap: 10px;
     align-self: stretch;
 }
 
-.comDetail>div>div>ul>li:nth-child(1) {
+.comDetailTop,
+.comDetail_A>li:nth-child(1) {
     color: #000;
     font-family: Noto Sans KR;
     font-size: 24px;
     font-weight: 500;
 }
 
-.comDetail>div>div>ul>li:nth-child(2) {
+.comDetailPop>ul>li:nth-child(2) {
     width: 100%;
     color: #000;
 }
 
-.comDetail>div>div>ul:nth-child(1)>li:nth-child(2) {
-    -webkit-box-orient: vertical;
+.comDetailTop>li:nth-child(2) {
     font-size: 24px;
     font-weight: 500;
 }
 
-.comDetail>div>div>ul:nth-child(2)>li:nth-child(2) {
+.comDetail_A>li:nth-child(2) {
     width: 100%;
     display: flex;
     padding: 15px 20px 30px 20px;
@@ -232,20 +274,24 @@
     font-weight: 500;
 }
 
-.comDetail_A h2 {
+.comDetail_A h2,
+.community_item h2 {
     font-size: 18px;
     padding: 0 0 5px 0;
 }
 
 .comDetail_A h5,
-.comDetail_A h6 {
+.comDetail_A h6,
+.community_item h5,
+.community_item h6 {
     font-size: 16px;
     font-weight: normal;
     padding-left: 10px;
     padding: 0 0 20px 10px;
 }
 
-.comDetail_A p {
+.comDetail_A p,
+.community_item>div>.Com_Answer>p {
     font-size: 16px;
     font-weight: normal;
     padding: 0 0 20px 0;
@@ -273,6 +319,11 @@
     padding: 0 0 20px 0;
 }
 
-.Notification {
-    padding-top: 70px;
+
+@media (max-width: 750px) {}
+
+@media (max-width: 450px) {
+    .community_item>div {
+        width: 100%;
+    }
 }
