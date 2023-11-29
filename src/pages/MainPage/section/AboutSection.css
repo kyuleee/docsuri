@@ -1,12 +1,11 @@
 .AboutSection {
-  height: 400vh;
+  height: 550vh;
   position: relative;
-  transition: 1s;
 }
 
 .aboutSpace {
   position: sticky;
-  width: 1440px;
+  width: 1400px;
   margin: 0 auto;
   height: 100vh;
   top: 0;
@@ -18,7 +17,7 @@
 .aboutContentWrap {
   width: max-content;
   display: flex;
-  transition: 1s;
+  transition: 0.7s;
 }
 .bars{
   height: 30px;

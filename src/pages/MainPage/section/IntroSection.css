@@ -1,5 +1,5 @@
 .IntroSection {
-  height: 150vh;
+  height: 200vh;
 }
 .introSpace {
   position: sticky;
@@ -13,6 +13,7 @@
   left: 40%;
   transform: translate(-50%, -50%);
   transition: 1s;
+  z-index: 100;
 }
 h2.secondTitleText {
   font-size: 48px;
@@ -29,8 +30,22 @@ h2.TitleText {
   font-size: 70px;
   font-weight: 800;
   transition: 0.5s;
+  z-index: 100;
 }
 h3.titleComent {
   font-size: 24px;
   margin-bottom: 30px;
 }
+@media (max-width:1440px) {
+  h2.TitleText{
+    font-size: 50px;
+  }
+  h2.secondTitleText {
+    font-size: 32px;
+    font-weight: 700;
+  }
+  h3.titleComent {
+    font-size: 16px;
+  }
+}
+@media(max-width:1440px){}
