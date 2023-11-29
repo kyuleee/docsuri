@@ -8,7 +8,7 @@ import KakaoLogin from './pages/Login/KakaoLogin'
 import Join from "./pages/Login/Join";
 import MyPage from "./pages/MyPage/MyPage";
 import StudyPage from "./pages/StudyPage/Studypage";
-import StudyBook from "./pages/StudyBook/StudyBook";
+import StudyEbook from "./pages/StudyBook/StudyEbook";
 import Notification from "./pages/community/notification/Notification";
 import Challenge from "./pages/Challenge/Challenge";
 import Header from "./components/Header";
@@ -23,7 +23,7 @@ function App() {
       <Routes>
         <Route path="/" element={<MainPage />}/>
         <Route path="/StudyPage" element={<StudyPage/>}/>
-        <Route path="/StudyBook" element={<StudyBook/>}/>
+        <Route path="/StudyEbook" element={<StudyEbook/>}/>
         {/* <Route path="/login" element={<Login />} /> */}
         {/* <Route path="/login/kakao" element={<KakaoLogin />} /> */}
         <Route path="/login" element={<KakaoLogin />} />
