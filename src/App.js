@@ -10,6 +10,7 @@ import StudyPage from "./pages/StudyPage/Studypage";
 import StudyBook from "./pages/StudyBook/StudyBook";
 import Notification from "./pages/community/notification/Notification";
 import Challenge from "./pages/Challenge/Challenge";
+// import KakaoLogin from './pages/Login/KakaoLogin'
 
 
 import Header from "./components/Header";
@@ -25,11 +26,12 @@ function App() {
         <Route path="/" element={<MainPage />}/>
         <Route path="/StudyPage" element={<StudyPage/>}/>
         <Route path="/StudyBook" element={<StudyBook/>}/>
-        <Route path="/login" element={<LoginPage/>}/>
         <Route path="/Challenge" element={<Challenge />} />
+        <Route path="/notification" element={<Notification />} />
+        <Route path="/login" element={<LoginPage/>}/>
+        {/* <Route path="/kakaologin" element={<KakaoLogin/>}/> */}
         <Route path="/join" element={<Join />} />
         <Route path="/mypage" element={<MyPage />} />
-        <Route path="/notification" element={<Notification />} />
       </Routes>
     <Footer/>
     {/* <ScrollDirectionDetector/> */}

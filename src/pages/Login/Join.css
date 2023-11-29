@@ -4,7 +4,8 @@
 }
 .joinSection>h2{
     font-size: 48px;
-    margin: 150px 0 30px;
+    /* margin: 150px 0 30px; */
+    margin-bottom: 30px;
 }
 .formList{
     border: 1px solid #ccc;

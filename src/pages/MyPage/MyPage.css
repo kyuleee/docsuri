@@ -1,7 +1,84 @@
 .myPage{
-    width: 100%;
+    /* width: 100%; */
     height: 100vh;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    padding-top:120px ;
+}
+.myPage>h2{
+    margin-bottom: 50px;
+    font-size: 48px;
+}
+.sub_cont{
+    display: flex;
+}
+.mypage_left{
+    display: flex;
+    flex-direction: column;
+    width: 62.5%;
+    padding-right: 2rem;
+}
+.mypage_right{
+    display: flex;
+    flex-direction: column;
+    width: 47.5%;
+}
+.myProfile{
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 100%;
+}
+.profile_label{
+    background-color: #708FFF;
+    padding: 5px 20px;
+    border-radius: 5rem;
+    color: #fff;
+    margin-right: 1.5rem;
+}
+.mptop>div:first-child{
+    margin-bottom: 30px;
+}
+.mypageTotal{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+}
+#profileDisplay>img{
+    border-radius: 50%;
+}
+.mypageTotal>div:first-child{
+    display: flex;
+    align-items: center;
+}
+.myage{
+    margin-left: 20px;
+}
+.badgeWrap{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.recommendBook{
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 30px;
+}
+.bookWrap{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.bookWrap>img{
+    width: 17%;    
+    height: auto;
+    box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.25);
+}
+.mypage_right{
+    border: 1px solid #ddd;
+    border-radius: 10px;
 }

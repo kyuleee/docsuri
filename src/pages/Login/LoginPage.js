@@ -2,7 +2,7 @@ import './LoginPage.css';
 import KakaoLogin from './KakaoLogin';
 import { debounce } from "lodash";
 import { useMemo, useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import users from '../../datas/userData.json';
 
 
@@ -34,7 +34,7 @@ const LoginPage = () => {
             sessionStorage.setItem("level", ID.level);
             sessionStorage.setItem("school", ID.school);
             sessionStorage.setItem("badge", ID.badge);
-            navigator('/mypage')
+            navigator('/mypage');
         } else {
             sessionStorage.clear();
         }
@@ -48,16 +48,26 @@ const LoginPage = () => {
                         <input type='text' placeholder='아이디' name='userId' id="ID" onChange={debounceChange} />
                     </div>
                     <div>
-                        <input type='text' placeholder='비밀번호' name='userPwd' id="PASSWORD" onChange={debounceChange} />
+                        <input type='password' placeholder='비밀번호' name='userPwd' id="PASSWORD" onChange={debounceChange} autoComplete='off' />
                     </div>
                     <div className='keepchk'>
-                        <input type='checkbox' id='keep' name='nvlong' />
-                        <label for='keep' className='keeptxt'>로그인 상태 유지</label>
+                        <label for="chk">
+                            <input type="checkbox" id="chk"/>
+                                <i class="circle"></i>
+                                <span class="keeptxt">로그인 상태 유지</span>
+                        </label>
                     </div>
                     <button className='loginbtn' onClick={searchUser}>로그인</button>
                     {/* <KakaoLogin /> */}
                 </form>
             </article>
+            <ul>
+                <li>비밀번호 찾기</li>
+                <li>|</li>
+                <li>아이디 찾기</li>
+                <li>|</li>
+                <Link to='/join'><li>회원가입</li></Link>
+            </ul>
         </section>
     );
 }
