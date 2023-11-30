@@ -1,0 +1,17 @@
+h2.menuTitleText {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+h3.subTitleText {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+h3.subComent {
+  font-size: 22px;
+  font-weight: 500;
+}
+div.subComentWrap{
+  margin-bottom: 30px;
+}

@@ -1,0 +1,104 @@
+.w1400 {
+  margin: 0 auto;
+  width: 1400px;
+
+}
+
+.StudyPage {
+  padding: 70px 0px 80px 0px;
+}
+
+.Study_Allpage {
+  padding-bottom: 150px;
+}
+
+.Study_Allpage h2 {
+  font-size: 48px;
+  padding: 50px 0px 80px 0px;
+}
+
+.Study_Ebooks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 50px;
+}
+
+.Study_Ebooks>img {
+  width: 30%;
+  transition: all 0.3s ease-in-out;
+}
+
+.Study_Ebooks>img:hover {
+  filter: brightness(100%);
+  transform: translateY(-30px);
+}
+
+@media (max-width:1440px) {
+  .w1400 {
+    width: 100%;
+    padding: 0 50px;
+  }
+}
+
+@media (max-width:460px) {
+  .w1400 {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .Study_Allpage h2 {
+    font-size: 28px;
+    padding: 100px 0px 30px 0;
+  }
+
+  .Study_Ebooks>img {
+    width: 100%;
+    margin-bottom: 30px;
+
+  }
+
+  .w1400 {
+    margin: 0 auto;
+    width: 1400px;
+  }
+
+  .Study_Allpage h2 {
+    font-size: 48px;
+    padding: 50px 0px 80px 0;
+  }
+
+  .Study_Ebooks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .Study_Ebooks>img {
+    width: 30%;
+  }
+}
+
+@media (max-width: 1440px) {
+  .w1400 {
+    width: 100%;
+    padding: 0 50px;
+  }
+}
+
+@media (max-width: 460px) {
+  .w1400 {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .Study_Allpage h2 {
+    font-size: 28px;
+    padding: 100px 0px 30px 0;
+  }
+
+  .Study_Ebooks>img {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}

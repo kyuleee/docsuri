@@ -1,0 +1,8 @@
+canvas {
+  width: 100%;
+}
+@media (max-width:460px) {
+  canvas{
+    opacity: 0.5;
+  }
+}

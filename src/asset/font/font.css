@@ -1,0 +1,71 @@
+@font-face {
+  font-family: "Roboto";
+  font-weight: 700;
+  src: local("Roboto"), url("./Roboto-Bold.woff2") format("woff2"),
+    url("./Roboto-Bold.woff") format("woff"),
+    url("./Roboto-Bold.ttf") format("ttf");
+  unicode-range: U+0041-005A, U+0061-007A;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 400;
+  src: local("Roboto"), url("./Roboto-Regular.woff2") format("woff2"),
+    url("./Roboto-Regular.woff") format("woff"),
+    url("./Roboto-Regular.ttf") format("ttf");
+  unicode-range: U+0041-005A, U+0061-007A;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 300;
+  src: local("Roboto"), url("./Roboto-Light.woff2") format("woff2"),
+    url("./Roboto-Light.woff") format("woff"),
+    url("./Roboto-Light.ttf") format("ttf");
+  unicode-range: U+0041-005A, U+0061-007A;
+}
+
+@font-face {
+  font-family: "NotoSansKR";
+  font-weight: 800;
+  src: local("NotoSansKR"), url("./NotoSansKR-ExtraBold.woff2") format("woff2"),
+    url("./NotoSansKR-ExtraBold.woff") format("woff"),
+    url("./NotoSansKR-ExtraBold.ttf") format("ttf");
+  unicode-range: U+AC00-D7A3;
+}
+
+@font-face {
+  font-family: "NotoSansKR";
+  font-weight: 700;
+  src: local("NotoSansKR"), url("./NotoSansKR-Bold.woff2") format("woff2"),
+    url("./NotoSansKR-Bold.woff") format("woff"),
+    url("./NotoSansKR-Bold.ttf") format("ttf");
+  unicode-range: U+AC00-D7A3;
+}
+
+@font-face {
+  font-family: "NotoSansKR";
+  font-weight: 500;
+  src: local("NotoSansKR"), url("./NotoSansKR-Medium.woff2") format("woff2"),
+    url("./NotoSansKR-Medium.woff") format("woff"),
+    url("./NotoSansKR-Medium.ttf") format("ttf");
+  unicode-range: U+AC00-D7A3;
+}
+
+@font-face {
+  font-family: "NotoSansKR";
+  font-weight: 400;
+  src: local("NotoSansKR"), url("./NotoSansKR-Regular.woff2") format("woff2"),
+    url("./NotoSansKR-Regular.woff") format("woff"),
+    url("./NotoSansKR-Regular.ttf") format("ttf");
+  unicode-range: U+AC00-D7A3;
+}
+
+@font-face {
+  font-family: "NotoSansKR";
+  font-weight: 300;
+  src: local("NotoSansKR"), url("./NotoSansKR-Light.woff2") format("woff2"),
+    url("./NotoSansKR-Light.woff") format("woff"),
+    url("./NotoSansKR-Light.ttf") format("ttf");
+  unicode-range: U+AC00-D7A3;
+}

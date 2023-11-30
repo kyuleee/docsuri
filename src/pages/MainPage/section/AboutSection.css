@@ -1,0 +1,27 @@
+.AboutSection {
+  height: 550vh;
+  position: relative;
+}
+
+.aboutSpace {
+  position: sticky;
+  width: 1400px;
+  margin: 0 auto;
+  height: 100vh;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: 0.5s;
+}
+.aboutContentWrap {
+  width: max-content;
+  display: flex;
+  transition: 0.7s;
+}
+.bars{
+  height: 30px;
+  background-color: black;
+  position: absolute;
+  top: 50%;
+}
