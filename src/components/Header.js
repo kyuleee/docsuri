@@ -14,7 +14,7 @@ const Header = () => {
     return ( 
         <div className="Header">
             <div className="headerCont">
-                <Link to='/'><div className="logo"></div></Link>
+                <Link to='/docsuri/'><div className="logo"></div></Link>
                 <div>
                     <Link to='/mypage'><div className="loginIcon"></div></Link>
                     <div className="menuBar" onClick={toggleSubNav}>
