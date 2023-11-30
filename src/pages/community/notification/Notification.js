@@ -1,4 +1,4 @@
-import '../community_st.css';
+import './community_st.css';
 import { useState } from 'react';
 import NftJson from './NtfData.json';
 import FAQJson from './FAQData.json';

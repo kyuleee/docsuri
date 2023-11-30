@@ -9,6 +9,7 @@ import MyPage from "./pages/MyPage/MyPage";
 import StudyPage from "./pages/StudyPage/Studypage";
 import StudyBook from "./pages/StudyBook/StudyBook";
 import Notification from "./pages/community/notification/Notification";
+import Sudahark from "./pages/community/Sudahark/SUDAHARK";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -25,6 +26,7 @@ function App() {
         <Route path="/join" element={<Join />} />
         <Route path="/mypage" element={<MyPage />} />
         <Route path="/notification" element={<Notification />} />
+        <Route path="/sudahark" element={<Sudahark />} />
       </Routes>
       <Footer />
     </>
