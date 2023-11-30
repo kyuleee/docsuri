@@ -189,3 +189,15 @@
     font-size: 18px;
     font-weight: 500;
 }
+.QuestionImg{
+    margin-top: 50px;
+    width: 60%;
+    height: 230px;
+    background-image: url(../../asset/img/QuestionImg.png)  ;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.red{
+    color: red;
+    font-weight: bold;
+}

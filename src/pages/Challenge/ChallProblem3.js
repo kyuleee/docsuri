@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import './ChallProblem.css'
-const ChallProblem1 = ({isOpen, onClose, onClose2}) => {
+const ChallProblem3 = ({isOpen, onClose, onClose2}) => {
     
     const [userAnswer, setUserAnswer] = useState('');
     const [isCorrect, setIsCorrect] = useState(null); // null: 모달창 감춤, true: 정답, false: 오답
     
     const checkAnswer = () => {
         // 여기에서 정답을 비교하고 상태를 업데이트합니다.
-        const correctAnswer = "2"; // 예시에서는 답이 2로 가정합니다.
+        const correctAnswer = "984명"; // 
         if (userAnswer === correctAnswer){
             setIsCorrect(true); // 정답인 경우
         } else {
@@ -23,20 +23,23 @@ const ChallProblem1 = ({isOpen, onClose, onClose2}) => {
     return ( 
         <div className="ChallProblem" onClick={onClose}>
             <div className='ProblemModal' onClick={(e) => e.stopPropagation()}>
-                <div className='ProblemTitle'><h2>[규칙찾기 수학 챌린지]</h2></div>
+                <div className='ProblemTitle'><h2>[고학년 심화문제 챌린지]</h2></div>
                 <div className='Problem'>
                     <div className='LeftProblem'>
                         <div className='subTitle'>[챌린지 문제]</div>
                         <div className='Question'>
-                        <p>7 ♥ 2 = 1</p>
+                        <p>민영이네 학교의 작년 학생은 모두 875명이었고,</p>
                         <br/>
-                        <p>39 ♥ 9 = 3</p>
+                        <p>남학생이 여학생보다 25명 더 많았습니다.</p>
                         <br/>
-                        <p>26 ♥ (9 ♥ 6) = 2</p>
+                        <p>올해 남학생 수는 작년 남학생 수의 1.2배이고,</p>
                         <br/>
-                        <p>161 ♥ (13♥5) = ?</p>
+                        <p>올해 여학생 수는 작년 여학생 수의 0.96배입니다.</p>
                         <br/>
-                        <p>♥의 규칙을 찾아 ? 값을 구하세요.</p>
+                        <p>민영이네 학교의 올해 전체 학생은 모두 몇 명인가요?</p>
+                        <br/>
+                        <p className='red'>(정답칸에 명 까지 입력해주세요.)</p>
+                        <p>ex. 100명</p>
                         </div>
                     </div>
                     <div className='RightProblem'>
@@ -89,4 +92,4 @@ const ChallProblem1 = ({isOpen, onClose, onClose2}) => {
      );
 }
  
-export default ChallProblem1;
+export default ChallProblem3;
