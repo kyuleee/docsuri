@@ -4,7 +4,7 @@
       "id": "mindy7453",
       "password": "1234",
       "name": "민규리",
-      "grade": 6,
+      "grade": 4,
       "level": 5,
       "school": "한국초등학교",
       "badge": [
@@ -33,7 +33,7 @@
         "그랜드마스터",
         "챌린저"
       ],
-      "profile": null
+      "profile": "./docsuri/img/mkProfile.jpg"
     },
     {
       "key": 3,
@@ -62,7 +62,7 @@
         "시간은 금",
         "노력왕"
       ],
-      "profile": null
+      "profile": "./docsuri/img/jung.jpg"
     },
     {
       "key": 6,
@@ -72,7 +72,7 @@
       "grade": 4,
       "level": 5,
       "school": "불암초등학교",
-      "badge": ["칭찬 한 걸음", "척척박사", "현자", "수학의시작", "마스터"],
-      "profile": null
+      "badge": ["칭찬 한 걸음", "척척박사", "현자", "수학의시작", "마스터","챌린저"],
+      "profile": "./docsuri/img/parkmy.jpg"
     }
   ]

@@ -2,6 +2,8 @@ import { useEffect, useRef } from 'react';
 import users from '../../datas/userData.json';
 import { useNavigate } from 'react-router-dom';
 import './MyPage.css'
+import Progress from '../../components/contentBox/Progress';
+
 
 const MyPage = () => {
     const navigate = useNavigate();
@@ -38,9 +40,13 @@ const MyPage = () => {
         navigate('/login');
     }
     return (
-        <div className='myPage w1400'>
+        <div className='myPage'>
             {/* <button onClick={dataview} style={{border:"1px solid red"}}>보기</button> */}
-            <h2>마이페이지</h2>
+            <div className='mypageTop'>
+                <h2>마이페이지</h2>
+                <button onClick={logout}>로그아웃</button>
+            </div>
+            {/* <button onClick={logout}>로그아웃</button> */}
             <article className='sub_cont'>
                 <div className='mypage_left'>
                     <div className='myProfile'>
@@ -72,27 +78,29 @@ const MyPage = () => {
                     <div className='recommendBook'>
                         <h3>추천도서</h3>
                         <div className='bookWrap'>
-                            <img src='./img/수학 하지 않는 수학.jpg' alt='수학하지 않는 수학'></img>
-                            <img src='./img/발칙한 수학책.jpg' alt='발칙한 수학책'/>
-                            <img src='./img/이런 수학은 처음이야.jpg' alt='이런 수학은 처음이야'/>
-                            <img src='./img/법칙, 원리, 공식을 쉽게 정리한 수학 사전.jpg' alt='법칙, 원리, 공식을 쉽게 정리한 수학 사전'/>
-                            <img src='./img/신사고 쎈 초등 수학 4-2.jpg' alt='신사고 쎈 초등 수학 4-2'/>
+                            <a href='https://www.aladin.co.kr/m/mproduct.aspx?ItemId=256945177' target='_blank'><img src={process.env.PUBLIC_URL + '/img/book1.jpg'} alt='수학하지 않는 수학'/></a>
+                            <a href='https://www.aladin.co.kr/m/mproduct.aspx?ItemId=286921418' target='_blank'><img src={process.env.PUBLIC_URL + '/img/book2.jpg'} alt='발칙한 수학책'/></a>
+                            <a href='https://www.aladin.co.kr/m/mproduct.aspx?ItemId=255672255' target='_blank'><img src={process.env.PUBLIC_URL + '/img/book3.jpg'} alt='이런 수학은 처음이야'/></a>
+                            <a href='https://www.yes24.com/Product/Goods/45545900' target='_blank'><img src={process.env.PUBLIC_URL + '/img/book4.jpg'} alt='법칙, 원리, 공식을 쉽게 정리한 수학 사전'/></a>
+                            <a href='https://www.yes24.com/Product/Goods/106188521' target='_blank'><img src={process.env.PUBLIC_URL + '/img/book5.jpg'} alt='신사고 쎈 초등 수학 4-2'/></a>
                         </div>
                     </div>
                 </div>
 
                 <div className='mypage_right'>
-                    
+                    <h3>{userRef.current.grade}학년 1학기</h3>
+                    <p>진행중인 공부 내용을 확인하세요 순서대로 배워보세요.</p>
+                    <ul>
+                        <Progress title='1 - 1 큰수' progress='완료'/>
+                        <Progress title='1 - 2 각도' progress='완료'/>
+                        <Progress title='1 - 3 곱셈, 나눗셈' progress='진행중'/>
+                        <Progress title='1 - 4 막대그래프' progress='미완료'/>
+                        <Progress title='1 - 5 규칙찾기' progress='미완료'/>
+                    </ul>
                 </div>
             </article>
             
-            <p>{userRef.current.name}</p>
             <p>{userRef.current.level}</p>
-            <p>{userRef.current.grade}</p>
-            <p>{userRef.current.level}</p>
-            {/* <p>{userRef.current.badge.split(',')[3]}</p> */}
-            <p>Third Badge: {userRef.current.badge && typeof userRef.current.badge === 'string' ? userRef.current.badge.split(",")[2] : ""}</p>
-            <button onClick={logout}>로그아웃</button>
         </div>
     );
 }

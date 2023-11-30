@@ -1,0 +1,42 @@
+.progressItem{
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.progressItem>.leftBox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.progressItem>.leftBox>div:first-child{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px 0 rgba(0,0,0,0.05);
+    margin-right: 20px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.progressItem>.leftBox>div:first-child:hover{
+    box-shadow: 5px 5px 10px 0 rgba(0,0,0,0.2);
+
+}
+.progressItem img{
+    vertical-align: top;
+}
+.progressItem>div:last-child{
+    font-size: 24px;
+    font-weight: 400;
+}
+.progressItem>.leftBox>div:last-child>p:first-child{
+    font-size: 18px;
+}
+.progressItem>.leftBox>div:last-child>p:last-child{
+    font-size: 13px;
+}
+.progressItem>.leftBox>div:last-child{
+    cursor: pointer;
+}

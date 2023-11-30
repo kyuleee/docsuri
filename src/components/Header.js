@@ -1,22 +1,31 @@
-import React, { useState } from 'react';
-import {Link} from 'react-router-dom';
-
+import React, { useState,useRef } from 'react';
+import {Link,useNavigate} from 'react-router-dom';
+import users from '../datas/userData.json';
 import './Header.css';
 const Header = () => {
     // 서브메뉴 나오게하기
     const [subNavVisible, setSubNavVisible] = useState(false);
-  
+  const navigate = useNavigate();
+//   const userRef = useRef({ ...sessionStorage });
+  const userId = sessionStorage.getItem("ID");
+  const currentUser = users.find((user) => user.id === userId);
     const toggleSubNav = () => {
       setSubNavVisible(!subNavVisible);
     };
-  
+    const changePath = ()=>{
+        if(currentUser){
+            navigate('/mypage');
+        }else{
+            navigate('/login')
+        }
+    }
     
     return ( 
         <div className="Header">
             <div className="headerCont">
                 <Link to='/docsuri/'><div className="logo"></div></Link>
                 <div>
-                    <Link to='/mypage'><div className="loginIcon"></div></Link>
+                    <div className="loginIcon" onClick={changePath}></div>
                     <div className="menuBar" onClick={toggleSubNav}>
                         <div className="bar"></div>
                         <div className="bar"></div>
