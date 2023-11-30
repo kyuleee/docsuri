@@ -23,7 +23,7 @@ function App() {
       <Header />
       <SideBar/>
       <Routes>
-        <Route path="/docsuri" element={<MainPage />}/>
+        <Route path="/docsuri/" element={<MainPage />}/>
         <Route path="/StudyPage" element={<StudyPage/>}/>
         <Route path="/StudyEbook" element={<StudyEbook/>}/>
         <Route path="/Challenge" element={<Challenge />} />
