@@ -7,7 +7,7 @@ import LoginPage from "./pages/Login/LoginPage";
 import Join from "./pages/Login/Join";
 import MyPage from "./pages/MyPage/MyPage";
 import StudyPage from "./pages/StudyPage/Studypage";
-import StudyBook from "./pages/StudyBook/StudyBook";
+import StudyEbook from "./pages/StudyBook/StudyEbook";
 import Notification from "./pages/community/notification/Notification";
 import Challenge from "./pages/Challenge/Challenge";
 // import KakaoLogin from './pages/Login/KakaoLogin'
@@ -25,11 +25,10 @@ function App() {
       <Routes>
         <Route path="/" element={<MainPage />}/>
         <Route path="/StudyPage" element={<StudyPage/>}/>
-        <Route path="/StudyBook" element={<StudyBook/>}/>
+        <Route path="/StudyEbook" element={<StudyEbook/>}/>
         <Route path="/Challenge" element={<Challenge />} />
         <Route path="/notification" element={<Notification />} />
         <Route path="/login" element={<LoginPage/>}/>
-        {/* <Route path="/kakaologin" element={<KakaoLogin/>}/> */}
         <Route path="/join" element={<Join />} />
         <Route path="/mypage" element={<MyPage />} />
       </Routes>
