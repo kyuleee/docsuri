@@ -99,12 +99,15 @@
     bottom: 50px;
     padding-left: 30px;
     display: flex;
+    align-items: center;
     font-size: 16px;
     color: #fff;
 }
+.login>a{
+    color: #fff;
+}
 .login>p{
-    padding-right: 10px;
-    cursor: pointer;
+    padding: 0 12px;
 }
 @media (max-width:460px){
     .subNav{

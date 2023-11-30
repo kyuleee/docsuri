@@ -40,3 +40,16 @@
 .progressItem>.leftBox>div:last-child{
     cursor: pointer;
 }
+@media (max-width:460px) {
+    .progressItem>div:last-child{
+        font-size: calc(100vw * (18 / 460));
+    }
+    .progressItem>.leftBox>div:first-child{
+        padding: 7px;
+        border-radius: 8px;
+        margin-right: 15px;
+    }
+    .progressItem>.leftBox>div:last-child p:first-child{
+        font-size: 16px;
+    }
+}

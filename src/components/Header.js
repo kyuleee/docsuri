@@ -47,7 +47,9 @@ const Header = () => {
                 <div className="login">
                     <Link to='/login'>
                         <p>로그인</p>
+                    </Link>
                         <p>|</p>
+                    <Link to='/join'>
                         <p>회원가입</p>
                     </Link>
                 </div>

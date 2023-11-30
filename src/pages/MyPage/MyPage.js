@@ -23,12 +23,18 @@ const MyPage = () => {
                 const image = new Image();
                 image.src = profile;
                 image.alt = "Profile Image";
-                image.width = 150;
-                image.height = 150;
-
+                // image.width = 150;
+                // image.height = 150;
                 const profileDisplay = document.getElementById("profileDisplay");
                 profileDisplay.innerHTML = "";
                 profileDisplay.appendChild(image);
+                if(window.innerWidth>460){
+                    image.width=150;
+                    image.height=150;
+                }else{
+                    image.width = 100;
+                    image.height = 100;
+                }
             }
         }
     };
@@ -63,7 +69,7 @@ const MyPage = () => {
                                         <p>학년 : {userRef.current.grade}학년</p>
                                     </div>
                                 </div>
-                                <div></div>
+                                <div>{userRef.current.level} 등급</div>
                             </div>
                         </div>
                         <div className='badgeWrap'>
@@ -99,8 +105,6 @@ const MyPage = () => {
                     </ul>
                 </div>
             </article>
-            
-            <p>{userRef.current.level}</p>
         </div>
     );
 }

@@ -23,7 +23,10 @@
     padding: 10px;
     height: 100%;
     cursor: pointer;
-
+    transition: all 0.3s;
+}
+.mypageTop>button:hover{
+    background-color: #4659a0;
 }
 .sub_cont{
     display: flex;
@@ -60,6 +63,12 @@
     align-items: center;
     justify-content: space-between;
 }
+.mypageTotal>div:last-child{
+    background-color: #59CA79;
+    padding: 5px 10px;
+    color: #fff;
+    border-radius: 25px;
+}
 #profileDisplay>img{
     border-radius: 50%;
     object-fit: cover;
@@ -75,7 +84,6 @@
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
-
 }
 .recommendBook{
     margin-top: 20px;
@@ -150,9 +158,38 @@
     .mypage_right>ul>li{
         width: 100%;
     }
+    .myProfile{
+        padding: 20px;
+    }
+    .recommendBook{
+        padding: 20px;
+    }
+    .mypage_right{
+        padding: 20px;
+    }
 }
 @media (max-width:460px) {
     .myPage{
         padding: 100px 20px 100px;
+    }
+    .mypageTotal{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .mypageTotal>div:last-child{
+        margin-top: 10px;
+    }
+    .mypageTotal>div:first-child{
+        display: flex;
+        flex-direction: column;
+    }
+    .profile_label{
+        margin-right: 8px;
+    }
+    .mypageTop>button{
+        border-radius: 20px;
+        font-size: 13px;
+        padding: 8px;
+        cursor: pointer;
     }
 }

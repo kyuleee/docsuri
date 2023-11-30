@@ -15,7 +15,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="adress">
-                    Copyright ⓒ 2023 독수리 어쩌고 All rights reserved.
+                    Copyright ⓒ 2023 독수리 All rights reserved.
                 </div>
             </div>
         </div>
