@@ -1,0 +1,191 @@
+*{padding: 0;margin: 0;box-sizing: border-box;}
+.ChallProblem{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ProblemModal{
+    display: flex;
+    width: 1200px;
+    height: 700px;
+    min-width: 600px;
+    max-width: 1200px;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+}
+.ProblemTitle{
+    width: 100%;
+    height: 50px;
+    padding: 10px 20px 10px 40px;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+}
+.Problem{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    flex: 1 0 0;
+    align-self: stretch;
+}
+.LeftProblem{
+    display: flex;
+    max-width: 570px;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1 0 0;
+    align-self: stretch;
+}
+.subTitle{
+    width: 100%;
+    height: 46px;
+    display: flex;
+    padding: 10px 20px;
+    align-items: center;
+    border: 1px solid #000;
+}
+.Question{
+    padding: 10px 20px;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #000;
+    border-top: none;
+}
+.Question>p{
+    font-size: 20px;
+}
+.RightProblem{
+    display: flex;
+    width: calc((100% / 2) - 20px );
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1 0 0;
+    align-self: stretch;
+}
+.ProblemAnswer{
+    display: flex;
+    padding: 30px;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 30px;
+    flex: 1 0 0;
+    align-self: stretch;
+    border: 1px solid #000;
+    border-top: none;
+}
+.ProblemAnswer>div:first-child{
+    display: flex;
+    height: 46px;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border: 1px solid #222;
+    background: #FFF;
+}
+.Answer{
+    display: flex;
+    padding: 30px;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    flex: 1 0 0;
+    align-self: stretch;
+    border: 1px solid #222;
+    background: #FFF;
+}
+.ProblemAnswer>button{
+    display: inline-flex;
+    padding: 10px 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    border: 1px solid #222;
+    background: #FFF;
+    cursor: pointer;
+}
+.ProblemAnswer>button:hover{
+    background-color: #eee;
+}
+
+
+
+/* 모달 디자인 */
+
+.ChallModalContent{
+    display: flex;
+    width: 350px;
+    height: 200px;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 1px solid #222;
+    background: #FFF;
+
+}
+.Good{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+}
+.Stamp{
+    width: 100px;
+    height: 97.568px;
+    background: url(../../asset/img/stamp.png), #fff 10% / cover no-repeat;
+
+}
+.ment{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.ment>p:first-child{
+    font-size: 18px;
+    font-weight: 500;
+}
+.ChallModalContent>button{
+    display: flex;
+    padding: 10px 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    border: 1px solid #222;
+    background: #FFF;
+    cursor: pointer;
+
+}
+.Return{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.ment2{
+    text-align: center;
+}
+.ment2>p:first-child{
+    font-size: 18px;
+    font-weight: 500;
+}
