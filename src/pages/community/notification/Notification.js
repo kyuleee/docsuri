@@ -1,4 +1,4 @@
-import '../community_st.css';
+import './community_st.css';
 import { useState } from 'react';
 import NftJson from './NtfData.json';
 import FAQJson from './FAQData.json';
@@ -35,7 +35,7 @@ const Notification = () => {
                             <div key={item.id} onClick={() => modalWindowTap(item)}>
                                 <div className='com_Qust'><h3>Q.</h3><p>{item.title}</p></div>
                                 <div className='comTTAAGG' dangerouslySetInnerHTML={{ __html: item.tag }} />
-                                {/* <div className='Com_Answer' dangerouslySetInnerHTML={{ __html: item.detail }} /> */}
+                                <div className='Com_Answer' dangerouslySetInnerHTML={{ __html: item.detail }} />
                             </div>
                         ))
                     ) : (
@@ -43,6 +43,7 @@ const Notification = () => {
                             <div key={item.id} onClick={() => modalWindowTap(item)}>
                                 <div className='com_Qust'><h3>Q.</h3><p>{item.title}</p></div>
                                 <div className='comTTAAGG' dangerouslySetInnerHTML={{ __html: item.tag }} />
+                                <div className='Com_Answer' dangerouslySetInnerHTML={{ __html: item.detail }} />
                             </div>
                         ))
                     )}
