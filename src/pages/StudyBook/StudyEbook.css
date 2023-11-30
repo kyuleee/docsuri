@@ -133,6 +133,17 @@
   cursor: pointer;
 }
 
+.AnswerBox {
+  border-radius: 10px;
+  background: #708fff;
+  padding: 5px 10px;
+  font-size: 16px;
+  color: #fff;
+  padding: 5px 10px;
+  margin: 10px;
+  float: right;
+  cursor: pointer;
+}
 
 /* ---[페이지네이션]--------- */
 /* .pagination {
