@@ -24,11 +24,14 @@ const SideBar = ()=>{
                     <li>
                         <div className='icon icon4'><p className="faq">FAQ</p></div>
                         <p>자주하는 질문</p>
-                    </li></Link>
+                    </li>
+                    </Link>
+                    <Link to='/sudahark'>
                     <li>
                         <div className='icon icon5'><p className="su">수</p></div>
                         <p>수다학</p>
                     </li>
+                    </Link>
                 </ul>
             </nav>
         </>

@@ -34,7 +34,7 @@ const Challenge = () => {
 
     return ( 
         <div className="challenge">
-            <div className='w1400 '>
+            <div className='w1400'>
                 <h2 className='challengeTitle'>챌린지</h2>
                 <div className='challengeBox'>
                     <div className='challenge1' onClick={() => handleChallengeClick2(4)}>

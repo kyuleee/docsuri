@@ -10,7 +10,7 @@ const MyPage = () => {
     const userRef = useRef({ ...sessionStorage });
     const dataview = () => {
         // console.log(sessionStorage);
-        console.log(userRef.current);
+        // console.log(userRef.current);
         // const userData = JSON.stringify(userRef.current);
         const userId = sessionStorage.getItem("ID"); // Assuming you store the user ID in sessionStorage
         const currentUser = users.find((user) => user.id === userId);
@@ -52,13 +52,13 @@ const MyPage = () => {
                 <h2>마이페이지</h2>
                 <button onClick={logout}>로그아웃</button>
             </div>
-            {/* <button onClick={logout}>로그아웃</button> */}
             <article className='sub_cont'>
                 <div className='mypage_left'>
                     <div className='myProfile'>
                         <div className='mptop'>
                             <div>
-                                <span className='profile_label'>학생</span>
+                                <span className='profile_label'>{userRef.current.edu}</span>
+                                {/* <span className='profile_label'>학생</span> */}
                                 <span><strong style={{fontSize:'18px'}}>{userRef.current.name}</strong>님 반갑습니다!</span>
                             </div>
                             <div className='mypageTotal'>
@@ -73,12 +73,18 @@ const MyPage = () => {
                             </div>
                         </div>
                         <div className='badgeWrap'>
-                            <p>1: {userRef.current.badge && typeof userRef.current.badge === 'string' ? userRef.current.badge.split(",")[0] : ""}</p>
-                            <p>2: {userRef.current.badge && typeof userRef.current.badge === 'string' ? userRef.current.badge.split(",")[1] : ""}</p>
-                            <p>3: {userRef.current.badge && typeof userRef.current.badge === 'string' ? userRef.current.badge.split(",")[2] : ""}</p>
-                            <p>4: {userRef.current.badge && typeof userRef.current.badge === 'string' ? userRef.current.badge.split(",")[3] : ""}</p>
-                            <p>5: {userRef.current.badge && typeof userRef.current.badge === 'string' ? userRef.current.badge.split(",")[4] : ""}</p>
-                            <p>6: {userRef.current.badge && typeof userRef.current.badge === 'string' ? userRef.current.badge.split(",")[5] : ""}</p>
+                            <p>{userRef.current.badge && typeof userRef.current.badge === 'string' ? userRef.current.badge.split(",")[0] : ""}</p>
+                            <p>{userRef.current.badge && typeof userRef.current.badge === 'string' ? userRef.current.badge.split(",")[1] : ""}</p>
+                            <p>{userRef.current.badge && typeof userRef.current.badge === 'string' ? userRef.current.badge.split(",")[2] : ""}</p>
+                            <p>{userRef.current.badge && typeof userRef.current.badge === 'string' ? userRef.current.badge.split(",")[3] : ""}</p>
+                            <p>{userRef.current.badge && typeof userRef.current.badge === 'string' ? userRef.current.badge.split(",")[4] : ""}</p>
+                            <p>{userRef.current.badge && typeof userRef.current.badge === 'string' ? userRef.current.badge.split(",")[5] : ""}</p>
+                            {/* <p>{userRef.current.badge[0] === '시간은 금' ? 'ddd':'dd'}</p>
+                            <p>{userRef.current.badge[1]}</p>
+                            <p>{userRef.current.badge[2]}</p>
+                            <p>{userRef.current.badge[3]}</p>
+                            <p>{userRef.current.badge[4]}</p>
+                            <p>{userRef.current.badge[5]}</p> */}
                         </div>
                     </div>
                     <div className='recommendBook'>

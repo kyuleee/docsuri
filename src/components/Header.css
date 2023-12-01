@@ -55,7 +55,6 @@
 .subMenu{
     width: 100%;
     height: 70px;
-    border-bottom: 1px solid #fff;
 }
 .subMenu>h2{
     font-size: 24px;
@@ -79,18 +78,19 @@
     color: #fff;
     font-size: 18px;
 }
-.subLink>div{
+.subLink div{
     width: 100%;
     line-height: 70px;
     height: 70px;
     cursor: pointer;
     margin-top: 10px;
     padding-left: 30px;
+    transition: all .25s;
 }
-.subLink>div:hover{
+.subLink div:hover{
     background-color: rgba(0,0,0,.3);
 }
-.subLink>div>a{
+.subLink>a{
     font-style: normal;
     color: #fff;
 }
@@ -112,5 +112,8 @@
 @media (max-width:460px){
     .subNav{
         width: 100%;
+    }
+    .headerCont{
+        padding: 20px 20px;
     }
 }

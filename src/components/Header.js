@@ -1,26 +1,30 @@
-import React, { useState,useRef } from 'react';
-import {Link,useNavigate} from 'react-router-dom';
+import React, { useState, useRef, useEffect } from 'react';
+import { Link, useNavigate,useLocation } from 'react-router-dom';
 import users from '../datas/userData.json';
 import './Header.css';
 const Header = () => {
     // 서브메뉴 나오게하기
     const [subNavVisible, setSubNavVisible] = useState(false);
-  const navigate = useNavigate();
-//   const userRef = useRef({ ...sessionStorage });
-  const userId = sessionStorage.getItem("ID");
-  const currentUser = users.find((user) => user.id === userId);
+    const navigate = useNavigate();
+    const locationSection = useLocation();
+    //   const userRef = useRef({ ...sessionStorage });
+    const userId = sessionStorage.getItem("ID");
+    const currentUser = users.find((user) => user.id === userId);
     const toggleSubNav = () => {
-      setSubNavVisible(!subNavVisible);
+        setSubNavVisible(!subNavVisible);
     };
-    const changePath = ()=>{
-        if(currentUser){
+    const changePath = () => {
+        if (currentUser) {
             navigate('/mypage');
-        }else{
+        } else {
             navigate('/login')
         }
-    }
-    
-    return ( 
+    }   
+    useEffect(()=>{
+        locationSection.pathname !== '/docsuri/' && window.scrollTo({top:0,left:0,behavior: "smooth"})
+    })
+
+    return (
         <div className="Header">
             <div className="headerCont">
                 <Link to='/docsuri/'><div className="logo"></div></Link>
@@ -39,23 +43,23 @@ const Header = () => {
                     <div className="close" onClick={toggleSubNav}></div>
                 </div>
                 <div className="subLink">
-                    <div><Link to='/StudyPage'>교과학습</Link></div>
-                    <div><Link to='/Challenge'>챌린지</Link></div>
-                    <div><Link to='/notification'>게시판</Link></div>
-                    <div>수다학</div>
+                    <Link to='/StudyPage'><div>교과학습</div></Link>
+                    <Link to='/Challenge'><div>챌린지</div></Link>
+                    <Link to='/notification'><div>게시판</div></Link>
+                    <Link to='/sudahark'><div>수다학</div></Link>
                 </div>
                 <div className="login">
                     <Link to='/login'>
                         <p>로그인</p>
                     </Link>
-                        <p>|</p>
+                    <p>|</p>
                     <Link to='/join'>
                         <p>회원가입</p>
                     </Link>
                 </div>
             </div>
         </div>
-     );
+    );
 }
- 
-export default Header ;
+
+export default Header;

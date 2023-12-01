@@ -75,7 +75,15 @@
         width: 100%;
     }
 }
+@media (max-width: 768px){
+    .Footer{
+        padding: 70px 30px 100px;
+    }
+}
 @media (max-width:460px){
+    .Footer{
+        padding: 70px 20px 100px;
+    }
     .footerIcon{
         flex-direction: column;
     }

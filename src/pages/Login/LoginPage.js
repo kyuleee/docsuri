@@ -34,6 +34,7 @@ const LoginPage = () => {
             sessionStorage.setItem("level", ID.level);
             sessionStorage.setItem("school", ID.school);
             sessionStorage.setItem("badge", ID.badge);
+            sessionStorage.setItem("edu", ID.edu);
             navigator('/mypage');
         } else {
             sessionStorage.clear();
