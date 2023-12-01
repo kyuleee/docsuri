@@ -1,5 +1,5 @@
 import "./Page.css";
-import { IntroSection, AboutSection, ChallengeSection } from "./section";
+import { IntroSection, AboutSection, ChallengeSection, NoticeSection } from "./section";
 import { createContext, useEffect, useMemo, useRef, useState } from "react";
 import { throttle } from "lodash";
 
@@ -110,6 +110,7 @@ const Page = () => {
         ChallengeSectionRef={ChallengeSectionRef}
         challengeOn={challengeOn}
       />
+      <NoticeSection/>
     </main>
   );
 };

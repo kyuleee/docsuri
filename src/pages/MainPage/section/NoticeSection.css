@@ -1,0 +1,16 @@
+.NoticeSection{
+    background-color: #282828;
+    border-bottom: 1px solid #fff;
+    height: 60px;
+    overflow: hidden;
+    position: relative;
+}
+.barWrap{
+    transition: 1.5s;
+    position: absolute;
+}
+.cloneBar{
+    top: 0;
+    position: absolute;
+    transition: 1.5s;
+}
