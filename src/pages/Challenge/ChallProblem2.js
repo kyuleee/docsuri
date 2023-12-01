@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import './ChallProblem.css'
-const ChallProblem1 = ({isOpen, onClose, onClose2}) => {
+const ChallProblem2 = ({isOpen, onClose, onClose2}) => {
     
     const [userAnswer, setUserAnswer] = useState('');
     const [isCorrect, setIsCorrect] = useState(null); // null: 모달창 감춤, true: 정답, false: 오답
     
     const checkAnswer = () => {
         // 여기에서 정답을 비교하고 상태를 업데이트합니다.
-        const correctAnswer = "2"; // 예시에서는 답이 2로 가정합니다.
+        const correctAnswer = "25번"; // 
         if (userAnswer === correctAnswer){
             setIsCorrect(true); // 정답인 경우
         } else {
@@ -23,20 +23,20 @@ const ChallProblem1 = ({isOpen, onClose, onClose2}) => {
     return ( 
         <div className="ChallProblem" onClick={onClose}>
             <div className='ProblemModal' onClick={(e) => e.stopPropagation()}>
-                <div className='ProblemTitle'><h2>[규칙찾기 수학 챌린지]</h2></div>
+                <div className='ProblemTitle'><h2>[비례식 수학 챌린지]</h2></div>
                 <div className='Problem'>
                     <div className='LeftProblem'>
                         <div className='subTitle'>[챌린지 문제]</div>
                         <div className='Question'>
-                        <p>7 ♥ 2 = 1</p>
+                        <p>서로 맞물려 돌아가는 두 톱니바퀴 A , B 가있습니다.</p>
                         <br/>
-                        <p>39 ♥ 9 = 3</p>
+                        <p>A 의 톱니는 15개이고 B의 톱니는 6개입니다.</p>
                         <br/>
-                        <p>26 ♥ (9 ♥ 6) = 2</p>
+                        <p>A가 10번 도는 동안 B 는 몇번 돌까요?</p>
                         <br/>
-                        <p>161 ♥ (13♥5) = ?</p>
-                        <br/>
-                        <p>♥의 규칙을 찾아 ? 값을 구하세요.</p>
+                        <p className='red'>(정답칸에 번 까지 입력해주세요.)</p>
+                        <p>ex. 100번</p>
+                        <div className='QuestionImg'></div>
                         </div>
                     </div>
                     <div className='RightProblem'>
@@ -89,4 +89,4 @@ const ChallProblem1 = ({isOpen, onClose, onClose2}) => {
      );
 }
  
-export default ChallProblem1;
+export default ChallProblem2;

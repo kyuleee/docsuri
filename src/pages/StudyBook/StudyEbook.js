@@ -1,34 +1,66 @@
+import { useState } from "react";
 import "./StudyEbook.css";
 import StudyProblem from "./StudyProblem.json";
 import HTMLFlipBook from "react-pageflip";
 import { Link } from "react-router-dom";
-import { useState } from "react";
-
 const StudyEbook = () => {
-  
   const [userAnswer, setAnswer] = useState("");
-  const [hint, setHint] = useState(false);
+  const [hint, setHint] = useState(
+    Array(StudyProblem.unit1.length).fill(false)
+  );
+  const [answered, setAnswered] = useState(
+    Array(StudyProblem.unit1.length).fill(false)
+  );
   const [showModal, setShowModal] = useState(false);
+  const [currentProblemIndex, setCurrentProblemIndex] = useState(null);
 
   function answerInput(e) {
     setAnswer(e.target.value);
   }
 
-  function handlePushAnswer(answer) {
-    if (answer === userAnswer) {
-      alert("정답입니다.");
-    } else {
-      alert("오답입니다");
-    }
+  function handleAnswerButtonClick(index) {
+    setShowModal(true);
+    setCurrentProblemIndex(index);
   }
 
+  function closeModal() {
+    setShowModal(false);
+    setCurrentProblemIndex(null);
+  }
 
+  function handlePushHint(index) {
+    setHint((prevHints) => {
+      const newHints = [...prevHints];
+      newHints[index] = true;
+      return newHints;
+    });
+  }
 
   return (
     <section className="StudyEbook w1400">
+      {showModal && currentProblemIndex !== null && (
+        <article className="StudyEbook_AnswerMadal">
+          <div className="ModalContent">
+            <div className="StudyBook_AnswerAll">
+              <input type="text" onChange={answerInput} />
+            </div>
+            <button
+              className="StudyBook_AnswerBtn"
+              onClick={() => handleAnswerButtonClick(currentProblemIndex)}
+            >
+              정답확인하기
+            </button>
+            <button className="CloseButton" onClick={closeModal}>
+              X
+            </button>
+          </div>
+          <div></div>
+        </article>
+      )}
+
       <article className="StudyBook_AllPages">
         <HTMLFlipBook width={600} height={800}>
-          {/* 페이지속도조절 flippingTime={1000} */}
+          {/* 페이지 속도 조절 flippingTime={1000} */}
           <div className="demoPage">
             <div className="StudyBook_LeftPage">
               <h3>4학년 목차</h3>
@@ -89,7 +121,6 @@ const StudyEbook = () => {
               </div>
             </div>
           </div>
-
           <div className="demoPage">
             <div className="StudyBook_RightPage">
               <div className="StudyBook_LevelText-1">
@@ -159,37 +190,33 @@ const StudyEbook = () => {
               </div>
             </div>
           </div>
-
           {/* 1-1 큰수 */}
           {StudyProblem.unit1.map((problem, index) => (
             <div className="demoPage" key={index}>
-
-
               <div className="StudyBook_ProblemPage">
                 <div className="StudyBook_ThreeItems">
                   <div className="StudyBook_Number">{problem.id}.</div>
                   <div className="StudyBook_ProblemText">{problem.title}</div>
-                  <button className="StudyBook_HintImg" onClick={() => setHint(true)}>?</button>  
+                  <button
+                    className="StudyBook_HintImg"
+                    onClick={() => handlePushHint(index)}
+                  >
+                    ?
+                  </button>
                 </div>
-
-                <div className="StudyBook_AnswerAll">
-                  <input type="text" onChange={answerInput} />                
-                </div>
-
+                {hint[index] ? <div>{problem.hint}</div> : null}
 
                 <button
-                  className="StudyBook_AnswerBtn"
-                  onClick={() => handlePushAnswer(problem.answer)}
+                  className="AnswerBox"
+                  onClick={() =>
+                    handleAnswerButtonClick(problem.answer, problem.comment)
+                  }
                 >
-                  정답확인하기
+                  정답입력하기
                 </button>
-
-                {hint ? <div>{problem.hint}</div> : null}
-                   
               </div>
             </div>
           ))}
-          
 
           <div className="demoPage">Page 4</div>
           <div className="demoPage">Page 5</div>
@@ -205,4 +232,3 @@ const StudyEbook = () => {
 };
 
 export default StudyEbook;
-
