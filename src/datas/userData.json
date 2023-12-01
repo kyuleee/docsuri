@@ -47,7 +47,7 @@
       "school": "동산초등학교",
       "edu":"학부모",
       "badge": ["챌린저", "현자", "이글", "백점만점", "척척박사", "그랜드마스터"],
-      "profile": null
+      "profile": "./docsuri/img/jinsuPark_profile.jpg"   
     },
     {
       "key": 4,

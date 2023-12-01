@@ -13,7 +13,7 @@ nav.SideBar {
   align-items: center;
   margin-bottom: 20px;
   position: relative;
-  width: 170px;
+  width: 160px;
   user-select: none;
   cursor: pointer;
   overflow: hidden;
@@ -63,7 +63,9 @@ nav.SideBar {
 }
 .icon>.faq{
   position: absolute;
-  left: 7px;
+  /* left: 7px;   */
+  left: 3px;
+
 }
 .icon>.su{
   position: absolute;
@@ -72,6 +74,12 @@ nav.SideBar {
 .SideBar li>p{
   position: absolute;
   left: 50px;
+}
+.SideBar>ul li>p{
+  opacity: 0;
+}
+.icon:hover + p{
+  opacity: 1;
 }
 @media (max-width:1440px){
   nav{
