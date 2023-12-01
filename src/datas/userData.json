@@ -1,78 +1,92 @@
 [
-    {
-      "key": 1,
-      "id": "mindy7453",
-      "password": "1234",
-      "name": "민규리",
-      "grade": 4,
-      "level": 5,
-      "school": "한국초등학교",
-      "badge": [
-        "노력왕",
-        "칭찬 한 걸음",
-        "백점만점",
-        "출석왕",
-        "척척박사",
-        "현자"
-      ],
-      "profile": "http://k.kakaocdn.net/dn/1G9kp/btsAot8liOn/8CWudi3uy07rvFNUkk3ER0/img_640x640.jpg"
-    },
-    {
-      "key": 2,
-      "id": "mk9504",
-      "password": "1234",
-      "name": "강민구",
-      "grade": 4,
-      "level": 1,
-      "school": "을지초등학교",
-      "badge": [
-        "시간은 금",
-        "수학의시작",
-        "이글",
-        "마스터",
-        "그랜드마스터",
-        "챌린저"
-      ],
-      "profile": "./docsuri/img/mkProfile.jpg"
-    },
-    {
-      "key": 3,
-      "id": "foxrain426",
-      "password": "1234",
-      "name": "박진수",
-      "grade": 6,
-      "level": 10,
-      "school": "동산초등학교",
-      "badge": ["챌린저", "현자", "이글", "백점만점", "척척박사", "그랜드마스터"],
-      "profile": null
-    },
-    {
-      "key": 4,
-      "id": "apple",
-      "password": "1234",
-      "name": "김정은",
-      "grade": 6,
-      "level": 10,
-      "school": "동산초등학교",
-      "badge": [
-        "백점만점",
-        "척척박사",
-        "그랜드마스터",
-        "출석왕",
-        "시간은 금",
-        "노력왕"
-      ],
-      "profile": "./docsuri/img/jung.jpg"
-    },
-    {
-      "key": 6,
-      "id": "min1127",
-      "password": "1234",
-      "name": "박민영",
-      "grade": 4,
-      "level": 5,
-      "school": "불암초등학교",
-      "badge": ["칭찬 한 걸음", "척척박사", "현자", "수학의시작", "마스터","챌린저"],
-      "profile": "./docsuri/img/parkmy.jpg"
-    }
-  ]
+  {
+    "key": 1,
+    "id": "mindy7453",
+    "password": "1234",
+    "name": "민규리",
+    "grade": 4,
+    "level": 5,
+    "school": "한국초등학교",
+    "badge": [
+      "노력왕",
+      "칭찬 한 걸음",
+      "백점만점",
+      "출석왕",
+      "척척박사",
+      "현자"
+    ],
+    "profile": "http://k.kakaocdn.net/dn/1G9kp/btsAot8liOn/8CWudi3uy07rvFNUkk3ER0/img_640x640.jpg"
+  },
+  {
+    "key": 2,
+    "id": "mk9504",
+    "password": "1234",
+    "name": "강민구",
+    "grade": 4,
+    "level": 1,
+    "school": "을지초등학교",
+    "badge": [
+      "시간은 금",
+      "수학의시작",
+      "이글",
+      "마스터",
+      "그랜드마스터",
+      "챌린저"
+    ],
+    "profile": "./docsuri/img/mkProfile.jpg"
+  },
+  {
+    "key": 3,
+    "id": "foxrain426",
+    "password": "1234",
+    "name": "박진수",
+    "grade": 6,
+    "level": 10,
+    "school": "동산초등학교",
+    "badge": [
+      "챌린저",
+      "현자",
+      "이글",
+      "백점만점",
+      "척척박사",
+      "그랜드마스터"
+    ],
+    "profile": null
+  },
+  {
+    "key": 4,
+    "id": "apple",
+    "password": "1234",
+    "name": "김정은",
+    "grade": 6,
+    "level": 10,
+    "school": "동산초등학교",
+    "badge": [
+      "백점만점",
+      "척척박사",
+      "그랜드마스터",
+      "출석왕",
+      "시간은 금",
+      "노력왕"
+    ],
+    "profile": "./docsuri/img/jung.jpg"
+  },
+  {
+    "key": 6,
+    "id": "min1127",
+    "password": "1234",
+    "name": "박민영",
+    "grade": 4,
+    "level": 5,
+    "school": "불암초등학교",
+    "badge": [
+      "칭찬 한 걸음",
+      "척척박사",
+      "현자",
+      "수학의시작",
+      "마스터",
+      "챌린저"
+    ],
+    "profile": "./docsuri/img/parkmy.jpg"
+  }
+]
