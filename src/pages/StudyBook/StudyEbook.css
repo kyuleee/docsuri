@@ -108,12 +108,13 @@
   cursor: pointer;
 }
 .StudyBook_AnswerAll {
+  display: flex;
   align-items: center;
   padding: 20px 30px 0px 30px;
 }
 
 .StudyBook_AnswerAll > input {
-  width: 440px;
+  width: 400px;
   height: 33px;
   padding: 5px 50px 5px 30px;
   border-radius: 10px;
@@ -143,6 +144,44 @@
   margin: 10px;
   float: right;
   cursor: pointer;
+}
+
+/* ----[정답확인의 모달창 관련]------------------ */
+.Modal_Answer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 1px solid black;
+  width: 600px;
+  z-index: 99;
+}
+
+.CloseButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  color: #000; /* 버튼 색상을 조절할 수 있습니다. */
+}
+
+.AnswerTwin {
+  width: 79px;
+  height: 33px;
+  margin: 0 auto;
+  background-color: #c7ffdd;
+}
+
+.On_target {
+  color: #2fba67;
+}
+.Off_target {
+  color: red;
 }
 
 /* ---[페이지네이션]--------- */
