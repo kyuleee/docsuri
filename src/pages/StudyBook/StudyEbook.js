@@ -5,6 +5,7 @@ import HTMLFlipBook from "react-pageflip";
 import { Link } from "react-router-dom";
 const StudyEbook = () => {
   const [userAnswer, setAnswer] = useState("");
+
   const [hint, setHint] = useState(
     Array(StudyProblem.unit1.length).fill(false)
   );
@@ -18,9 +19,13 @@ const StudyEbook = () => {
     setAnswer(e.target.value);
   }
 
-  function handleAnswerButtonClick(index) {
+  function handleAnswerButtonClick(answer, comment) {
     setShowModal(true);
-    setCurrentProblemIndex(index);
+    setCurrentProblemIndex(answer, comment);
+    const isCorrect = userAnswer === answer;
+    setAnswered(isCorrect);
+    console.log(answer);
+    console.log(comment);
   }
 
   function closeModal() {
@@ -40,21 +45,35 @@ const StudyEbook = () => {
     <section className="StudyEbook w1400">
       {showModal && currentProblemIndex !== null && (
         <article className="StudyEbook_AnswerMadal">
-          <div className="ModalContent">
-            <div className="StudyBook_AnswerAll">
-              <input type="text" onChange={answerInput} />
+          <div className="Modal_Answer">
+            <div className="ModalContent">
+              <button className="CloseButton" onClick={closeModal}>
+                X
+              </button>
+              <div className="StudyBook_AnswerAll">
+                <input type="text" onChange={answerInput} />
+                <button
+                  className="StudyBook_AnswerBtn"
+                  onClick={() => handleAnswerButtonClick(currentProblemIndex)}
+                >
+                  정답확인하기
+                </button>
+              </div>
             </div>
-            <button
-              className="StudyBook_AnswerBtn"
-              onClick={() => handleAnswerButtonClick(currentProblemIndex)}
-            >
-              정답확인하기
-            </button>
-            <button className="CloseButton" onClick={closeModal}>
-              X
-            </button>
+            <div>
+              <div className="AnswerTwin">
+                {answered !== null && (
+                  <h3 className={answered ? "On_target" : "Off_target"}>
+                    {answered ? "정답" : "오답"}
+                  </h3>
+                )}
+              </div>
+              <div>
+                <h3>해설</h3>
+                <div className="Target_Comment"></div>
+              </div>
+            </div>
           </div>
-          <div></div>
         </article>
       )}
 
