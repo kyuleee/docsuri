@@ -7,8 +7,8 @@ import users from '../../datas/userData.json';
 
 
 const LoginPage = () => {
-    const [readId, setReadId] = useState(null);
-    const [readPassword, setReadPassWord] = useState(null);
+    // const [readId, setReadId] = useState(null);
+    // const [readPassword, setReadPassWord] = useState(null);
     const navigator = useNavigate();
     const debounceChange = useMemo((e) =>
         debounce((e) => {
@@ -54,8 +54,8 @@ const LoginPage = () => {
                     <div className='keepchk'>
                         <label for="chk">
                             <input type="checkbox" id="chk"/>
-                                <i class="circle"></i>
-                                <span class="keeptxt">로그인 상태 유지</span>
+                                <i className="circle"></i>
+                                <span className="keeptxt">로그인 상태 유지</span>
                         </label>
                     </div>
                     <button className='loginbtn' onClick={searchUser}>로그인</button>

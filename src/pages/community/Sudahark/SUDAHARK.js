@@ -87,7 +87,7 @@ const Sudahark = () => {
             setNewComment('');
         }
     };
-
+   
     return (
         <div className="Sudahark">
             <div className="Sudahark_title">
