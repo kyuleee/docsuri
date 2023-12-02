@@ -20,21 +20,21 @@ function App() {
   return (
     <>
       <Header />
-      <SideBar/>
+      <SideBar />
       <Routes>
-        <Route path="/docsuri/" element={<MainPage />}/>
-        <Route path="/StudyPage" element={<StudyPage/>}/>
-        <Route path="/StudyEbook" element={<StudyEbook/>}/>
+        <Route path="/docsuri/" element={<MainPage />} />
+        <Route path="/StudyPage" element={<StudyPage />} />
+        <Route path="/StudyEbook" element={<StudyEbook />} />
         <Route path="/Challenge" element={<Challenge />} />
         <Route path="/notification" element={<Notification />} />
-        <Route path="/login" element={<LoginPage/>}/>
+        <Route path="/login" element={<LoginPage />} />
         <Route path="/join" element={<Join />} />
         <Route path="/mypage" element={<MyPage />} />
         <Route path="/notification" element={<Notification />} />
         <Route path="/sudahark" element={<Sudahark />} />
       </Routes>
-    <Footer/>
-    {/* <ScrollDirectionDetector/> */}
+      <Footer />
+      {/* <ScrollDirectionDetector/> */}
     </>
   );
 }
