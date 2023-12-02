@@ -9,9 +9,11 @@ const NoticeSection = () => {
   const [slide2, setSlide2] = useState(87.5);
   const [slideLogic, setSlideLogic] = useState(true);
   useEffect(() => {
-    if (slide === -100) {
-      setSlide(87.5);
+    if (slide <= -50) {
       setSlideLogic(false);
+    }
+    if (slide === -100) {
+      setSlide(75);
     }
   }, [slide]);
   useInterval(() => {
@@ -19,6 +21,9 @@ const NoticeSection = () => {
   }, 2500);
 
   useEffect(() => {
+    if (slide2 <= -50) {
+      setSlideLogic(true);
+    }
     if (slide2 === -100) {
       setSlide2(87.5);
     }
@@ -37,17 +42,19 @@ const NoticeSection = () => {
         }
       >
         {noticeData.map((data) => (
-          <NoticeBar key={data.id} title={data.title} />
+          <NoticeBar key={data.id} title={data.title} text={data.tag2}/>
         ))}
       </div>
       <div
         className="cloneBar"
-        style={  slideLogic
-          ? { transform: `translateY(${slide2}%)`, zIndex: "1" }
-          : { transform: `translateY(${slide2}%)`, zIndex: "3" }}
+        style={
+          slideLogic
+            ? { transform: `translateY(${slide2}%)`, zIndex: "1" }
+            : { transform: `translateY(${slide2}%)`, zIndex: "3" }
+        }
       >
         {noticeData.map((data) => (
-          <NoticeBar key={data.id} title={data.title} />
+          <NoticeBar key={data.id} title={data.title} text={data.tag2}/>
         ))}
       </div>
     </section>

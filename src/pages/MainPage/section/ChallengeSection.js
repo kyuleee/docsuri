@@ -20,7 +20,7 @@ const ChallengeSection = ({ ChallengeSectionRef, challengeOn }) => {
           />
           <div className="more">
             <div className="moreBtn"></div>
-            <Link>
+            <Link to="/Challenge">
               더보기 <Arrow />
             </Link>
           </div>

@@ -1,12 +1,11 @@
-import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "./NoticeBar.css";
-import { useInterval } from "../hooks/useInterval";
-const NoticeBar = ({ title }) => {
+const NoticeBar = ({ title, text }) => {
   return (
     <div className="noticeBar">
-      <span className="tmi">공지사항</span>
-      <h3 className="noticeBarTitle">{title}</h3>
-      <span>MORE</span>
+      <span className="info">[{text}]</span>
+      <h3 className="noticeBarTitle"> {title}</h3>
+      <Link to='/notification'><span className="noticeLink">MORE</span></Link>
     </div>
   );
 };

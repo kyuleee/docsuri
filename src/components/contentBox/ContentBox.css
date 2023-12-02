@@ -2,7 +2,8 @@
   width: 500px;
   height: 300px;
   border-radius: 40px;
-  background-color: gray;
+  /* background-color: gray; */
+  position: relative;
 }
 .ContentTitleText {
   font-size: 60px;

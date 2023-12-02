@@ -8,9 +8,11 @@
 .barWrap{
     transition: 1.5s;
     position: absolute;
+    width: 100%;
 }
 .cloneBar{
     top: 0;
     position: absolute;
     transition: 1.5s;
+    width: 100%;
 }

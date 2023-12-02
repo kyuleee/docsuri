@@ -1,0 +1,31 @@
+.solidWrap {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+.sPath {
+  stroke-width: 5px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 21.5;
+  stroke-dashoffset: 172;
+  animation: svgC 3s linear infinite;
+}
+.sRect {
+  stroke-width: 5px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 400;
+  animation: svgS 3s linear infinite;
+}
+@keyframes svgP {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes svgS { 
+  to {
+    stroke-dashoffset: 0;
+  }
+}

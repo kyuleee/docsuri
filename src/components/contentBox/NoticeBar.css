@@ -3,23 +3,22 @@
     margin: 0 auto;
     height: 60px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     transition: 1s;
     background-color: #282828;
-}
-.tmi{
-    padding: 3px 10px;
-    border-radius: 10px;
-    color: #00ff62;
-    background-color: #555;
+    justify-content: space-between;
 }
 h3.noticeBarTitle{
     width: 80%;
-    margin: 0 50px;
     text-align: left;
     color: #fff;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+}
+span.noticeLink{
+    color: #fff;
+}
+span.info{
+    color: #fff;
 }

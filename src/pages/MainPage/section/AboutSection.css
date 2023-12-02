@@ -19,9 +19,10 @@
   display: flex;
   transition: 0.7s;
 }
-.bars{
+.bars {
   height: 30px;
   background-color: black;
   position: absolute;
   top: 50%;
 }
+
