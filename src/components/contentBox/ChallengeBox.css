@@ -3,9 +3,7 @@
 }
 .challengeContent {
   position: relative;
-  width: 250px;
-  height: 324px;
-  /* background-color: red; */
+  width: 100%;
   margin-bottom: 5px;
 }
 .bookImage {
@@ -36,4 +34,9 @@
 .challengeText {
   font-size: 20px;
   font-weight: 500;
+}
+@media(max-width:1440px){
+  .ChallengeBox {
+    margin-left: 0;
+  }
 }

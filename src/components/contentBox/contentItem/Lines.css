@@ -1,0 +1,53 @@
+.linesWrap {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+  }
+.lines {
+  stroke-width: 10px;
+  stroke-linecap: round;
+  stroke: #6eb5ff;
+}
+.centersLine {
+  stroke-dasharray: 251;
+  stroke-dashoffset: 500;
+  animation: svgL 3s linear infinite;
+}
+.centersLine2 {
+  stroke-dasharray: 251;
+  stroke-dashoffset: 500;
+  animation: svgL 3s linear infinite;
+  animation-direction: reverse;
+}
+.secondLine {
+  stroke-dasharray: 50;
+  stroke-dashoffset: 400;
+  animation: svgL 5s linear infinite;
+}
+.thirdLine {
+  stroke-dasharray: 15;
+  stroke-dashoffset: 60;
+  animation: svgL 1s linear infinite;
+}
+.fourthLine {
+  stroke-dasharray: 79;
+  stroke-dashoffset: 79;
+  animation: svgL 1s linear infinite;
+  animation-direction: alternate-reverse;
+}
+.fifthLine{
+    stroke-dasharray: 38;
+    stroke-dashoffset: 64;
+    animation: svgL 2s linear infinite;
+}
+.sixthLine{
+    stroke-dasharray: 65;
+    stroke-dashoffset: 118;
+    animation: svgL 2s linear infinite;
+
+}
+@keyframes svgL {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

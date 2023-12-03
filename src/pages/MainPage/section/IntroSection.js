@@ -18,7 +18,7 @@ const IntroSection = ({ introOn, introText }) => {
           className="phase2"
           style={introText ? { opacity: 1 } : { opacity: 0 }}
         >
-          <h2 className="secondTitleText">
+          <h2 className="secondTitleText stt1">
             수학은 연계성이 <br />
             강한 과목
           </h2>
@@ -28,7 +28,7 @@ const IntroSection = ({ introOn, introText }) => {
             이때 기초 학습을 완벽하게 이해하지 못했다면, 다음 단계로 올라가기
             힘들죠.
           </h3>
-          <h2 className="secondTitleText">독:수리를 이용해주시는 회원</h2>
+          <h2 className="secondTitleText stt2">독:수리를 이용해주시는 회원</h2>
         </article>
         <TabletModel />
       </div>

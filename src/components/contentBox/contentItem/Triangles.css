@@ -1,0 +1,20 @@
+.trianglesWrap {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+.triangles {
+  stroke-width: 5px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 98;
+  stroke-dashoffset: 294;
+  animation: svgT 3s linear infinite;
+  animation-direction: alternate;
+}
+
+@keyframes svgT {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

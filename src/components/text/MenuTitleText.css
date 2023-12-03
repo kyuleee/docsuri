@@ -15,3 +15,21 @@ h3.subComent {
 div.subComentWrap{
   margin-bottom: 30px;
 }
+@media (max-width:768px){
+  h2.menuTitleText {
+    font-size: 40px;
+  }
+}
+@media (max-width:460px){
+  h2.menuTitleText {
+    font-size: 32px;
+  }
+  h3.subTitleText {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  div.subComentWrap{
+    display: none;
+  }
+}

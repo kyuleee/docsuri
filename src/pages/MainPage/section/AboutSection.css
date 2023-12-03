@@ -19,9 +19,28 @@
   display: flex;
   transition: 0.7s;
 }
-.bars{
+.bars {
   height: 30px;
   background-color: black;
   position: absolute;
   top: 50%;
+}
+@media(max-width:1440px){
+  .aboutSpace{
+    width: 100%;
+  }
+}
+
+@media (max-width:768px){
+  .AboutSection{
+    height: auto;
+  }
+  .aboutSpace{
+    position: static;
+    height: 100%;
+  }
+  .aboutContentWrap{
+    flex-direction: column;
+    margin: 0 auto;
+  }
 }

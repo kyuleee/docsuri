@@ -1,8 +1,7 @@
 import { Canvas, useThree } from "@react-three/fiber";
 import { Lights, Model } from "./parts";
 import "./TabletModel.css";
-import { useEffect, useRef } from "react";
-import { render } from "@testing-library/react";
+import { useEffect } from "react";
 
 function ResponsiveCamera() {
   const { camera, size } = useThree();
@@ -14,14 +13,14 @@ function ResponsiveCamera() {
     if (size.width <= 1440 && size.width >= 1025) {
       camera.position.set(0, 0, 16);
     }
-    if (size.width <= 1024 && size.width >= 765) {
+    if (size.width <= 1024 && size.width >= 769) {
       camera.position.set(0, 0, 21);
     }
-    if (size.width < 768 && size.width >= 461) {
-      camera.position.set(0, 0, 35);
+    if (size.width <= 768 && size.width >= 461) {
+      camera.position.set(0, 0, 40);
     }
     if (size.width <= 460) {
-      camera.position.set(0, 0, 40);
+      camera.position.set(0, 0, 50);
     }
   }, [camera, size.width]);
 }

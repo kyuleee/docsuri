@@ -50,7 +50,7 @@
     transition: transform 0.3s ease-in-out;
 }
 .subNav.visible {
-    transform: translateX(100%  ); 
+    transform: translateX(100%); 
 }
 .subMenu{
     width: 100%;
