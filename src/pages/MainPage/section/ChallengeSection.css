@@ -1,14 +1,16 @@
 .ChallengeSection {
-  height: 100vh;
+  height: 100%;
 }
 .ChallengeSpace {
-  width: 1400px;
   height: 100vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
   transition: 1s;
+}
+.titleWrap{
+  width: 100%;
 }
 .more {
   position: relative;
@@ -20,13 +22,15 @@
   width: 50px;
   height: 50px;
   top: 50%;
-  left: -20px;
   transform: translate(0, -50%);
   border-radius: 25px;
   background: linear-gradient(135deg, #0a47fd 0%, #7b00df 100%);
   opacity: 0.7;
   z-index: -1;
   transition: 1s;
+}
+.moreText{
+  margin: 10px;
 }
 .more > a {
   font-size: 18px;
@@ -48,5 +52,15 @@
 .more:hover > .moreBtn {
   background: linear-gradient(135deg, #0a47fd 0%, #7b00df 100%);
   opacity: 1;
-  width: 140%;
+  width: 110%;
+}
+@media(max-width:1024px){
+  .ChallengeSpace{
+    height: 100%;
+    flex-direction: column;
+  }
+  .ChallengeBox{
+    margin: 100px 0;
+  }
+
 }

@@ -20,7 +20,6 @@ h2.secondTitleText {
   font-weight: 700;
   margin-bottom: 20px;
 }
-
 h2.TitleText {
   width: max-content;
   position: absolute;
@@ -36,16 +35,45 @@ h3.titleComent {
   font-size: 24px;
   margin-bottom: 30px;
 }
-@media (max-width:1440px) {
-  h2.TitleText{
+@media (max-width: 1440px) {
+  h2.TitleText {
     font-size: 50px;
   }
-  h2.secondTitleText {
+  h2.stt2 {
     font-size: 32px;
-    font-weight: 700;
   }
   h3.titleComent {
-    font-size: 16px;
+    font-size: 24px;
   }
 }
-@media(max-width:1440px){}
+@media (max-width: 768px) {
+
+  h2.TitleText {
+    left: 50%;
+    font-size: 40px;
+  }
+  .phase2 {
+    left: 50%;
+  }
+  h2.stt1 {
+    font-size: 40px;
+    width: max-content;
+  }
+  h2.stt2 {
+    display: none;
+  }
+  h3.titleComent {
+    font-size: 20px;
+  }
+}
+@media (max-width: 460px) {
+  .IntroSection {
+    text-align: center;
+  } 
+  h2.TitleText {
+    font-size: 32px;
+  }
+  h2.stt1 {
+    font-size: 32px;
+  }
+}

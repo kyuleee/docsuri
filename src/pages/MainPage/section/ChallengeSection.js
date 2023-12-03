@@ -21,7 +21,7 @@ const ChallengeSection = ({ ChallengeSectionRef, challengeOn }) => {
           <div className="more">
             <div className="moreBtn"></div>
             <Link to="/Challenge">
-              더보기 <Arrow />
+              <span className="moreText">더보기</span> <Arrow />
             </Link>
           </div>
         </div>
