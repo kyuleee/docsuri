@@ -13,6 +13,7 @@
     display: flex;
     width: 1200px;
     height: 75vh;
+    
     padding: 20px;
     flex-direction: column;
     align-items: center;
@@ -216,9 +217,9 @@ textarea{
         background-repeat: no-repeat;
     }
 @media (max-width:768px){
-    .ProblemModal{
-        height:70vh;
-    }   
+    /* .ProblemModal{
+        height:90vh;
+    }    */
     .Problem{
         display: block;
     }
