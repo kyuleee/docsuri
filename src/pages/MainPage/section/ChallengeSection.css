@@ -2,16 +2,17 @@
   height: 100%;
 }
 .ChallengeSpace {
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  /* align-items: center; */
   margin: 0 auto;
   transition: 1s;
+  padding: 180px 0;
 }
-.titleWrap{
+/* .titleWrap{
   width: 100%;
-}
+} */
 .more {
   position: relative;
   width: max-content;
@@ -56,11 +57,27 @@
 }
 @media(max-width:1024px){
   .ChallengeSpace{
-    height: 100%;
+    /* height: 100%; */
     flex-direction: column;
   }
   .ChallengeBox{
-    margin: 100px 0;
+    /* margin: 30px 0; */
+    margin: 0;
   }
-
+  .ChallengeBox:nth-of-type(2){
+    margin: 0 20px;
+  }
+}
+@media (max-width:768px) {
+  .ChallengeSpace{
+    padding: 150px 0;
+  }
+}
+@media (max-width:460px) {
+  .ChallengeBox:nth-of-type(2){
+    margin: 0;
+  }
+  .ChallengeBox{
+    margin: 30px 0;
+  }
 }

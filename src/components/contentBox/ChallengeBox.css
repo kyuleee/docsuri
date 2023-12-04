@@ -1,5 +1,6 @@
 .ChallengeBox {
-  margin-left: 40px;
+  margin-top: 70px;
+  margin-left: 20px;
 }
 .challengeContent {
   position: relative;
@@ -34,9 +35,23 @@
 .challengeText {
   font-size: 20px;
   font-weight: 500;
+  
 }
-@media(max-width:1440px){
-  .ChallengeBox {
-    margin-left: 0;
+.chWrap{
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+@media(max-width:1024px){
+  .chWrap{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 70px;
+  }
+}
+@media(max-width:460px){
+  .chWrap{
+    flex-direction: column;
   }
 }
