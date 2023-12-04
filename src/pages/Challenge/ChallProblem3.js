@@ -43,9 +43,8 @@ const ChallProblem3 = ({isOpen, onClose, onClose2}) => {
                         </div>
                     </div>
                     <div className='RightProblem'>
-                        <div className='subTitle'></div>
+                        <div className='subTitle'>답변 제출</div>
                         <div className='ProblemAnswer'>
-                            <div><p>답변 제출</p></div>
                             <textarea className='Answer'
                             value={userAnswer}
                             onChange={(e) => setUserAnswer(e.target.value)}

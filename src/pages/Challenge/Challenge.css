@@ -122,4 +122,8 @@
     .challengeBox{
         padding-top: 30px;
     }
+    .challengeBox>div{
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
