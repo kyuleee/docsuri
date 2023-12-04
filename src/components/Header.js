@@ -21,7 +21,7 @@ const Header = () => {
         }
     }   
     useEffect(()=>{
-        locationSection.pathname !== '/docsuri/' && window.scrollTo({top:0,left:0,behavior: "smooth"})
+        locationSection.pathname !== '/docsuri/' && window.scrollTo({top:0,left:0})
     })
 
     return (
