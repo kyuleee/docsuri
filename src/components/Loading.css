@@ -7,8 +7,5 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: lightblue;
-}
-.loadingPage>h1{
-    font-size: 30vw;
+    background-color: #F5F7F6;
 }

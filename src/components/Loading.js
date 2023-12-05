@@ -1,10 +1,9 @@
 import './Loading.css'
-import React
- from 'react';
+import React from 'react';
 const Loading = () => {
     return ( 
         <div className="loadingPage">
-            <h1>로딩중</h1>
+            <img src='/docsuri/img/load.gif'/>
         </div>
      );
 }

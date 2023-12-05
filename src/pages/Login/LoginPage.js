@@ -7,8 +7,7 @@ import users from '../../datas/userData.json';
 
 
 const LoginPage = () => {
-    // const [readId, setReadId] = useState(null);
-    // const [readPassword, setReadPassWord] = useState(null);
+  
     const navigator = useNavigate();
     const debounceChange = useMemo((e) =>
         debounce((e) => {

@@ -23,8 +23,6 @@ const MyPage = () => {
                 const image = new Image();
                 image.src = profile;
                 image.alt = "Profile Image";
-                // image.width = 150;
-                // image.height = 150;
                 const profileDisplay = document.getElementById("profileDisplay");
                 profileDisplay.innerHTML = "";
                 profileDisplay.appendChild(image);
@@ -58,7 +56,6 @@ const MyPage = () => {
                         <div className='mptop'>
                             <div>
                                 <span className='profile_label'>{userRef.current.edu}</span>
-                                {/* <span className='profile_label'>학생</span> */}
                                 <span><strong style={{ fontSize: '18px' }}>{userRef.current.name}</strong>님 반갑습니다!</span>
                             </div>
                             <div className='mypageTotal'>

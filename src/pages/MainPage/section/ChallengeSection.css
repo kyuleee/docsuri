@@ -2,17 +2,13 @@
   height: 100%;
 }
 .ChallengeSpace {
-  /* height: 100vh; */
   display: flex;
   justify-content: space-between;
-  /* align-items: center; */
   margin: 0 auto;
   transition: 1s;
   padding: 180px 0;
 }
-/* .titleWrap{
-  width: 100%;
-} */
+
 .more {
   position: relative;
   width: max-content;
@@ -57,11 +53,9 @@
 }
 @media(max-width:1024px){
   .ChallengeSpace{
-    /* height: 100%; */
     flex-direction: column;
   }
   .ChallengeBox{
-    /* margin: 30px 0; */
     margin: 0;
   }
   .ChallengeBox:nth-of-type(2){

@@ -76,9 +76,7 @@
 
 .sdh_body {
     display: flex;
-    /* width: 100%; */
     min-height: 680px;
-    /* padding: 100px 100px 150px 100px; */
     padding: 100px 0;
     width: 1400px;
     margin: 0 auto;
