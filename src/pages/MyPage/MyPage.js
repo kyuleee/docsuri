@@ -81,7 +81,7 @@ const MyPage = () => {
                             <p>{userRef.current.badge && typeof userRef.current.badge === 'string' ? userRef.current.badge.split(",")[5] : ""}</p> */}
                             {Array(6).fill().map((_, index) => (
                                 <p key={index} style={{textAlign:'center'}}>
-                                    <img src='/docsuri/img/goodjop.gif' style={{ borderRadius: '50%', width: '100px', height: '100px' }} />
+                                    <img src='/docsuri/img/goodjob.png' style={{ width: '100px', height: '100px' }} alt='참 잘했어요 스티커'/>
                                     <p>{userRef.current.badge && typeof userRef.current.badge === 'string' ? userRef.current.badge.split(",")[index] : ""}</p>
                                 </p>
                             ))}
@@ -90,11 +90,11 @@ const MyPage = () => {
                     <div className='recommendBook'>
                         <h3>추천도서</h3>
                         <div className='bookWrap'>
-                            <a href='https://www.aladin.co.kr/m/mproduct.aspx?ItemId=256945177' target='_blank'><img src={process.env.PUBLIC_URL + '/img/book1.jpg'} alt='수학하지 않는 수학' /></a>
-                            <a href='https://www.aladin.co.kr/m/mproduct.aspx?ItemId=286921418' target='_blank'><img src={process.env.PUBLIC_URL + '/img/book2.jpg'} alt='발칙한 수학책' /></a>
-                            <a href='https://www.aladin.co.kr/m/mproduct.aspx?ItemId=255672255' target='_blank'><img src={process.env.PUBLIC_URL + '/img/book3.jpg'} alt='이런 수학은 처음이야' /></a>
-                            <a href='https://www.yes24.com/Product/Goods/45545900' target='_blank'><img src={process.env.PUBLIC_URL + '/img/book4.jpg'} alt='법칙, 원리, 공식을 쉽게 정리한 수학 사전' /></a>
-                            <a href='https://www.yes24.com/Product/Goods/106188521' target='_blank'><img src={process.env.PUBLIC_URL + '/img/book5.jpg'} alt='신사고 쎈 초등 수학 4-2' /></a>
+                            <a href='https://www.aladin.co.kr/m/mproduct.aspx?ItemId=256945177' target='_blank' rel="noreferrer"><img src={process.env.PUBLIC_URL + '/img/book1.jpg'} alt='수학하지 않는 수학' /></a>
+                            <a href='https://www.aladin.co.kr/m/mproduct.aspx?ItemId=286921418' target='_blank' rel="noreferrer"><img src={process.env.PUBLIC_URL + '/img/book2.jpg'} alt='발칙한 수학책' /></a>
+                            <a href='https://www.aladin.co.kr/m/mproduct.aspx?ItemId=255672255' target='_blank' rel="noreferrer"><img src={process.env.PUBLIC_URL + '/img/book3.jpg'} alt='이런 수학은 처음이야' /></a>
+                            <a href='https://www.yes24.com/Product/Goods/45545900' target='_blank' rel="noreferrer"><img src={process.env.PUBLIC_URL + '/img/book4.jpg'} alt='법칙, 원리, 공식을 쉽게 정리한 수학 사전' /></a>
+                            <a href='https://www.yes24.com/Product/Goods/106188521' target='_blank' rel="noreferrer"><img src={process.env.PUBLIC_URL + '/img/book5.jpg'} alt='신사고 쎈 초등 수학 4-2' /></a>
                         </div>
                     </div>
                 </div>

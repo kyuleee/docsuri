@@ -1,4 +1,4 @@
-.noticeBar{
+.noticeBar {
     width: 1400px;
     margin: 0 auto;
     height: 60px;
@@ -8,7 +8,8 @@
     background-color: #282828;
     justify-content: space-between;
 }
-h3.noticeBarTitle{
+
+h3.noticeBarTitle {
     width: 80%;
     text-align: left;
     color: #fff;
@@ -16,9 +17,31 @@ h3.noticeBarTitle{
     overflow: hidden;
     white-space: nowrap;
 }
-span.noticeLink{
+
+span.noticeLink {
     color: #fff;
 }
-span.info{
+
+span.info {
     color: #fff;
+}
+
+@media (max-width:1440px) {
+    .noticeBar {
+        width: 100%;
+        padding: 0 50px;
+    }
+    span.info {
+        display: none;
+    }
+}
+@media (max-width:768px) {
+    .noticeBar {
+        padding: 0 30px;
+    }
+}
+@media (max-width:460) {
+    .noticeBar {
+        padding: 0 20px;
+    }
 }

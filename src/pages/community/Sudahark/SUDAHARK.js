@@ -120,7 +120,6 @@ const Sudahark = () => {
                 {newPost.map(item => (
                     <div className='sdh_posts_box' key={item.id}>
                         <div>{item.name}</div>
-                        <div>{item.id}</div>
                         <div className='sdh_postsintext' dangerouslySetInnerHTML={{ __html: item.text.replace(/\n/g, '<br>') }} />
                         <div className='sdh_postsinPile'>첨부파일:</div>
                         <div className='sdh_post_reply'>

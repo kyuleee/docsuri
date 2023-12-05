@@ -1,5 +1,5 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { Link, useNavigate,useLocation } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import users from '../datas/userData.json';
 import './Header.css';
 const Header = () => {
@@ -19,11 +19,14 @@ const Header = () => {
         } else {
             navigate('/login')
         }
-    }   
-    useEffect(()=>{
-        locationSection.pathname !== '/docsuri/' && window.scrollTo({top:0,left:0})
-    })
+    }
+    useEffect(() => {
+        locationSection.pathname !== '/docsuri/' && window.scrollTo(0, 0)
+    }, [])
 
+    const closeHamMenu = () => {
+        setSubNavVisible(false)
+    }
     return (
         <div className="Header">
             <div className="headerCont">
@@ -39,14 +42,15 @@ const Header = () => {
             </div>
             <div className={`subNav ${subNavVisible ? 'visible' : ''}`}>
                 <div className="subMenu">
-                    <h2>MENU</h2>
+                    {/* <h2>MENU</h2> */}
+                    <Link to='/docsuri/' onClick={closeHamMenu}><div className="logoW"></div></Link>
                     <div className="close" onClick={toggleSubNav}></div>
                 </div>
-                <div className="subLink">
-                    <Link to='/StudyPage'><div>교과학습</div></Link>
-                    <Link to='/Challenge'><div>챌린지</div></Link>
-                    <Link to='/notification'><div>게시판</div></Link>
-                    <Link to='/sudahark'><div>수다학</div></Link>
+                <div className="subLink" >
+                    <Link to='/StudyPage' onClick={closeHamMenu}><div>교과학습</div></Link>
+                    <Link to='/Challenge' onClick={closeHamMenu}><div>챌린지</div></Link>
+                    <Link to='/notification' onClick={closeHamMenu}><div>게시판</div></Link>
+                    <Link to='/sudahark' onClick={closeHamMenu}><div>수다학</div></Link>
                 </div>
                 <div className="login">
                     <Link to='/login'>
@@ -54,7 +58,7 @@ const Header = () => {
                     </Link>
                     <p>|</p>
                     <Link to='/join'>
-                         <p>회원가입</p>
+                        <p>회원가입</p>
                     </Link>
                 </div>
             </div>

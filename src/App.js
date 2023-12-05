@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import "./style/reset.css";
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
@@ -15,10 +15,24 @@ import Sudahark from "./pages/community/Sudahark/SUDAHARK";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import SideBar from "./components/SideBar/SideBar";
+import Loading from "./components/Loading";
 
 function App() {
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, []);
+  
+
+
   return (
+    
     <>
+    {loading ? <Loading/>:<>
       <Header />
       <SideBar />
       <Routes>
@@ -33,9 +47,10 @@ function App() {
         <Route path="/notification" element={<Notification />} />
         <Route path="/sudahark" element={<Sudahark />} />
       </Routes>
-      <Footer />
+      <Footer /></>}
       {/* <ScrollDirectionDetector/> */}
     </>
+  
   );
 }
 

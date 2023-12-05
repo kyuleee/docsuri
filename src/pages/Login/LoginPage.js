@@ -59,7 +59,7 @@ const LoginPage = () => {
                         </label>
                     </div>
                     <button className='loginbtn' onClick={searchUser}>로그인</button>
-                    {/* <KakaoLogin /> */}
+                    <KakaoLogin />
                 </form>
             </article>
             <ul>
