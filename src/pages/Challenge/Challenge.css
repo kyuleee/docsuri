@@ -24,11 +24,10 @@
     height: 280px;
     position: relative;
     top: 0;
-    transition: top 0.2s ease;
+    transition: top 0.3s ease;
     cursor: pointer;
     overflow: hidden;
     box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.30);
-    border-radius: 10px;
 }
 .challengeBox>div:hover{
     top: -20px;
@@ -122,5 +121,9 @@
     }
     .challengeBox{
         padding-top: 30px;
+    }
+    .challengeBox>div{
+        left: 50%;
+        transform: translateX(-50%);
     }
 }

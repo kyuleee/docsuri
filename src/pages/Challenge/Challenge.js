@@ -60,28 +60,24 @@ const Challenge = () => {
 
   const handleChallengeClick = (challengeNumber) => {
     openModal();
-    console.log(`challenge${challengeNumber} 클릭!`);
   };
 
   const handleChallengeClick2 = (challengeNumber2) => {
     if (isModalOpen2_1 === true) {
       openModal2();
     }
-    console.log(`challenge${challengeNumber2} 클릭!`);
   };
 
   const handleChallengeClick3 = (challengeNumber3) => {
     if (isModalOpen3_1 === true) {
       openModal3();
     }
-    console.log(`challenge${challengeNumber3} 클릭!`);
   };
 
   const handleChallengeClick4 = (challengeNumber4) => {
     if (isModalOpen4_1 === true) {
       openModal4();
     }
-    console.log(`challenge${challengeNumber4} 클릭!`);
   };
 
 

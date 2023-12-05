@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import kakaologin from '../../asset/img/kakaologin.png';
 import './KakaoLogin.css';
+import MyPage from "../MyPage/MyPage";
 
 const Login = () => {
   const [user, setUser] = useState();
@@ -58,39 +59,20 @@ const Login = () => {
   return (
     <div>
       {user ? (
-        <div>
+        <>
+        <MyPage/>
+        {/* <div className="kakaoPage">
+          <h2>카카오톡 로그인</h2>
           <button onClick={kakaoLogout}>카카오 로그아웃</button>
           <img src={user.profileImg} alt="프로필 이미지" />
           <h2>닉네임 : {user.nickName}</h2>
-        </div>
+        </div> */}
+        </>
       ) : (
-        <section className='loginPage'>
-          <article className='frmLogin'>
-            <h3>로그인</h3>
-            <form method='post'>
-              <div>
-                <input type='text' placeholder='아이디' name='userId' id='userId' />
-              </div>
-              <div>
-                <input type='text' placeholder='비밀번호' name='userPwd' id='userPwd' />
-              </div>
-              <div className='keepchk'>
-                <input type='checkbox' id='keep' name='nvlong' />
-                <label for='keep' className='keeptxt'>로그인 상태 유지</label>
-              </div>
-              <button className='loginbtn'>로그인</button>
-              {/* <KakaoLogin/> */}
-              <button onClick={kakaoLogin} className="kakaologinbtn">
-                <img src={kakaologin} alt="카카오톡 로그인" />
-                카카오톡 간편 로그인
-              </button>
-            </form>
-          </article>
-        </section>
-        // <button onClick={kakaoLogin} className="kakaologinbtn">
-        //   <img src={kakaologin} alt="카카오톡 로그인"/>
-        //   카카오톡 간편 로그인
-        // </button>
+        <button onClick={kakaoLogin} className="kakaologinbtn">
+          <img src={kakaologin} alt="카카오톡 로그인"/>
+          카카오톡 간편 로그인
+        </button>
       )}
     </div>
   );

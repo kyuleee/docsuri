@@ -12,9 +12,8 @@
 .ProblemModal{
     display: flex;
     width: 1200px;
-    height: 700px;
-    min-width: 600px;
-    max-width: 1200px;
+    height: 75vh;
+    
     padding: 20px;
     flex-direction: column;
     align-items: center;
@@ -38,7 +37,6 @@
 }
 .LeftProblem{
     display: flex;
-    max-width: 570px;
     flex-direction: column;
     align-items: flex-start;
     flex: 1 0 0;
@@ -198,8 +196,9 @@
     color: red;
     font-weight: bold;
 }
-
-
+textarea{
+    resize: none;
+}
 /* 반응형 */
 
 @media (max-width:1260px){
@@ -217,16 +216,17 @@
         background-size: cover;
         background-repeat: no-repeat;
     }
+}
 @media (max-width:768px){
-    .ProblemModal{
-        height: 800px;
-    }   
+    /* .ProblemModal{
+        height:90vh;
+    }    */
     .Problem{
         display: block;
     }
     .LeftProblem{
         max-width: 100%;
-        margin-bottom: 20px;
+        margin-bottom: 5px;
     }
     .RightProblem{
         display: flex;
@@ -236,15 +236,53 @@
         flex: 1 0 0;
         align-self: stretch;
     }
-
+    .ProblemAnswer{
+        gap: 10px;
+        height: 100px;
+        padding: 20px;
     }
-}
-@media (max-width:640px){
-    .ChallProblem{
-        padding: 0 50px;
+    
+   
+    .QuestionImg{
+        margin-top: 10px;
+        width: 210px;
+        height: 153px;
+        background-image: url(../../asset/img/QuestionImg.png)  ;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .Answer{
+        padding: 15px;
     }
     .ProblemModal{
-        max-width: 500px;
-        margin-top: 100px;
+        justify-content: center;
+        overflow-y: scroll;
+    }
+
+}
+
+@media (max-width:640px){
+   
+    .QuestionImg{
+        margin-top: 10px;
+        width: 210px;
+        height: 153px;
+        background-image: url(../../asset/img/QuestionImg.png)  ;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .Question>p{
+        font-size: 14px;
+    }
+  
+}
+@media (max-width:480px){
+    .QuestionImg{
+        margin-top: 5px;
+        width: 130px;
+        height: 90px;
+        background-image: url(../../asset/img/QuestionImg.png)  ;
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 }

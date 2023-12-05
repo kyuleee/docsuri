@@ -25,28 +25,30 @@ const ChallengeSection = ({ ChallengeSectionRef, challengeOn }) => {
             </Link>
           </div>
         </div>
-        <ChallengeBox
-          text={"규칙찾기 수학 챌린지"}
-          date={""}
-          day={""}
-          personnel={""}
-          imgCode={5}
-        />
-        <ChallengeBox
-          text={"수학 블랙 챌린지"}
-          date={""}
-          day={""}
-          personnel={""}
-          imgCode={1}
-        />
-        <ChallengeBox
-          text={"고학년 심화 과정 챌린지"}
-          date={"2023.08.14~2023.09.10"}
-          day={"어워즈 2023.09.23"}
-          personnel={"참여인원 1301명"}
-          imgCode={2}
-        />
-      </div>
+        <div className="chWrap">
+          <ChallengeBox
+            text={"규칙찾기 수학 챌린지"}
+            date={"2023.12.01~2023.12.31"}
+            day={"어워즈 2024.01.01"}
+            personnel={"참여인원 840명"}
+            imgCode={5}
+          />
+          <ChallengeBox
+            text={"수학 블랙 챌린지"}
+            date={"2023.12.01~2023.12.31"}
+            day={"어워즈 2024.01.01"}
+            personnel={"참여인원 1184명"}
+            imgCode={1}
+          />
+          <ChallengeBox
+            text={"고학년 심화 과정 챌린지"}
+            date={"2023.12.01~2023.12.31"}
+            day={"어워즈 2024.01.01"}
+            personnel={"참여인원 1301명"}
+            imgCode={2}
+          />
+                </div>
+        </div>
     </section>
   );
 };

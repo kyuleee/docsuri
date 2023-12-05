@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Footer.css";
 const Footer = () => {
     return ( 
@@ -5,7 +6,7 @@ const Footer = () => {
             <div>
                 <div className="footerIcon">
                     <div className="footerLogo">
-                        <div className="FLogo"></div>
+                        <Link to='/docsuri/'><div className="FLogo"></div></Link>
                     </div>
                     <div className="iconLink">
                         <div className="Ficon"></div>
