@@ -252,10 +252,11 @@ textarea{
         background-repeat: no-repeat;
     }
     .Answer{
-        padding: 5px;
+        padding: 10px;
     }
     .ProblemModal{
         justify-content: center;
+        overflow-y: scroll;
     }
 
 }
