@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./StudyEbook.css";
 import StudyProblem from "./StudyProblem.json";
 import HTMLFlipBook from "react-pageflip";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const StudyEbook = () => {
   const [userAnswer, setAnswer] = useState("");
@@ -13,9 +13,9 @@ const StudyEbook = () => {
     Array(StudyProblem.unit1.length).fill(false)
   );
 
-  
-  const [visible,setVisible] =useState(false);
-  
+
+  const [visible, setVisible] = useState(false);
+
 
   const [hint, setHint] = useState(
     Array(StudyProblem.unit1.length).fill(false)
@@ -31,7 +31,7 @@ const StudyEbook = () => {
   }
 
   function handleAnswerButtonClick(answer, comment) {
-    setVisible(true);
+    // setVisible(true);
     setShowModal(true);
     setCurrentProblemIndex(answer, comment);
     const isCorrect = userAnswer === answer;
@@ -41,10 +41,12 @@ const StudyEbook = () => {
       setShowComment(true);
       setCommentContent(comment);
       setShowHintButton(false);
+      setVisible(!visible);
     } else {
       setShowComment(true);
       setCommentContent("");
       setShowHintButton(true);
+      setVisible(!visible);
     }
 
     setHint((prevHints) => {
@@ -101,11 +103,14 @@ const StudyEbook = () => {
       setVisible(true);
     }
   }
-
+  const navigate = useNavigate();
+  const goBack = () => {
+    navigate('/StudyPage');
+  }
   return (
     <section className="StudyEbook w1400">
       <article>
-        <button className="StudyEbook_Out">나가기 X</button>
+        <button className="StudyEbook_Out" onClick={goBack}>나가기 X</button>
       </article>
       {showModal && currentProblemIndex !== null && (
         <article className="StudyEbook_AnswerMadal">
@@ -127,17 +132,17 @@ const StudyEbook = () => {
                   정답확인하기
                 </button>
                 {visible && <div className='AnswerTwin'>
-                <h3 className={answered ? "On_target" : "Off_target"}>
+                  <h3 className={answered ? "On_target" : "Off_target"}>
                     {answered ? "정답" : "오답"}
                   </h3>
-                {/* {userAnswer !== "" && userAnswer !== null ? (
+                  {/* {userAnswer !== "" && userAnswer !== null ? (
                   <h3 className={answered ? "On_target" : "Off_target"}>
                     {answered ? "정답" : "오답"}
                   </h3>
                 ) : (
                   <h3 className="NotEntered">미입력</h3>
                 )} */}
-              </div>}
+                </div>}
               </div>
             </div>
             <div>
@@ -151,7 +156,6 @@ const StudyEbook = () => {
                 )}
               </div> */}
               <div>
-                {/* <h3 className="Comment_Text">해설</h3> */}
                 {showComment ? (
                   <div className="Target_Comment">
                     {answered ? commentContent : null}
