@@ -20,7 +20,7 @@ function ResponsiveCamera() {
       camera.position.set(0, 0, 40);
     }
     if (size.width <= 460) {
-      camera.position.set(0, 0, 45);
+      camera.position.set(0, 0, 35);
     }
   }, [camera, size.width]);
 }

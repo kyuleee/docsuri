@@ -42,8 +42,7 @@
   }
   .contentBox {
     width: 300px;
-    height: 300px;
-    margin-bottom: 100px;
+    height: 200px;
   }
   .circleWrap, .linesWrap, .solidWrap, .squareWrap, .trianglesWrap{
     width: 150px;

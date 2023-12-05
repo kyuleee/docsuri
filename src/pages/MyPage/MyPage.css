@@ -47,6 +47,7 @@
     border: 1px solid #ddd;
     border-radius: 10px;
     width: 100%;
+    overflow: hidden;
 }
 .profile_label{
     background-color: #708FFF;
