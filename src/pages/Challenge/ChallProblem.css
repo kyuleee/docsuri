@@ -216,6 +216,7 @@ textarea{
         background-size: cover;
         background-repeat: no-repeat;
     }
+}
 @media (max-width:768px){
     /* .ProblemModal{
         height:90vh;
@@ -250,9 +251,15 @@ textarea{
         background-size: cover;
         background-repeat: no-repeat;
     }
-
+    .Answer{
+        padding: 5px;
     }
+    .ProblemModal{
+        justify-content: center;
+    }
+
 }
+
 @media (max-width:640px){
    
     .QuestionImg{
