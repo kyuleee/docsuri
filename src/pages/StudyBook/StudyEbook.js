@@ -13,8 +13,7 @@ const StudyEbook = () => {
     Array(StudyProblem.unit1.length).fill(false)
   );
 
-
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(true);
 
 
   const [hint, setHint] = useState(
@@ -31,23 +30,15 @@ const StudyEbook = () => {
   }
 
   function handleAnswerButtonClick(answer, comment) {
-    // setVisible(true);
+    setVisible(!visible)
+    const isCorrect = userAnswer === answer;
     setShowModal(true);
     setCurrentProblemIndex(answer, comment);
-    const isCorrect = userAnswer === answer;
     setAnswered(isCorrect);
 
-    if (isCorrect) {
-      setShowComment(true);
-      setCommentContent(comment);
-      setShowHintButton(false);
-      setVisible(!visible);
-    } else {
-      setShowComment(true);
-      setCommentContent("");
-      setShowHintButton(true);
-      setVisible(!visible);
-    }
+    setShowComment(true);
+    setCommentContent(isCorrect ? comment : "");
+    setShowHintButton(!isCorrect);
 
     setHint((prevHints) => {
       const newHints = [...prevHints];
@@ -127,34 +118,20 @@ const StudyEbook = () => {
                 />
                 <button
                   className="StudyBook_AnswerBtn"
-                  onClick={() => handleAnswerButtonClick(currentProblemIndex)}
+                  onClick={() => { handleAnswerButtonClick(currentProblemIndex); }}
                 >
                   정답확인하기
                 </button>
-                {visible && <div className='AnswerTwin'>
-                  <h3 className={answered ? "On_target" : "Off_target"}>
-                    {answered ? "정답" : "오답"}
-                  </h3>
-                  {/* {userAnswer !== "" && userAnswer !== null ? (
-                  <h3 className={answered ? "On_target" : "Off_target"}>
-                    {answered ? "정답" : "오답"}
-                  </h3>
-                ) : (
-                  <h3 className="NotEntered">미입력</h3>
-                )} */}
-                </div>}
+                {visible &&(
+                  <div className='AnswerTwin'>
+                    <h3 className={answered ? "On_target" : "Off_target"}>
+                      {answered ? "정답" : "오답"}
+                    </h3>
+                  </div>
+                )}
               </div>
             </div>
             <div>
-              {/* <div className="AnswerTwin" ref={grading}>
-                {userAnswer !== "" && userAnswer !== null ? (
-                  <h3 className={answered ? "On_target" : "Off_target"}>
-                    {answered ? "정답" : "오답"}
-                  </h3>
-                ) : (
-                  <h3 className="NotEntered">미입력</h3>
-                )}
-              </div> */}
               <div>
                 {showComment ? (
                   <div className="Target_Comment">
@@ -171,7 +148,6 @@ const StudyEbook = () => {
           </div>
         </article>
       )}
-
       <article className="StudyBook_AllPages">
         <HTMLFlipBook width={600} height={800}>
           {/* 페이지 속도 조절 flippingTime={1000} */}
@@ -202,7 +178,7 @@ const StudyEbook = () => {
                   </div>
                   <p className="Chapter_Ptext">블라블라 - 이론내용</p>
                 </div>
-
+                
                 <div className="StudyBook_Chapter">
                   <div className="Chapter_Text">
                     <h4>1-3 곱셉,나눗셈</h4>

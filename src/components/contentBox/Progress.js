@@ -6,12 +6,12 @@ const Progress = (props) => {
         <li className='progressItem'>
             <div className='leftBox'>
                 <div>
-                    <Link to='/StudyPage'>
+                    <Link to='/StudyEbook'>
                         <img src={process.env.PUBLIC_URL + '/img/paper.jpg'} alt='paper icon' />
                     </Link>
                 </div>
                 <div>
-                    <Link to='/StudyPage'>
+                    <Link to='/StudyEbook'>
                         <p>{props.title}</p>
                         <p>이동 &gt;</p>
                     </Link>
