@@ -85,23 +85,12 @@
     margin-top: 20px;
     user-select: none;
 }
-.w1400{
-    width: 1400px;
-    margin: 0 auto;
-}
 @media (max-width:1440px) {
-    .w1400{
-        width: 100%;
-        padding: 0 50px;
-    }
     .challenge{
         padding: 120px 0 150px;
     }
 }
 @media (max-width:768px) {
-    .w1400{
-        padding: 0 30px;
-    }
     .challengeTitle{
         font-size: 34px;
     }
@@ -110,9 +99,6 @@
     }
 }
 @media (max-width:460px) {
-    .w1400{
-        padding: 0 20px;
-    }
     .challengeTitle{
         font-size: 28px;
     }
