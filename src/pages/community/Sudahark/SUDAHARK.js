@@ -30,13 +30,13 @@ const Sudahark = () => {
         {
             "id": 2,
             "name": randomName(),
-            "text": "모르겠는 문제 있습니다.\n 챌린지 3번문제 어떻게 푸는건가요",
+            "text": "모르겠는 문제 있습니다.\n 챌린지 2번문제 어떻게 푸는건가요",
             "comments": []
         },
         {
             "id": 3,
             "name": randomName(),
-            "text": "모르겠는 문제 있습니다.\n 챌린지 3번문제 어떻게 푸는건가요",
+            "text": "모르겠는 문제 있습니다.\n 챌린지 1번문제 어떻게 푸는건가요",
             "comments": []
         }
     ]);
@@ -87,6 +87,18 @@ const Sudahark = () => {
             setNewComment('');
         }
     };
+
+
+    const [searchTerm, setSearchTerm] = useState('');
+    const handleSearchTermChange = (e) => {
+        setSearchTerm(e.target.value);
+    };
+    const handleSearchIconClick = () => {
+        const filtered = newPost.filter((post) =>
+            post.text.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+        setNewPost(filtered);
+    };
    
     return (
         <div className="Sudahark">
@@ -96,8 +108,8 @@ const Sudahark = () => {
                     <div className="sdh_title_sub">수다 + 수학 = 수다학</div>
                 </div>
                 <div className="sdh_search">
-                    <input placeholder="궁금한 점을 검색해 보세요" />
-                    <div className="sdh_search_icon"></div>
+                    <input placeholder="궁금한 점을 검색해 보세요" value={searchTerm} onChange={handleSearchTermChange} />
+                    <div className="sdh_search_icon" onClick={handleSearchIconClick}></div>
                 </div>
             </div>
             <div className="sdh_body">
