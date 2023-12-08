@@ -70,15 +70,9 @@ const MyPage = () => {
                             </div>
                         </div>
                         <div className='badgeWrap'>
-                            {/* <p>{userRef.current.badge && typeof userRef.current.badge === 'string' ? userRef.current.badge.split(",")[0] : ""}</p>
-                            <p>{userRef.current.badge && typeof userRef.current.badge === 'string' ? userRef.current.badge.split(",")[1] : ""}</p>
-                            <p>{userRef.current.badge && typeof userRef.current.badge === 'string' ? userRef.current.badge.split(",")[2] : ""}</p>
-                            <p>{userRef.current.badge && typeof userRef.current.badge === 'string' ? userRef.current.badge.split(",")[3] : ""}</p>
-                            <p>{userRef.current.badge && typeof userRef.current.badge === 'string' ? userRef.current.badge.split(",")[4] : ""}</p>
-                            <p>{userRef.current.badge && typeof userRef.current.badge === 'string' ? userRef.current.badge.split(",")[5] : ""}</p> */}
                             {Array(6).fill().map((_, index) => (
                                 <p key={index} style={{textAlign:'center'}}>
-                                    <img src='/docsuri/img/goodjob.png' style={{ width: '100px', height: '100px' }} alt='참 잘했어요 스티커'/>
+                                    <img src='/docsuri/img/badge03.jpg' style={{ width: '100px', height: '100px' }} alt='참 잘했어요 스티커'/>
                                     <p>{userRef.current.badge && typeof userRef.current.badge === 'string' ? userRef.current.badge.split(",")[index] : ""}</p>
                                 </p>
                             ))}

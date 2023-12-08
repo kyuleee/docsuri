@@ -23,4 +23,20 @@ input{
   margin: 0 auto;
   width: 1400px;
 }
+@media (max-width:1440px) {
+  .w1400{
+      width: 100%;
+      padding: 0 50px;
+  }
+}
+@media (max-width:768px) {
+  .w1400{
+      padding: 0 30px;
+  }
+}
+@media (max-width:460px) {
+  .w1400{
+      padding: 0 20px;
+  }
+}
 
