@@ -174,9 +174,9 @@ const StudyEbook = () => {
         </article>
       )}
       <article className="StudyBook_AllPages">
-        <HTMLFlipBook width={600} height={750}>
+        <HTMLFlipBook className="flipBook" width={600} height={750}>
           {/* 페이지 속도 조절 flippingTime={1000} */}
-          <div className="demoPage">
+          <div className="demoPage pageStyle">
             <div className="StudyBook_LeftPage">
               <h3>4학년 목차</h3>
               <div className="StudyBook_LevelText">
@@ -250,7 +250,7 @@ const StudyEbook = () => {
               </div>
             </div>
           </div>
-          <div className="demoPage">
+          <div className="demoPage pageStyle">
             <div className="StudyBook_RightPage">
               <div className="StudyBook_LevelText-1">
                 <h5>2학기</h5>
@@ -338,7 +338,7 @@ const StudyEbook = () => {
           </div>
           {/* 1-1 큰수 */}
           {StudyProblem.unit1.map((problem, index) => (
-            <div className="demoPage" key={index}>
+            <div className="demoPage pageStyle" key={index}>
               <div className="StudyBook_ProblemPage">
                 <div className="StudyBook_ThreeItems">
                   <div className="StudyBook_Number">{problem.id}.</div>
@@ -382,7 +382,7 @@ const StudyEbook = () => {
             </div>
           ))}
           {StudyProblem.unit2.map((problem, index) => (
-            <div className="demoPage" key={index}>
+            <div className="demoPage pageStyle" key={index}>
               <div className="StudyBook_ProblemPage">
                 <div className="StudyBook_ThreeItems">
                   <div className="StudyBook_Number">{problem.id}.</div>
@@ -426,13 +426,13 @@ const StudyEbook = () => {
             </div>
           ))}
 
-          {/* <div className="demoPage">Page 4</div>
-          <div className="demoPage">Page 5</div>
-          <div className="demoPage">Page 6</div>
-          <div className="demoPage">Page 7</div>
-          <div className="demoPage">Page 8</div>
-          <div className="demoPage">Page 9</div>
-          <div className="demoPage">Page 10</div> */}
+          {/* <div className="demoPage pageStyle">Page 4</div>
+          <div className="demoPage pageStyle">Page 5</div>
+          <div className="demoPage pageStyle">Page 6</div>
+          <div className="demoPage pageStyle">Page 7</div>
+          <div className="demoPage pageStyle">Page 8</div>
+          <div className="demoPage pageStyle">Page 9</div>
+          <div className="demoPage pageStyle">Page 10</div> */}
         </HTMLFlipBook>
       </article>
     </section>
