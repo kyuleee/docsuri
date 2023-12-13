@@ -15,7 +15,6 @@ const StudyEbook = () => {
 
   const [visible, setVisible] = useState(true);
 
-
   const [hint, setHint] = useState(
     Array(StudyProblem.unit1.length).fill(false)
   );
@@ -30,14 +29,15 @@ const StudyEbook = () => {
   }
 
   function handleAnswerButtonClick(answer, comment) {
-    setVisible(!visible)
+    setVisible(!visible);
     const isCorrect = userAnswer === answer;
     setShowModal(true);
     setCurrentProblemIndex(answer, comment);
     setAnswered(isCorrect);
 
-    setShowComment(true);
-    setCommentContent(isCorrect ? comment : "");
+    // "해설보기" 버튼이 클릭되었을 때만 해설을 보이도록 설정
+    setShowComment(false);
+
     setShowHintButton(!isCorrect);
 
     setHint((prevHints) => {
@@ -45,6 +45,16 @@ const StudyEbook = () => {
       newHints[currentProblemIndex] = false; // 정답 확인 시 해당 문제의 힌트 상태를 숨김으로 변경
       return newHints;
     });
+
+    if (!isCorrect && comment) {
+      handleCommentButtonClick(comment);
+    }
+  }
+
+  function handleCommentButtonClick(comment) {
+    console.log("Comment Button Clicked. Comment:", comment);
+
+    setCommentContent(comment);
   }
 
   function closeModal() {
@@ -88,23 +98,21 @@ const StudyEbook = () => {
   //정답확인 버튼 + 엔터키
   function handleInputKeyPress(e) {
     if (e.key === "Enter") {
-      handleAnswerButtonClick(currentProblemIndex);
+      handleAnswerButtonClick(currentProblemIndex, commentContent);
       setVisible(true);
     }
   }
   const navigate = useNavigate();
   const goBack = () => {
-    navigate('/StudyPage');
-  }
-  function handleCommentButtonClick(index) {
-    setCommentContent(StudyProblem.unit2[index-1].comment);
-    setShowComment(true);
-  }
+    navigate("/StudyPage");
+  };
 
   return (
     <section className="StudyEbook w1400">
       <article>
-        <button className="StudyEbook_Out" onClick={goBack}>나가기 X</button>
+        <button className="StudyEbook_Out" onClick={goBack}>
+          나가기 X
+        </button>
       </article>
       {showModal && currentProblemIndex !== null && (
         <article className="StudyEbook_AnswerMadal">
@@ -116,36 +124,49 @@ const StudyEbook = () => {
               <div className="StudyBook_AnswerAll">
                 <input
                   type="text"
+                  placeholder="정답을 입력하세요"
                   onChange={answerInput}
                   onKeyPress={handleInputKeyPress}
                 />
                 <button
                   className="StudyBook_AnswerBtn"
-                  onClick={() => { handleAnswerButtonClick(currentProblemIndex); }}
+                  onClick={() => {
+                    handleAnswerButtonClick(
+                      currentProblemIndex,
+                      commentContent
+                    );
+                  }}
                 >
-                  정답 확인
+                  정답확인
                 </button>
               </div>
-              {visible &&(
-                  <div className='AnswerTwin'>
-                    <h3 className={answered ? "On_target" : "Off_target"}>
-                      {answered ? "정답" : "오답"}
-                    </h3>
-                  </div>
-                )}
+              {visible && (
+                <div className="AnswerTwin">
+                  <h3 className={answered ? "On_target" : "Off_target"}>
+                    {answered ? "정답" : "오답"}
+                  </h3>
+                </div>
+              )}
             </div>
             <div>
               <div>
                 {showComment ? (
                   <div className="Target_Comment">
                     {answered ? commentContent : null}
-                    
                   </div>
                 ) : (
                   <div className="Target_Comment"></div>
                 )}
                 {answered && !showHintButton && (
-                  <button className="Target_CommentBtn" onClick={() => handleCommentButtonClick(currentProblemIndex)}>해설보기</button>
+                  <button
+                    className="Target_CommentBtn"
+                    onClick={() => {
+                      handleCommentButtonClick(commentContent);
+                      setShowComment(true);
+                    }}
+                  >
+                    해설보기
+                  </button>
                 )}
               </div>
             </div>
@@ -153,9 +174,9 @@ const StudyEbook = () => {
         </article>
       )}
       <article className="StudyBook_AllPages">
-        <HTMLFlipBook width={600} height={750}>
+        <HTMLFlipBook className="flipBook" width={600} height={750}>
           {/* 페이지 속도 조절 flippingTime={1000} */}
-          <div className="demoPage">
+          <div className="demoPage pageStyle">
             <div className="StudyBook_LeftPage">
               <h3>4학년 목차</h3>
               <div className="StudyBook_LevelText">
@@ -170,7 +191,10 @@ const StudyEbook = () => {
                       <Link>{StudyProblem.unit1.length}문제</Link>
                     </h4>
                   </div>
-                  <p className="Chapter_Ptext">수학에서 큰 수는 숫자의 중요한 개념 중 하나로, 크기를 비교하거나 덧셈과 뺄셈 등 다양한 연산에 활용된다.</p>
+                  <p className="Chapter_Ptext">
+                    수학에서 큰 수는 숫자의 중요한 개념 중 하나로, 크기를
+                    비교하거나 덧셈과 뺄셈 등 다양한 연산에 활용된다.
+                  </p>
                 </div>
 
                 <div className="StudyBook_Chapter">
@@ -180,9 +204,12 @@ const StudyEbook = () => {
                       <Link>{StudyProblem.unit2.length}문제</Link>
                     </h4>
                   </div>
-                  <p className="Chapter_Ptext">각도기와 같은 구체물로 각도를 재거나, 각도끼리 더하거나 빼는 활동이 들어있다. </p>
+                  <p className="Chapter_Ptext">
+                    각도기와 같은 구체물로 각도를 재거나, 각도끼리 더하거나 빼는
+                    활동이 들어있다.{" "}
+                  </p>
                 </div>
-                
+
                 <div className="StudyBook_Chapter">
                   <div className="Chapter_Text">
                     <h4>1-3 곱셉,나눗셈</h4>
@@ -190,7 +217,10 @@ const StudyEbook = () => {
                       <Link>{StudyProblem.unit3.length}문제</Link>
                     </h4>
                   </div>
-                  <p className="Chapter_Ptext">세 자리 수와 두 자리 수의 곱셈과 두 자리 수로 나누는 나눗셈을 공부한다.</p>
+                  <p className="Chapter_Ptext">
+                    세 자리 수와 두 자리 수의 곱셈과 두 자리 수로 나누는
+                    나눗셈을 공부한다.
+                  </p>
                 </div>
 
                 <div className="StudyBook_Chapter">
@@ -200,7 +230,10 @@ const StudyEbook = () => {
                       <Link>{StudyProblem.unit4.length}문제</Link>
                     </h4>
                   </div>
-                  <p className="Chapter_Ptext">막대그래프는 변량만큼 막대의 길이를 나타낸 그래프로, 가로축과 세로축에 변량을 그래프로 나타내는 단원이다. </p>
+                  <p className="Chapter_Ptext">
+                    막대그래프는 변량만큼 막대의 길이를 나타낸 그래프로,
+                    가로축과 세로축에 변량을 그래프로 나타내는 단원이다.{" "}
+                  </p>
                 </div>
 
                 <div className="StudyBook_Chapter">
@@ -210,12 +243,14 @@ const StudyEbook = () => {
                       <Link>{StudyProblem.unit5.length}문제</Link>
                     </h4>
                   </div>
-                  <p className="Chapter_Ptext">수, 도형, 계산식 등에서 어떤 규칙이 있는지 찾는 단원이다.</p>
+                  <p className="Chapter_Ptext">
+                    수, 도형, 계산식 등에서 어떤 규칙이 있는지 찾는 단원이다.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
-          <div className="demoPage">
+          <div className="demoPage pageStyle">
             <div className="StudyBook_RightPage">
               <div className="StudyBook_LevelText-1">
                 <h5>2학기</h5>
@@ -229,7 +264,10 @@ const StudyEbook = () => {
                       <Link>{StudyProblem.unit6.length}문제</Link>
                     </h4>
                   </div>
-                  <p className="Chapter_Ptext">분모가 같은 분수의 덧셈과 뺄셈을 계산하고 통분이라는 과정을 이해한다.</p>
+                  <p className="Chapter_Ptext">
+                    분모가 같은 분수의 덧셈과 뺄셈을 계산하고 통분이라는 과정을
+                    이해한다.
+                  </p>
                 </div>
 
                 <div className="StudyBook_Chapter">
@@ -239,7 +277,10 @@ const StudyEbook = () => {
                       <Link>{StudyProblem.unit7.length}문제</Link>
                     </h4>
                   </div>
-                  <p className="Chapter_Ptext">변과 각에 따른 특징을 가진 삼각형의 이름, 특징, 모양을 배운다.</p>
+                  <p className="Chapter_Ptext">
+                    변과 각에 따른 특징을 가진 삼각형의 이름, 특징, 모양을
+                    배운다.
+                  </p>
                 </div>
 
                 <div className="StudyBook_Chapter">
@@ -249,7 +290,10 @@ const StudyEbook = () => {
                       <Link>{StudyProblem.unit8.length}문제</Link>
                     </h4>
                   </div>
-                  <p className="Chapter_Ptext">소수의 크기를 비교하고 소수끼리 더하거나 빼는 활동을 하면서 자연수처럼 소수끼리 연산이 가능함을 배운다.</p>
+                  <p className="Chapter_Ptext">
+                    소수의 크기를 비교하고 소수끼리 더하거나 빼는 활동을 하면서
+                    자연수처럼 소수끼리 연산이 가능함을 배운다.
+                  </p>
                 </div>
 
                 <div className="StudyBook_Chapter">
@@ -259,7 +303,10 @@ const StudyEbook = () => {
                       <Link>{StudyProblem.unit9.length}문제</Link>
                     </h4>
                   </div>
-                  <p className="Chapter_Ptext">여러 가지 사각형에 대한 분류 활동을 통하여 그 성질을 이해한다.</p>
+                  <p className="Chapter_Ptext">
+                    여러 가지 사각형에 대한 분류 활동을 통하여 그 성질을
+                    이해한다.
+                  </p>
                 </div>
 
                 <div className="StudyBook_Chapter">
@@ -269,7 +316,9 @@ const StudyEbook = () => {
                       <Link>{StudyProblem.unit10.length}문제</Link>
                     </h4>
                   </div>
-                  <p className="Chapter_Ptext">꺽은선그래프를 알고, 그 특징을 이해한다.</p>
+                  <p className="Chapter_Ptext">
+                    꺽은선그래프를 알고, 그 특징을 이해한다.
+                  </p>
                 </div>
 
                 <div className="StudyBook_Chapter">
@@ -279,18 +328,24 @@ const StudyEbook = () => {
                       <Link>{StudyProblem.unit11.length}문제</Link>
                     </h4>
                   </div>
-                  <p className="Chapter_Ptext">다각형의 의미와 정다각형을 배우고, 대각선이라는 요소를 이해한다.</p>
+                  <p className="Chapter_Ptext">
+                    다각형의 의미와 정다각형을 배우고, 대각선이라는 요소를
+                    이해한다.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
           {/* 1-1 큰수 */}
           {StudyProblem.unit1.map((problem, index) => (
-            <div className="demoPage" key={index}>
+            <div className="demoPage pageStyle" key={index}>
               <div className="StudyBook_ProblemPage">
                 <div className="StudyBook_ThreeItems">
                   <div className="StudyBook_Number">{problem.id}.</div>
-                  <div className="StudyBook_ProblemText" dangerouslySetInnerHTML={{__html: problem.title}}/>
+                  <div
+                    className="StudyBook_ProblemText"
+                    dangerouslySetInnerHTML={{ __html: problem.title }}
+                  />
                   <button
                     className="StudyBook_HintImg"
                     onClick={() => handlePushHint(index)}
@@ -298,7 +353,11 @@ const StudyEbook = () => {
                     ?
                   </button>
                 </div>
-                <img src={problem.content} alt={`problem ${problem.id}`} style={{width:'100%' ,height:'auto', marginTop:'20px'}}/>
+                <img
+                  src={problem.content}
+                  alt={`problem ${problem.id}`}
+                  style={{ width: "100%", height: "auto", marginTop: "20px" }}
+                />
                 <button
                   className="AnswerBox"
                   onClick={() =>
@@ -323,11 +382,14 @@ const StudyEbook = () => {
             </div>
           ))}
           {StudyProblem.unit2.map((problem, index) => (
-            <div className="demoPage" key={index}>
+            <div className="demoPage pageStyle" key={index}>
               <div className="StudyBook_ProblemPage">
                 <div className="StudyBook_ThreeItems">
                   <div className="StudyBook_Number">{problem.id}.</div>
-                  <div className="StudyBook_ProblemText" dangerouslySetInnerHTML={{__html: problem.title}}/>
+                  <div
+                    className="StudyBook_ProblemText"
+                    dangerouslySetInnerHTML={{ __html: problem.title }}
+                  />
                   <button
                     className="StudyBook_HintImg"
                     onClick={() => handlePushHint(index)}
@@ -335,7 +397,11 @@ const StudyEbook = () => {
                     ?
                   </button>
                 </div>
-                <img src={problem.content} alt={`problem ${problem.id}`} style={{width:'100%' ,height:'auto', marginTop:'20px'}}/>
+                <img
+                  src={problem.content}
+                  alt={`problem ${problem.id}`}
+                  style={{ width: "100%", height: "auto", marginTop: "20px" }}
+                />
                 <button
                   className="AnswerBox"
                   onClick={() =>
@@ -360,13 +426,6 @@ const StudyEbook = () => {
             </div>
           ))}
 
-          {/* <div className="demoPage">Page 4</div>
-          <div className="demoPage">Page 5</div>
-          <div className="demoPage">Page 6</div>
-          <div className="demoPage">Page 7</div>
-          <div className="demoPage">Page 8</div>
-          <div className="demoPage">Page 9</div>
-          <div className="demoPage">Page 10</div> */}
         </HTMLFlipBook>
       </article>
     </section>

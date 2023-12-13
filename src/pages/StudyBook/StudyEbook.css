@@ -2,7 +2,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  /* height: 100%; */
   background: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
@@ -26,7 +25,6 @@
 .StudyBook_AllPages {
   padding: 50px 100px 50px 100px;
 }
-
 
 .StudyBook_LeftPage,
 .StudyBook_RightPage {
@@ -118,7 +116,7 @@
 .StudyBook_AnswerAll {
   display: flex;
   align-items: center;
-  padding: 20px 30px 0px 30px;
+  padding: 20px 30px 20px 30px;
 }
 
 .StudyBook_AnswerAll > input {
@@ -162,6 +160,7 @@
   transform: translate(-50%, -50%);
   background-color: white;
   border: 1px solid black;
+  border-radius: 10px;
   width: 600px;
   z-index: 99;
 }
@@ -201,14 +200,9 @@
 
 .Target_CommentBtn {
   cursor: pointer;
+  float: right;
+  margin-right: 20px;
 }
-
-/* 해설 */
-/* .Comment_Text {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
 
 /* ----[힌트 상자 관련]------------- */
 
@@ -232,7 +226,9 @@
 .EBook_HintContainer {
   text-align: left;
   position: relative;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
+  border-radius: 10px;
+  font-size: 16px;
 }
 
 .Ebook_HintClose {
@@ -253,4 +249,193 @@
 .handleCloseHintBox {
   display: none;
 }
-/* ------------------------------------- */
+
+.Target_Comment {
+  padding: 20px;
+}
+
+
+/* ++++++++++++++++++++++++++++++++++++++ */
+.flipBook {
+  width: 100%; /* 기본적으로 전체 너비를 차지하도록 설정 */
+  height: 100%; /* 기본적으로 전체 높이를 차지하도록 설정 */
+}
+
+@media (max-width: 1440px) {
+  .flipBook {
+    max-width: 720px;
+    max-height: 750px;
+    padding: 0 50px;
+  }
+  .pageStyle {
+    width: 600px;
+    padding: 0 50px;
+  }
+  .StudyBook_LeftPage {
+    margin: 0 auto;
+    padding: 50px 50px 50px 0px;
+  }
+  .StudyBook_RightPage {
+    margin: 0 auto;
+    padding: 50px 50px 50px 0px;
+  }
+  .Modal_Answer {
+    position: fixed;
+    margin-left: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 500px;
+    z-index: 99;
+  }
+  .StudyBook_AnswerBtn {
+    border-radius: 10px;
+    background: #708fff;
+    padding: 5px 10px;
+    font-size: 12px;
+    color: #fff;
+    padding: 5px 10px;
+    margin-left: 20px;
+    /* margin: 10px; */
+    float: right;
+    cursor: pointer;
+  }
+  .StudyBook_AnswerAll > input {
+    width: 300px;
+    height: 33px;
+    padding: 5px 50px 5px 30px;
+    border-radius: 10px;
+    border: 1px solid #000;
+    background: #fff;
+  }
+  .Ebook_HintBoX {
+    max-width: 450px;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #fff;
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+    left: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .flipBook {
+    max-width: 600px;
+    max-height: 750px;
+  }
+
+  .pageStyle {
+    width: 600px;
+    padding: 0 50px;
+  }
+  .StudyBook_LeftPage {
+    margin: 0 auto;
+    padding: 50px 50px 50px 0px;
+  }
+  .StudyBook_RightPage {
+    margin: 0 auto;
+    padding: 50px 50px 50px 0px;
+  }
+  .Modal_Answer {
+    position: fixed;
+    margin-left: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 400px;
+    z-index: 99;
+  }
+  .StudyBook_AnswerBtn {
+    border-radius: 10px;
+    background: #708fff;
+    padding: 5px 10px;
+    font-size: 12px;
+    color: #fff;
+    padding: 5px 10px;
+    margin-left: 20px;
+    /* margin: 10px; */
+    float: right;
+    cursor: pointer;
+  }
+  .StudyBook_AnswerAll > input {
+    width: 200px;
+    height: 33px;
+    padding: 5px 50px 5px 30px;
+    border-radius: 10px;
+    border: 1px solid #000;
+    background: #fff;
+  }
+  .Ebook_HintBoX {
+    max-width: 450px;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #fff;
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 786px) {
+  .flipBook {
+    max-width: 100%;
+    max-height: 750px;
+  }
+  .pageStyle {
+    width: 100%;
+    padding: 0 30px;
+  }
+  .Modal_Answer {
+    position: fixed;
+    margin-left: 110px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 400px;
+    z-index: 99;
+  }
+  .StudyBook_AnswerBtn {
+    border-radius: 10px;
+    background: #708fff;
+    padding: 5px 10px;
+    font-size: 12px;
+    color: #fff;
+    padding: 5px 10px;
+    margin-left: 20px;
+    /* margin: 10px; */
+    float: right;
+    cursor: pointer;
+  }
+  .StudyBook_AnswerAll > input {
+    width: 200px;
+    height: 33px;
+    padding: 5px 50px 5px 30px;
+    border-radius: 10px;
+    border: 1px solid #000;
+    background: #fff;
+  }
+  .Ebook_HintBoX {
+    max-width: 450px;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #fff;
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+    left: 0;
+  }
+}

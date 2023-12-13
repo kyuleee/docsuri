@@ -40,6 +40,9 @@
     width: 100%;
     padding: 0 50px;
   }
+  .Study_Allpage {
+    padding: 120px 0 150px;
+  }
 }
 @media (max-width:1024px) {
   .StudyPage {

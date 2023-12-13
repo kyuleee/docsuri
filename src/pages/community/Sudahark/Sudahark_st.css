@@ -204,7 +204,9 @@
     height: 30px;
     background: url(./img/love_icon.png);
 }
-
+.sdh_reply_1>p{
+    width: 60px;
+}
 .sdh_create_reply {
     display: flex;
     padding: 5px 10px;
@@ -278,6 +280,7 @@
 
 .sdh_comments {
     display: flex;
+    align-items: center;
 }
 
 .sdh_profile {
