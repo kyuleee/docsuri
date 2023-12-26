@@ -7,7 +7,7 @@
 - Test PW : 
 <br>
 
- <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge">
+ <img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=React&logoColor=white">
  <img src="https://img.shields.io/badge/Framework-%23121011?style=for-the-badge">
 
 
