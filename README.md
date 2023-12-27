@@ -130,7 +130,9 @@
 - Figma 디자인 작업 및 3D 모델링, 작업환경 구성 : 2023-11-16 ~ 2023-11-22
 - 코딩 분담 작업 및 코드 컨벤션 : 2023-11-23 ~ 2023-12-12
 - 최종 완성 및 ppt 제작 : 2023-12-13 ~ 2023-12-15
-![독수리일정](https://github.com/kyuleee/docsuri/assets/118513511/6597a21a-659b-4a04-9199-14f52a1b45a4)
+<br>
+
+<img src='https://github.com/kyuleee/docsuri/assets/118513511/6597a21a-659b-4a04-9199-14f52a1b45a4' width='400px' height='auto'>
 <br>
 
 ### 작업 관리
