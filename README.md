@@ -137,20 +137,12 @@
 
 ### 작업 관리
 
-- GitHub Projects와 Issues를 사용하여 진행 상황을 공유했습니다.
-- 주간회의를 진행하며 작업 순서와 방향성에 대한 고민을 나누고 GitHub Wiki에 회의 내용을 기록했습니다.
+- GitHub Desktop를 사용하여 코드를 관리했습니다.
+- 주간회의를 진행하며 작업 순서와 방향성에 대한 고민을 나누고 개발 회의록을 작성했습니다.
 
 <br>
 
-## 6. 신경 쓴 부분
-
-- [접근제한 설정](https://github.com/likelion-project-README/README/wiki/README-6.%EC%8B%A0%EA%B2%BD-%EC%93%B4-%EB%B6%80%EB%B6%84_%EC%A0%91%EA%B7%BC%EC%A0%9C%ED%95%9C-%EC%84%A4%EC%A0%95)
-
-- [Recoil을 통한 상태관리 및 유지](https://github.com/likelion-project-README/README/wiki/README-6.%EC%8B%A0%EA%B2%BD-%EC%93%B4-%EB%B6%80%EB%B6%84_Recoil%EC%9D%84-%ED%86%B5%ED%95%9C-%EC%83%81%ED%83%9C%EA%B4%80%EB%A6%AC-%EB%B0%8F-%EC%9C%A0%EC%A7%80)
-
-<br>
-
-## 7. 페이지별 기능
+## 6. 페이지별 기능
 
 ### [초기화면]
 - 서비스 접속 초기화면으로 splash 화면이 잠시 나온 뒤 다음 페이지가 나타납니다.
@@ -210,21 +202,6 @@
 
 <br>
 
-### [상하단 배너]
-- 상단 배너 : 각 페이지별로 다른 종류의 버튼을 가지고 있습니다.
-    - 뒤로가기 : 브라우저 상에 기록된 이전 페이지로 돌아갑니다.
-    - 검색 : 사용자 검색 페이지로 이동합니다.
-    - 사용자 이름 : 채팅룸 페이지의 경우 상대방의 사용자 이름을 보여줍니다.
-    - kebab menu : 각 페이지 또는 컴포넌트에 따른 하단 모달창을 생성합니다.
-        - 상품, 댓글, 게시글 컴포넌트 - 삭제, 수정, 신고하기
-        - 사용자 프로필 페이지 - 설정 및 사용자 정보, 로그아웃
-- 하단 탭 메뉴 : 홈, 채팅, 게시물 작성, 프로필 아이콘을 클릭하면 각각 홈 피드, 채팅 목록, 게시글 작성 페이지, 내 프로필 페이지로 이동합니다.
-
-| 상하단 배너 |
-|----------|
-|![tab](https://user-images.githubusercontent.com/112460466/210178028-3185f944-6ac1-468a-94ba-b32cdc5e380e.gif)|
-
-<br>
 
 ### [홈 피드]
 - 자신이 팔로우 한 유저의 게시글이 최신순으로 보여집니다.
@@ -358,39 +335,9 @@
 |![chat](https://user-images.githubusercontent.com/112460466/210386478-ea4877c5-1728-4872-ab50-a8408ddf6dcd.gif)|
 
 <br>
+   
 
-## 8. 트러블 슈팅
-
-- [탭메뉴 프로필 버튼 이슈](https://github.com/likelion-project-README/README/wiki/README-8.%ED%8A%B8%EB%9F%AC%EB%B8%94-%EC%8A%88%ED%8C%85_%ED%83%AD%EB%A9%94%EB%89%B4-%ED%94%84%EB%A1%9C%ED%95%84-%EB%B2%84%ED%8A%BC-%EC%9D%B4%EC%8A%88)
-
-- [프로필 수정 이슈](https://github.com/likelion-project-README/README/wiki/README-8.%ED%8A%B8%EB%9F%AC%EB%B8%94-%EC%8A%88%ED%8C%85_%ED%94%84%EB%A1%9C%ED%95%84-%EC%88%98%EC%A0%95-%EC%9D%B4%EC%8A%88)
-
-<br>
-
-## 9. 개선 목표
-
-- API 모듈화 : API를 불러오는 코드의 반복이 많아 모듈화할 예정
-- lighthouse Performance 증진
-    - 모든 페이지에서 특히 Best Practices & SEO 점수는 90~100으로 우수
-    - Performance 점수가 대체적으로 미흡한 문제
-    
-    ![KakaoTalk_Photo_2023-01-04-16-55-30](https://user-images.githubusercontent.com/112460466/210591134-09bf8efd-3c34-4b99-a3d7-895ca99e1457.png)
-    
-- **23-01-17 성능 개선 내용**
-    
-    ![성능개선 후](https://user-images.githubusercontent.com/106502312/212872369-7ceeb2cf-d551-41d2-bfb0-01e35e9903fe.png)
-    
-    - 이미지 최적화
-        - `<img>` 요소에 `width` , `height` 속성값을 명시해 불필요한 Reflow를 방지했습니다.
-        - browser-image-compression 라이브러리를 사용해 유저가 업로드하는 이미지를 압축했습니다.
-        - Intersection Observer API를 사용해 Lazy Loading 기법을 적용하여 홈 피드의 게시글 이미지가 viewport 내에 들어오는 순간 로딩되도록 변경했습니다.
-    - 웹폰트 최적화
-        - WOFF2 포맷을 추가하고 가장 우선적으로 적용되도록 선언했습니다.
-        - 서브셋 폰트로 교체해 용량을 줄였습니다.
-    
-<br>
-
-## 10. 프로젝트 후기
+## 7. 프로젝트 후기
 
 ### 🍊 민규리
 
