@@ -8,7 +8,7 @@
  <img alt="Css" src ="https://img.shields.io/badge/CSS3-1572B6.svg?&style=for-the-badge&logo=CSS3&logoColor=white"> 
  <img alt="JavaScript" src ="https://img.shields.io/badge/JavaScriipt-F7DF1E.svg?&style=for-the-badge&logo=JavaScript&logoColor=black">
  <img alt="react" src ="https://img.shields.io/badge/React-61DAFB?&style=for-the-badge&logo=React&logoColor=white">
- <img alt="Node.js" src ="https://img.shields.io/badge/nodedotjs-339933?&style=for-the-badge&logo=nodedotjs&logoColor=white">
+ <img alt="Node.js" src ="https://img.shields.io/badge/nodejs-339933?&style=for-the-badge&logo=nodedotjs&logoColor=white">
 
 ## 프로젝트 소개
 
