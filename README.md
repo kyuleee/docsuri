@@ -1,10 +1,7 @@
 # 📖 초등학교 고학년 수학 문제 사이트 README
 <div align='center'>
  <img src='https://github.com/kyuleee/docsuri/assets/118513511/581313d2-764f-4b11-95c3-5f0e0b204064'>
- 
 </div>
-![독수리](https://github.com/kyuleee/docsuri/assets/118513511/581313d2-764f-4b11-95c3-5f0e0b204064)
-
 - 배포 URL : https://kyuleee.github.io/docsuri
 <br>
 
@@ -30,9 +27,9 @@
 
 <div align="center">
 
-| **고지연** | **김민제** | **양희지** | **지창언** |
-| :------: |  :------: | :------: | :------: |
-| [<img src="https://avatars.githubusercontent.com/u/106502312?v=4" height=150 width=150> <br/> @yeon1615](https://github.com/yeon1615) | [<img src="https://avatars.githubusercontent.com/u/112460466?v=4" height=150 width=150> <br/> @Cheorizzang](https://github.com/Cheorizzang) | [<img src="https://avatars.githubusercontent.com/u/112460506?v=4" height=150 width=150> <br/> @heejiyang](https://github.com/heejiyang) | [<img src="https://avatars.githubusercontent.com/u/76766459?v=4" height=150 width=150> <br/> @journey-ji](https://github.com/journey-ji) |
+| **민규리** | **김민구** | **김정은** | **박진수** | **박민영** |
+| :------: |  :------: | :------: | :------: | :------: |
+| [<img src="https://avatars.githubusercontent.com/u/106502312?v=4" height=150 width=150> <br/> @yeon1615](https://github.com/yeon1615) | [<img src="https://avatars.githubusercontent.com/u/112460466?v=4" height=150 width=150> <br/> @Cheorizzang](https://github.com/Cheorizzang) | [<img src="https://avatars.githubusercontent.com/u/112460506?v=4" height=150 width=150> <br/> @heejiyang](https://github.com/heejiyang) | [<img src="https://avatars.githubusercontent.com/u/76766459?v=4" height=150 width=150> <br/> @journey-ji](https://github.com/journey-ji) | [<img src="https://avatars.githubusercontent.com/u/76766459?v=4" height=150 width=150> <br/> @journey-ji](https://github.com/journey-ji) |
 
 </div>
 
