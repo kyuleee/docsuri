@@ -32,8 +32,8 @@
 
 | **민규리** | **김민구** | **김정은** | **박진수** | **박민영** |
 | :------: |  :------: | :------: | :------: | :------: |
-| [<img src="https://avatars.githubusercontent.com/u/106502312?v=4" height=150 width=150> <br/> @kyuleee](https://github.com/kyuleee) | [<img src="https://github.com/kyuleee/docsuri/assets/118513511/b8981a9e-a03f-47e8-a776-6766e385901a" height=150 width=150> <br/> @minkoo](https://github.com/minkoo) | [<img src="https://github.com/kyuleee/docsuri/assets/118513511/28d82e22-5f13-46c7-8d50-283c11dd1232" height=150 width=150> <br/> @정은](https://github.com/jungeuon) | [<img src="https://github.com/kyuleee/docsuri/assets/118513511/a0c0d36d-cfd4-4766-baec-acdfc950ac6c" height=150 width=150> <br/> @진수](https://github.com/journey-ji) | [<img src="https://github.com/kyuleee/docsuri/assets/118513511/240c18a1-f2fe-45c8-8c67-0a413943f4f5" height=150 width=150> <br/> @journey-ji](https://github.com/journey-ji) |
-![png-transparent-avatars-accounts-man-male-people-person-shirt-headphone-headset-music-listen-male-avatars-free-d-illustration](https://github.com/kyuleee/docsuri/assets/118513511/a0c0d36d-cfd4-4766-baec-acdfc950ac6c)
+| [<img src="https://avatars.githubusercontent.com/u/106502312?v=4" height=150 width=150> <br/> @kyuleee](https://github.com/kyuleee) | [<img src="https://github.com/kyuleee/docsuri/assets/118513511/b8981a9e-a03f-47e8-a776-6766e385901a" height=150 width=150> <br/> @minkoo](https://github.com/minkoo) | [<img src="https://github.com/kyuleee/docsuri/assets/118513511/28d82e22-5f13-46c7-8d50-283c11dd1232" height=150 width=150> <br/> @정은](https://github.com/jungeuon) | [<img src="https://github.com/kyuleee/docsuri/assets/118513511/a0c0d36d-cfd4-4766-baec-acdfc950ac6c" height=150 width=150> <br/> @진수](https://github.com/journey-ji) | [<img src="https://github.com/kyuleee/docsuri/assets/118513511/9c975c20-8414-472d-b0d2-9f990040c392" height=150 width=150> <br/> @journey-ji](https://github.com/journey-ji) |
+
 </div>
 
 <br>
