@@ -143,10 +143,6 @@
 <br>
 
 ## 6. 페이지별 기능
-![로그인기능](https://github.com/kyuleee/docsuri/assets/118513511/6d266d6a-3117-45ea-bee4-6bab603e1f5a)
-![마이페이지](https://github.com/kyuleee/docsuri/assets/118513511/e4ca2e78-a305-4e5a-a0db-a9a690e4fe2f)
-![독수리 로딩](https://github.com/kyuleee/docsuri/assets/118513511/8ca21e5b-5233-4ece-9327-a74eaedf3140)
-![수다학](https://github.com/kyuleee/docsuri/assets/118513511/9ba4db2d-c9e2-47cc-b74f-7f5db505863a)
 
 ### [초기화면]
 - 초기에 필요한 자원을 불러오고 설정하는데 시간이 걸립니다.
