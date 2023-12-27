@@ -86,6 +86,7 @@
 <br>
 
 ## 3. 프로젝트 구조
+![독수리정구](https://github.com/kyuleee/docsuri/assets/118513511/124959d6-18e9-4252-a045-145c087226b7)
 
 ```
 ├── README.md
