@@ -32,8 +32,10 @@
 
 | **민규리** | **김민구** | **김정은** | **박진수** | **박민영** |
 | :------: |  :------: | :------: | :------: | :------: |
-| [<img src="https://avatars.githubusercontent.com/u/106502312?v=4" height=150 width=150> <br/> @yeon1615](https://github.com/yeon1615) | [<img src="https://avatars.githubusercontent.com/u/112460466?v=4" height=150 width=150> <br/> @Cheorizzang](https://github.com/Cheorizzang) | [<img src="https://avatars.githubusercontent.com/u/112460506?v=4" height=150 width=150> <br/> @heejiyang](https://github.com/heejiyang) | [<img src="https://avatars.githubusercontent.com/u/76766459?v=4" height=150 width=150> <br/> @journey-ji](https://github.com/journey-ji) | [<img src="https://avatars.githubusercontent.com/u/76766459?v=4" height=150 width=150> <br/> @journey-ji](https://github.com/journey-ji) |
-
+| [<img src="https://avatars.githubusercontent.com/u/106502312?v=4" height=150 width=150> <br/> @yeon1615](https://github.com/yeon1615) | [<img src="https://github.com/kyuleee/docsuri/assets/118513511/b8981a9e-a03f-47e8-a776-6766e385901a" height=150 width=150> <br/> @Cheorizzang](https://github.com/Cheorizzang) | [<img src="https://github.com/kyuleee/docsuri/assets/118513511/28d82e22-5f13-46c7-8d50-283c11dd1232" height=150 width=150> <br/> @heejiyang](https://github.com/heejiyang) | [<img src="https://github.com/kyuleee/docsuri/assets/118513511/240c18a1-f2fe-45c8-8c67-0a413943f4f5" height=150 width=150> <br/> @journey-ji](https://github.com/journey-ji) | [<img src="https://avatars.githubusercontent.com/u/76766459?v=4" height=150 width=150> <br/> @journey-ji](https://github.com/journey-ji) |
+![9720037](https://github.com/kyuleee/docsuri/assets/118513511/b8981a9e-a03f-47e8-a776-6766e385901a)
+![9720009](https://github.com/kyuleee/docsuri/assets/118513511/240c18a1-f2fe-45c8-8c67-0a413943f4f5)
+![9441909](https://github.com/kyuleee/docsuri/assets/118513511/28d82e22-5f13-46c7-8d50-283c11dd1232)
 </div>
 
 <br>
