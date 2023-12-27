@@ -132,7 +132,7 @@
 - 최종 완성 및 ppt 제작 : 2023-12-13 ~ 2023-12-15
 <br>
 
-<img src='https://github.com/kyuleee/docsuri/assets/118513511/6597a21a-659b-4a04-9199-14f52a1b45a4' width='400px' height='auto'>
+<img src='https://github.com/kyuleee/docsuri/assets/118513511/6597a21a-659b-4a04-9199-14f52a1b45a4' width='300px' height='auto'/>
 <br>
 
 ### 작업 관리
