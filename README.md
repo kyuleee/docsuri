@@ -40,11 +40,10 @@
 
 ## 1. 개발 환경
 
-- Front : HTML, React, styled-components, Recoil
-- Back-end : 제공된 API 활용
-- 버전 및 이슈관리 : Github, Github Issues, Github Project
+- 사용한 프레임워크 & 언어 : JSX, javascript, CSS3, node.js, npm, React, three.js
 - 협업 툴, 버전 및 이슈관리 : Github, Notion, Github Desktop, Obsidian
 - 디자인 : [Figma](https://www.figma.com/file/DvLzDdG7zgsBoRLZRthyR5/%EB%8F%85%EC%88%98%EB%A6%AC%EC%98%A4%EB%82%A8%EB%A7%A4-%ED%8C%80%ED%94%8C?type=design&node-id=7-724&mode=design&t=qibwXTCfjPgQrxgT-0)
+- 사용프로그램 : vscode, Blender, illustrator, photoshop
 - [커밋 컨벤션](https://github.com/likelion-project-README/README/wiki/%EC%BB%A4%EB%B0%8B-%EC%BB%A8%EB%B2%A4%EC%85%98)
 - [코드 컨벤션](https://github.com/likelion-project-README/README/wiki/%EC%BD%94%EB%93%9C-%EC%BB%A8%EB%B2%A4%EC%85%98)
 - [스프라이트](https://github.com/likelion-project-README/README/wiki/%EC%8A%A4%ED%94%84%EB%9D%BC%EC%9D%B4%ED%8A%B8)
