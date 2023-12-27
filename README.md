@@ -44,6 +44,7 @@
 - 협업 툴, 버전 및 이슈관리 : Github, Notion, Github Desktop, Obsidian
 - 디자인 : [Figma](https://www.figma.com/file/DvLzDdG7zgsBoRLZRthyR5/%EB%8F%85%EC%88%98%EB%A6%AC%EC%98%A4%EB%82%A8%EB%A7%A4-%ED%8C%80%ED%94%8C?type=design&node-id=7-724&mode=design&t=qibwXTCfjPgQrxgT-0)
 - 사용프로그램 : vscode, Blender, illustrator, photoshop
+- 사용 패키지 :  React-router-dom , gh-pages, three.js, react-kakao
 <br>
 
 
