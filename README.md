@@ -1,4 +1,4 @@
-# 📖 초등학교 고학년 수학 문제 사이트 README
+# 📖 초등학교 고학년 수학 문제 사이트 독:수리
 <div align='center'>
  <img src='https://github.com/kyuleee/docsuri/assets/118513511/581313d2-764f-4b11-95c3-5f0e0b204064'>
 </div>
