@@ -10,7 +10,7 @@
  <img alt="react" src ="https://img.shields.io/badge/React-61DAFB?&style=for-the-badge&logo=React&logoColor=white">
  <img alt="Node.js" src ="https://img.shields.io/badge/Node.js-339933?&style=for-the-badge&logo=nodedotjs&logoColor=white">
  <img alt="npm" src ="https://img.shields.io/badge/npm-CB3837?&style=for-the-badge&logo=npm&logoColor=white">
- <img alt="three.js" src ="https://img.shields.io/badge/three-000000?&style=for-the-badge&logo=three&logoColor=white">
+ <img alt="three.js" src ="https://img.shields.io/badge/three-000000?&style=for-the-badge&logo=threedotjs&logoColor=white">
 
 ## 프로젝트 소개
 
